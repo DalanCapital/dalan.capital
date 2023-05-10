@@ -1,5 +1,5 @@
 import { CheckCircleIcon } from '@heroicons/react/24/solid'
-import Image from 'next/future/image'
+import Image from 'next/image'
 
 import Avatar from '@/images/avatars/avatar-01.jpg'
 import homeHeroImg from '@/images/stock/home-hero.jpg'

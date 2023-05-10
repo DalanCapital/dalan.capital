@@ -45,10 +45,8 @@ export function Footer() {
       <Container>
         <div className="lg:grid lg:grid-cols-12 lg:gap-12">
           <div className="max-w-xl lg:col-span-4 lg:max-w-none">
-            <Link href="/" aria-label="Home">
-              <a className="flex flex-shrink-0">
-                <Image src={logo} className="h-7 w-auto sm:h-8 lg:h-9" />
-              </a>
+            <Link href="/" aria-label="Home" className="flex flex-shrink-0">
+              <Image src={logo} className="h-7 w-auto sm:h-8 lg:h-9" />
             </Link>
             <p className="mt-10 text-md leading-relaxed text-slate-50">
               Lorem ipsum dolor sit amet aliqua rhoncus turpis. Justo adipiscing
@@ -127,7 +125,7 @@ export function Footer() {
               <p className="text-md font-semibold text-white">Company</p>
               <div className="mt-4 flex flex-col space-y-3">
                 {navigation.company.map((item) => (
-                  <Link key={item.name} href={item.href}>
+                  <Link legacyBehavior key={item.name} href={item.href}>
                     <a className="text-md text-slate-100 duration-150 hover:text-white">
                       {item.name}
                     </a>
@@ -139,7 +137,7 @@ export function Footer() {
               <p className="text-md font-semibold text-white">Solutions</p>
               <div className="mt-4 flex flex-col space-y-3">
                 {navigation.solutions.map((item) => (
-                  <Link key={item.name} href={item.href}>
+                  <Link legacyBehavior key={item.name} href={item.href}>
                     <a className="text-md text-slate-100 duration-150 hover:text-white">
                       {item.name}
                     </a>
@@ -151,7 +149,7 @@ export function Footer() {
               <p className="text-md font-semibold text-white">Integrations</p>
               <div className="mt-4 flex flex-col space-y-3">
                 {navigation.integrations.map((item) => (
-                  <Link key={item.name} href={item.href}>
+                  <Link legacyBehavior key={item.name} href={item.href}>
                     <a className="text-md text-slate-100 duration-150 hover:text-white">
                       {item.name}
                     </a>
@@ -163,7 +161,7 @@ export function Footer() {
               <p className="text-md font-semibold text-white">Resources</p>
               <div className="mt-4 flex flex-col space-y-3">
                 {navigation.resources.map((item) => (
-                  <Link key={item.name} href={item.href}>
+                  <Link legacyBehavior key={item.name} href={item.href}>
                     <a className="text-md text-slate-100 duration-150 hover:text-white">
                       {item.name}
                     </a>
@@ -179,17 +177,17 @@ export function Footer() {
             © 2022 Wavvy, Inc. All rights reserved.
           </p>
           <div className="mt-5 flex gap-3 sm:mt-0">
-            <Link href="#">
+            <Link legacyBehavior href="#">
               <a className="text-md text-slate-100 underline duration-150 hover:text-white">
                 Terms
               </a>
             </Link>
-            <Link href="#">
+            <Link legacyBehavior href="#">
               <a className="text-md text-slate-100 underline duration-150 hover:text-white">
                 Privacy
               </a>
             </Link>
-            <Link href="#">
+            <Link legacyBehavior href="#">
               <a className="text-md text-slate-100 underline duration-150 hover:text-white">
                 Cookies
               </a>

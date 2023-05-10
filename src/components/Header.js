@@ -1,5 +1,5 @@
 import { Fragment } from 'react'
-import Image from 'next/future/image'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { Disclosure, Transition, Popover, Menu } from '@headlessui/react'
@@ -69,7 +69,7 @@ export function Header() {
     return (
       <Popover>
         <Popover.Button
-          className="relative z-50 flex items-center justify-center p-3 transition duration-300 ease-in-out border cursor-pointer group border-gray-secondary-400/75 bg-gray-secondary-50 focus:outline-none md:hidden"
+          className="group relative z-50 flex cursor-pointer items-center justify-center border border-gray-secondary-400/75 bg-gray-secondary-50 p-3 transition duration-300 ease-in-out focus:outline-none md:hidden"
           aria-label="Toggle Navigation"
         >
           {({ open }) => <MenuIcon open={open} />}
@@ -85,7 +85,7 @@ export function Header() {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <Popover.Overlay className="fixed inset-0 z-20 bg-opacity-25 bg-slate-900 backdrop-blur" />
+            <Popover.Overlay className="fixed inset-0 z-20 bg-slate-900 bg-opacity-25 backdrop-blur" />
           </Transition.Child>
           <Transition.Child
             as={Fragment}
@@ -98,12 +98,16 @@ export function Header() {
           >
             <Popover.Panel
               as="div"
-              className="absolute inset-x-0 top-0 z-30 px-5 pt-24 pb-8 overflow-hidden bg-amber-100"
+              className="absolute inset-x-0 top-0 z-30 overflow-hidden bg-amber-100 px-5 pt-24 pb-8"
             >
               <div>
                 <div className="flex flex-col divide-y divide-gray-secondary-400/75">
                   {links.map((link) => (
-                    <Link key={`${link.name}-mobile`} href={link.href}>
+                    <Link
+                      legacyBehavior
+                      key={`${link.name}-mobile`}
+                      href={link.href}
+                    >
                       <a
                         className={
                           'block px-4 pt-4 pb-2 font-medium text-slate-700 hover:bg-amber-50 hover:text-slate-900'
@@ -135,14 +139,14 @@ export function Header() {
                           />
                         </Disclosure.Button>
 
-                        <Disclosure.Panel className="z-20 px-4 space-y-0">
+                        <Disclosure.Panel className="z-20 space-y-0 px-4">
                           {pages.map((subLink) => (
                             <div
                               className="mt-2"
                               key={`${subLink.label}-dropdown-desktop`}
                             >
-                              <Link href={subLink.href}>
-                                <a className="block px-3 py-3 font-medium transition duration-300 ease-in-out text-slate-700 hover:bg-amber-50 hover:text-slate-900">
+                              <Link legacyBehavior href={subLink.href}>
+                                <a className="block px-3 py-3 font-medium text-slate-700 transition duration-300 ease-in-out hover:bg-amber-50 hover:text-slate-900">
                                   {subLink.label}
                                 </a>
                               </Link>
@@ -173,24 +177,28 @@ export function Header() {
 
   return (
     <header className="h-24 bg-amber-100">
-      <Container className="flex items-center w-full h-full border-b border-gray-secondary-300/60">
-        <nav className="relative z-50 flex items-center justify-between w-full ">
+      <Container className="flex h-full w-full items-center border-b border-gray-secondary-300/60">
+        <nav className="relative z-50 flex w-full items-center justify-between ">
           <div className="flex items-center space-x-8 lg:space-x-12">
-            <Link href="/" aria-label="Home">
-              <a className="flex items-center flex-shrink-0">
+            <Link legacyBehavior href="/" aria-label="Home">
+              <a className="flex flex-shrink-0 items-center">
                 <Image
                   src={logo}
-                  className="w-auto h-7 sm:h-8 md:hidden lg:block lg:h-9"
+                  className="h-7 w-auto sm:h-8 md:hidden lg:block lg:h-9"
                 />
                 <Image
                   src={logoIcon}
-                  className="hidden w-auto h-7 md:block lg:hidden"
+                  className="hidden h-7 w-auto md:block lg:hidden"
                 />
               </a>
             </Link>
-            <div className="items-center hidden space-x-3 md:flex lg:space-x-4">
+            <div className="hidden items-center space-x-3 md:flex lg:space-x-4">
               {links.map((link) => (
-                <Link key={`${link.label}-desktop`} href={link.href}>
+                <Link
+                  legacyBehavior
+                  key={`${link.label}-desktop`}
+                  href={link.href}
+                >
                   <a
                     className={clsx(
                       router.pathname == link.href
@@ -228,7 +236,7 @@ export function Header() {
                     <Menu.Items className="absolute right-0 z-20 mt-3 w-52 space-y-1 bg-gray-secondary-50 p-2.5 drop-shadow filter">
                       {pages.map((subLink, i) => (
                         <Menu.Item key={`${subLink.label}-dropdown-desktop`}>
-                          <Link href={subLink.href}>
+                          <Link legacyBehavior href={subLink.href}>
                             <a
                               className={`block py-3.5 px-5 font-medium ${
                                 router.pathname == subLink.href
@@ -251,7 +259,7 @@ export function Header() {
           <div>
             <div className="flex items-center space-x-4">
               <div className="hidden lg:block">
-                <Link href="/signin">
+                <Link legacyBehavior href="/signin">
                   <a className="inline-block px-4 py-2 font-medium text-slate-700 hover:bg-amber-50 hover:text-slate-900">
                     Sign in
                   </a>

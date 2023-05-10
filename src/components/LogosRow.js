@@ -18,12 +18,12 @@ const companies = [
 
 export function LogosRow() {
   return (
-    <section className="relative py-20 overflow-hidden bg-vanilla lg:pt-24">
+    <section className="relative overflow-hidden bg-vanilla py-20 lg:pt-24">
       <Container>
-        <p className="text-base font-semibold tracking-widest text-center uppercase text-slate-500">
+        <p className="text-center text-base font-semibold uppercase tracking-widest text-slate-500">
           As featured in
         </p>
-        <ul className="grid grid-cols-1 mt-10 gap-x-5 gap-y-8 sm:grid-cols-6 sm:gap-x-12 lg:grid-cols-5">
+        <ul className="mt-10 grid grid-cols-1 gap-x-5 gap-y-8 sm:grid-cols-6 sm:gap-x-12 lg:grid-cols-5">
           {companies.map((company, index) => (
             <li
               key={company.name}

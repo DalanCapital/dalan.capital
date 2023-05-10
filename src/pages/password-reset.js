@@ -16,14 +16,14 @@ export default function Signup() {
       </Head>
 
       <section className="relative flex min-h-screen items-center justify-center bg-amber-100 py-16 sm:py-20">
-        <Link href="/">
+        <Link legacyBehavior href="/">
           <a className="group absolute right-8 top-8 hidden cursor-pointer items-center justify-center border border-gray-secondary-400/60 bg-gray-secondary-50 p-2 transition duration-150 ease-in-out hover:bg-vanilla focus:outline-none sm:flex lg:top-12 lg:right-12">
             <XMarkIcon className="h-5 w-5 text-slate-800" />
           </a>
         </Link>
         <Container className="w-full">
           <div className="mx-auto flex max-w-lg flex-col items-center">
-            <Link href="/" aria-label="Home">
+            <Link legacyBehavior href="/" aria-label="Home">
               <a className="flex flex-shrink-0">
                 <Image src={logo} className="h-auto w-12" />
               </a>
@@ -63,7 +63,7 @@ export default function Signup() {
               </form>
               <p className="mt-4 text-center leading-relaxed text-slate-600">
                 Remembered your password?
-                <Link href="/signin">
+                <Link legacyBehavior href="/signin">
                   <a className="ml-1.5 font-medium text-slate-800 underline duration-150 hover:text-slate-900">
                     Sign in
                   </a>

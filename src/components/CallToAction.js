@@ -1,4 +1,4 @@
-import Image from 'next/future/image'
+import Image from 'next/image'
 
 import { Container } from '@/components/Container'
 import ctaImage1 from '@/images/stock/cta-image-01.jpg'

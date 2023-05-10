@@ -50,7 +50,7 @@ export function Button({
   )
 
   return href ? (
-    <Link href={href}>
+    <Link legacyBehavior href={href}>
       <a className={className} {...props}>
         {children}
       </a>

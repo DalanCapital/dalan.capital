@@ -4,7 +4,7 @@ import { UserIcon } from '@heroicons/react/24/outline'
 import { EnvelopeIcon } from '@heroicons/react/24/outline'
 import { LockClosedIcon } from '@heroicons/react/24/outline'
 import { XMarkIcon } from '@heroicons/react/24/outline'
-import Image from 'next/future/image'
+import Image from 'next/image'
 
 import logo from '@/images/logo-icon.png'
 import { Button } from '@/components/Button'
@@ -18,27 +18,27 @@ export default function Signup() {
       </Head>
 
       <section className="relative flex min-h-screen items-center justify-center bg-amber-100 py-16 sm:py-20">
-        <Link href="/">
-          <a className="group absolute right-8 top-8 hidden cursor-pointer items-center justify-center border border-gray-secondary-400/60 bg-gray-secondary-50 p-2 transition duration-150 ease-in-out hover:bg-vanilla focus:outline-none sm:flex lg:top-12 lg:right-12">
-            <XMarkIcon className="h-5 w-5 text-slate-800" />
-          </a>
+        <Link
+          href="/"
+          className="group absolute right-8 top-8 hidden cursor-pointer items-center justify-center border border-gray-secondary-400/60 bg-gray-secondary-50 p-2 transition duration-150 ease-in-out hover:bg-vanilla focus:outline-none sm:flex lg:top-12 lg:right-12"
+        >
+          <XMarkIcon className="h-5 w-5 text-slate-800" />
         </Link>
         <Container className="w-full">
           <div className="mx-auto flex max-w-lg flex-col items-center">
-            <Link href="/" aria-label="Home">
-              <a className="flex flex-shrink-0">
-                <Image src={logo} className="h-auto w-12 " />
-              </a>
+            <Link href="/" aria-label="Home" className="flex flex-shrink-0">
+              <Image src={logo} className="h-auto w-12 " />
             </Link>
             <h1 className="mt-10 text-center text-4xl font-semibold text-slate-900">
               Sign up for an account
             </h1>
             <p className="mt-4 text-center leading-relaxed text-slate-600">
               Already have an account?
-              <Link href="/signin">
-                <a className="block text-center font-medium text-slate-800 underline duration-150 hover:text-slate-900 sm:ml-1.5 sm:inline-block sm:text-left">
-                  Login to your account
-                </a>
+              <Link
+                href="/signin"
+                className="block text-center font-medium text-slate-800 underline duration-150 hover:text-slate-900 sm:ml-1.5 sm:inline-block sm:text-left"
+              >
+                Login to your account
               </Link>
               .
             </p>

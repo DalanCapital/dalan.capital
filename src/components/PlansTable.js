@@ -152,7 +152,7 @@ export function PlansTable() {
           <div className="mx-auto mt-5 max-w-xl text-center text-lg leading-relaxed text-slate-700">
             Compare the features and benifits of each plan. If you’re still
             unsure about anything feel free to{' '}
-            <Link href="/contact">
+            <Link legacyBehavior href="/contact">
               <a className="font-medium text-slate-900 underline">
                 reach out to us
               </a>

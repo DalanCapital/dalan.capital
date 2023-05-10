@@ -150,16 +150,16 @@ export function TestimonialsSlide() {
   }, [])
 
   return (
-    <section className="py-16 overflow-hidden bg-vanilla sm:py-24 lg:py-28">
-      <h2 className="max-w-xl px-4 mx-auto text-4xl font-semibold leading-tight text-center text-slate-900 sm:max-w-2xl sm:px-6 sm:text-5xl sm:leading-tight lg:px-8">
+    <section className="overflow-hidden bg-vanilla py-16 sm:py-24 lg:py-28">
+      <h2 className="mx-auto max-w-xl px-4 text-center text-4xl font-semibold leading-tight text-slate-900 sm:max-w-2xl sm:px-6 sm:text-5xl sm:leading-tight lg:px-8">
         See what podcasters have to say about us
       </h2>
       <div className="relative mt-20">
-        <div className="flex items-center gap-6 px-12 animate w-max animate-infiniteScroll sm:gap-8 lg:gap-12">
+        <div className="animate flex w-max animate-infiniteScroll items-center gap-6 px-12 sm:gap-8 lg:gap-12">
           {[...Array(2)].map((_, index) => (
             <div
               key={`testimonials-row-${index}`}
-              className="flex justify-around w-1/2 gap-6 sm:gap-8 lg:gap-12"
+              className="flex w-1/2 justify-around gap-6 sm:gap-8 lg:gap-12"
             >
               {testimonials.map((testimonialGroup, groupIndex) => (
                 <div
@@ -172,9 +172,9 @@ export function TestimonialsSlide() {
                       className="w-80 border border-gray-secondary-400/60 bg-gray-secondary-50 px-6 py-8 sm:w-96 sm:p-8 lg:w-[512px] lg:p-10"
                     >
                       <div className="flex ">
-                        <div className="w-12 h-12 shrink-0 bg-gray-secondary-100 lg:h-14 lg:w-14">
+                        <div className="h-12 w-12 shrink-0 bg-gray-secondary-100 lg:h-14 lg:w-14">
                           <Image
-                            className="object-cover object-center w-full h-full podcast-image"
+                            className="podcast-image h-full w-full object-cover object-center"
                             width={56}
                             height={56}
                             src={testimonial.image}
@@ -182,7 +182,7 @@ export function TestimonialsSlide() {
                           />
                         </div>
                         <div className="ml-4">
-                          <p className="font-medium text-md text-slate-900 lg:text-lg">
+                          <p className="text-md font-medium text-slate-900 lg:text-lg">
                             {testimonial.person}
                           </p>
 
@@ -193,7 +193,7 @@ export function TestimonialsSlide() {
                       </div>
                       <div className="relative">
                         <svg
-                          className="absolute z-0 w-10 h-10 transform -left-3 -top-3 text-purple-dark/20 sm:-left-4 sm:-top-4 sm:h-12 sm:w-12 lg:-left-6 lg:-top-6 lg:h-16 lg:w-16"
+                          className="absolute -left-3 -top-3 z-0 h-10 w-10 transform text-purple-dark/20 sm:-left-4 sm:-top-4 sm:h-12 sm:w-12 lg:-left-6 lg:-top-6 lg:h-16 lg:w-16"
                           height="48"
                           width="48"
                           viewBox="0 0 48 48"
@@ -206,7 +206,7 @@ export function TestimonialsSlide() {
                             />
                           </g>
                         </svg>
-                        <p className="relative z-10 mt-8 leading-relaxed text-md text-slate-700 lg:mt-10 lg:text-lg">
+                        <p className="relative z-10 mt-8 text-md leading-relaxed text-slate-700 lg:mt-10 lg:text-lg">
                           {testimonial.quote}
                         </p>
                       </div>
