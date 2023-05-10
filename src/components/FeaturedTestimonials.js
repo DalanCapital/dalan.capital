@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import Image from 'next/future/image'
+import Image from 'next/image'
 
 import { Container } from '@/components/Container'
 import podcastImage1 from '@/images/stock/podcast-01.jpg'

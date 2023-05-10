@@ -1,4 +1,4 @@
-import Image from 'next/future/image'
+import Image from 'next/image'
 
 import Team01 from '@/images/avatars/team-01.jpg'
 import Team02 from '@/images/avatars/team-02.jpg'

@@ -1,4 +1,4 @@
-import Image from 'next/future/image'
+import Image from 'next/image'
 import { useEffect } from 'react'
 
 import Podcast01 from '@/images/podcasts/podcast-01.jpeg'
