@@ -93,6 +93,8 @@ function crud() {
                           src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png"
                           alt="iMac Front Image"
                           className="mr-3 h-8 w-auto"
+                          width="32"
+                          height="32"
                         />
                         Apple iMac 27&#34;
                       </div>
@@ -257,6 +259,8 @@ function crud() {
                           src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png"
                           alt="iMac Front Image"
                           className="mr-3 h-8 w-auto"
+                          width="32"
+                          height="32"
                         />
                         Apple iMac 20&#34;
                       </div>
@@ -421,6 +425,8 @@ function crud() {
                           src="https://flowbite.s3.amazonaws.com/blocks/application-ui/devices/apple-iphone-14.png"
                           alt="iMac Front Image"
                           className="mr-3 h-8 w-auto"
+                          width="32"
+                          height="32"
                         />
                         Apple iPhone 14
                       </div>
@@ -585,6 +591,8 @@ function crud() {
                           src="https://flowbite.s3.amazonaws.com/blocks/application-ui/devices/apple-ipad-air.png"
                           alt="iMac Front Image"
                           className="mr-3 h-8 w-auto"
+                          width="32"
+                          height="32"
                         />
                         Apple iPad Air
                       </div>
@@ -749,6 +757,8 @@ function crud() {
                           src="https://flowbite.s3.amazonaws.com/blocks/application-ui/devices/xbox-series-s.png"
                           alt="iMac Front Image"
                           className="mr-3 h-8 w-auto"
+                          width="32"
+                          height="32"
                         />
                         Xbox Series S
                       </div>
@@ -913,6 +923,8 @@ function crud() {
                           src="https://flowbite.s3.amazonaws.com/blocks/application-ui/devices/playstation-5.png"
                           alt="iMac Front Image"
                           className="mr-3 h-8 w-auto"
+                          width="32"
+                          height="32"
                         />
                         PlayStation 5
                       </div>
@@ -1077,6 +1089,8 @@ function crud() {
                           src="https://flowbite.s3.amazonaws.com/blocks/application-ui/devices/xbox-series-x.png"
                           alt="iMac Front Image"
                           className="mr-3 h-8 w-auto"
+                          width="32"
+                          height="32"
                         />
                         Xbox Series X
                       </div>
@@ -1900,6 +1914,8 @@ function crud() {
                   <Image
                     src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-side-image.png"
                     alt="imac image"
+                    width="32"
+                    height="32"
                   />
                   <button
                     type="button"
@@ -1925,6 +1941,8 @@ function crud() {
                   <Image
                     src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png"
                     alt="imac image"
+                    width="32"
+                    height="32"
                   />
                   <button
                     type="button"
@@ -1950,6 +1968,8 @@ function crud() {
                   <Image
                     src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-back-image.png"
                     alt="imac image"
+                    width="32"
+                    height="32"
                   />
                   <button
                     type="button"
@@ -1975,6 +1995,8 @@ function crud() {
                   <Image
                     src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-side-image.png"
                     alt="imac image"
+                    width="32"
+                    height="32"
                   />
                   <button
                     type="button"
