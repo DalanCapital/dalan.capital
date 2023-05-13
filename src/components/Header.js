@@ -185,6 +185,7 @@ export function Header() {
               <a className="flex flex-shrink-0 items-center">
                 <Image
                   src={logo}
+                  alt="Dalan logo"
                   className="h-7 w-auto sm:h-8 md:hidden lg:block lg:h-9"
                 />
                 <Image

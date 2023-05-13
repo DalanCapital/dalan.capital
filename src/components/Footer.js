@@ -46,7 +46,11 @@ export function Footer() {
         <div className="lg:grid lg:grid-cols-12 lg:gap-12">
           <div className="max-w-xl lg:col-span-4 lg:max-w-none">
             <Link href="/" aria-label="Home" className="flex flex-shrink-0">
-              <Image src={logo} className="h-7 w-auto sm:h-8 lg:h-9" />
+              <Image
+                src={logo}
+                alt="Dalan logo"
+                className="h-8 w-auto sm:h-9 lg:h-10"
+              />
             </Link>
             <p className="mt-10 text-md leading-relaxed text-slate-50">
               Lorem ipsum dolor sit amet aliqua rhoncus turpis. Justo adipiscing
