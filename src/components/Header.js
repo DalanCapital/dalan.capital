@@ -1,7 +1,8 @@
+'use client'
 import { Fragment } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
+import { usePathname } from 'next/navigation'
 import { Disclosure, Transition, Popover, Menu } from '@headlessui/react'
 import clsx from 'clsx'
 import { ChevronDownIcon, ChevronRightIcon } from '@heroicons/react/20/solid'
@@ -30,7 +31,7 @@ const pages = [
 ]
 
 export function Header() {
-  const router = useRouter()
+  const pathname = usePathname()
 
   function MenuIcon({ open }) {
     return (
@@ -201,7 +202,7 @@ export function Header() {
                 >
                   <a
                     className={clsx(
-                      router.pathname == link.href
+                      pathname == link.href
                         ? 'bg-amber-50 text-slate-900'
                         : 'text-slate-700 hover:bg-amber-50 hover:text-slate-900',
                       'inline-block px-4 py-2 font-medium'
@@ -239,7 +240,7 @@ export function Header() {
                           <Link legacyBehavior href={subLink.href}>
                             <a
                               className={`block py-3.5 px-5 font-medium ${
-                                router.pathname == subLink.href
+                                pathname == subLink.href
                                   ? 'bg-gray-secondary-100/60 text-slate-900'
                                   : 'text-slate-700 transition duration-300 ease-in-out hover:bg-gray-secondary-100/60 hover:text-slate-900'
                               }`}
