@@ -9,8 +9,8 @@ import { ChevronDownIcon, ChevronRightIcon } from '@heroicons/react/20/solid'
 
 import { Container } from '@/components/Container'
 import { Button } from '@/components/Button'
-import logo from '@/images/logo-dark.png'
-import logoIcon from '@/images/logo-icon.png'
+import logo from 'public/images/logo-dark.png'
+import logoIcon from 'public/images/logo-icon.png'
 
 const links = [
   { label: 'Home', href: '/' },

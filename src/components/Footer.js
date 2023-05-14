@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-import logo from '@/images/logo-light.png'
+import logo from 'public/images/logo-light.png'
 import { Container } from '@/components/Container'
 
 const navigation = {

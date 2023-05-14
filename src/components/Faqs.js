@@ -4,7 +4,7 @@ import clsx from 'clsx'
 import { Disclosure, Transition } from '@headlessui/react'
 
 import { Container } from '@/components/Container'
-import faqImage from '@/images/stock/faq-image.jpg'
+import faqImage from 'public/images/stock/faq-image.jpg'
 
 const faqs = [
   {

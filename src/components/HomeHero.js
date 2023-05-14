@@ -1,8 +1,8 @@
 import { CheckCircleIcon } from '@heroicons/react/24/solid'
 import Image from 'next/image'
 
-import Avatar from '@/images/avatars/avatar-01.jpg'
-import homeHeroImg from '@/images/stock/home-hero.jpg'
+import Avatar from 'public/images/avatars/avatar-01.jpg'
+import homeHeroImg from 'public/images/stock/home-hero.jpg'
 import { Container } from '@/components/Container'
 import { Button } from '@/components/Button'
 

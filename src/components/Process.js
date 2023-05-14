@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 import { Container } from '@/components/Container'
 import { Button } from '@/components/Button'
-import processImage from '@/images/stock/process.jpg'
+import processImage from 'public/images/stock/process.jpg'
 
 export function Process() {
   return (

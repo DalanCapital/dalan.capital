@@ -1,8 +1,8 @@
 import Image from 'next/image'
 
 import { Container } from '@/components/Container'
-import ctaImage1 from '@/images/stock/cta-image-01.jpg'
-import ctaImage2 from '@/images/stock/cta-image-02.jpg'
+import ctaImage1 from 'public/images/stock/cta-image-01.jpg'
+import ctaImage2 from 'public/images/stock/cta-image-02.jpg'
 import { Button } from '@/components/Button'
 
 export function CallToAction() {

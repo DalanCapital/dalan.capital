@@ -4,7 +4,7 @@ import { EnvelopeIcon } from '@heroicons/react/24/outline'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
 
-import logo from '@/images/logo-icon.png'
+import logo from 'public/images/logo-icon.png'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 
