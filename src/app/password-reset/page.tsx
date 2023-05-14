@@ -1,12 +1,12 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import { EnvelopeIcon } from '@heroicons/react/24/outline'
-import { XMarkIcon } from '@heroicons/react/24/outline'
-import Image from 'next/image'
+import Head from "next/head";
+import Link from "next/link";
+import { EnvelopeIcon } from "@heroicons/react/24/outline";
+import { XMarkIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
 
-import logo from '@/images/logo-icon.png'
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
+import logo from "@/images/logo-icon.png";
+import { Button } from "@/components/Button";
+import { Container } from "@/components/Container";
 
 export default function Signup() {
   return (
@@ -25,7 +25,7 @@ export default function Signup() {
           <div className="mx-auto flex max-w-lg flex-col items-center">
             <Link legacyBehavior href="/" aria-label="Home">
               <a className="flex flex-shrink-0">
-                <Image src={logo} className="h-auto w-12" />
+                <Image alt="logo" src={logo} className="h-auto w-12" />
               </a>
             </Link>
             <h1 className="mt-10 text-center text-4xl font-semibold text-slate-900">
@@ -75,5 +75,5 @@ export default function Signup() {
         </Container>
       </section>
     </>
-  )
+  );
 }

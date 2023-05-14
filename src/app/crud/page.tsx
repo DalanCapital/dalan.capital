@@ -1,9 +1,8 @@
-import { Button } from '@/components/Button'
-import { Footer } from '@/components/Footer'
-import { Header } from '@/components/Header'
-import ProductsFilter from '@/components/ProductsFilter'
-import Head from 'next/head'
-import Image from 'next/image'
+import { Button } from "@/components/Button";
+import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
+import ProductsFilter from "@/components/ProductsFilter";
+import Head from "next/head";
 
 function crud() {
   return (
@@ -73,7 +72,6 @@ function crud() {
                         <input
                           id="checkbox-table-search-1"
                           type="checkbox"
-                          onClick="event.stopPropagation()"
                           className="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
                         />
                         <label
@@ -89,9 +87,9 @@ function crud() {
                       className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white"
                     >
                       <div className="mr-3 flex items-center">
-                        <Image
+                        <img
                           src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png"
-                          alt="iMac Front Image"
+                          alt="iMac Front img"
                           className="mr-3 h-8 w-auto"
                           width="32"
                           height="32"
@@ -239,7 +237,6 @@ function crud() {
                         <input
                           id="checkbox-table-search-1"
                           type="checkbox"
-                          onClick="event.stopPropagation()"
                           className="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
                         />
                         <label
@@ -255,9 +252,9 @@ function crud() {
                       className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white"
                     >
                       <div className="mr-3 flex items-center">
-                        <Image
+                        <img
                           src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png"
-                          alt="iMac Front Image"
+                          alt="iMac Front img"
                           className="mr-3 h-8 w-auto"
                           width="32"
                           height="32"
@@ -405,7 +402,6 @@ function crud() {
                         <input
                           id="checkbox-table-search-1"
                           type="checkbox"
-                          onClick="event.stopPropagation()"
                           className="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
                         />
                         <label
@@ -421,9 +417,9 @@ function crud() {
                       className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white"
                     >
                       <div className="mr-3 flex items-center">
-                        <Image
+                        <img
                           src="https://flowbite.s3.amazonaws.com/blocks/application-ui/devices/apple-iphone-14.png"
-                          alt="iMac Front Image"
+                          alt="iMac Front img"
                           className="mr-3 h-8 w-auto"
                           width="32"
                           height="32"
@@ -571,7 +567,6 @@ function crud() {
                         <input
                           id="checkbox-table-search-1"
                           type="checkbox"
-                          onClick="event.stopPropagation()"
                           className="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
                         />
                         <label
@@ -587,9 +582,9 @@ function crud() {
                       className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white"
                     >
                       <div className="mr-3 flex items-center">
-                        <Image
+                        <img
                           src="https://flowbite.s3.amazonaws.com/blocks/application-ui/devices/apple-ipad-air.png"
-                          alt="iMac Front Image"
+                          alt="iMac Front img"
                           className="mr-3 h-8 w-auto"
                           width="32"
                           height="32"
@@ -737,7 +732,6 @@ function crud() {
                         <input
                           id="checkbox-table-search-1"
                           type="checkbox"
-                          onClick="event.stopPropagation()"
                           className="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
                         />
                         <label
@@ -753,9 +747,9 @@ function crud() {
                       className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white"
                     >
                       <div className="mr-3 flex items-center">
-                        <Image
+                        <img
                           src="https://flowbite.s3.amazonaws.com/blocks/application-ui/devices/xbox-series-s.png"
-                          alt="iMac Front Image"
+                          alt="iMac Front img"
                           className="mr-3 h-8 w-auto"
                           width="32"
                           height="32"
@@ -903,7 +897,6 @@ function crud() {
                         <input
                           id="checkbox-table-search-1"
                           type="checkbox"
-                          onClick="event.stopPropagation()"
                           className="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
                         />
                         <label
@@ -919,9 +912,9 @@ function crud() {
                       className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white"
                     >
                       <div className="mr-3 flex items-center">
-                        <Image
+                        <img
                           src="https://flowbite.s3.amazonaws.com/blocks/application-ui/devices/playstation-5.png"
-                          alt="iMac Front Image"
+                          alt="iMac Front img"
                           className="mr-3 h-8 w-auto"
                           width="32"
                           height="32"
@@ -1069,7 +1062,6 @@ function crud() {
                         <input
                           id="checkbox-table-search-1"
                           type="checkbox"
-                          onClick="event.stopPropagation()"
                           className="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
                         />
                         <label
@@ -1085,9 +1077,9 @@ function crud() {
                       className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white"
                     >
                       <div className="mr-3 flex items-center">
-                        <Image
+                        <img
                           src="https://flowbite.s3.amazonaws.com/blocks/application-ui/devices/xbox-series-x.png"
-                          alt="iMac Front Image"
+                          alt="iMac Front img"
                           className="mr-3 h-8 w-auto"
                           width="32"
                           height="32"
@@ -1337,7 +1329,7 @@ function crud() {
       </section>
       <div
         id="createProductModal"
-        tabIndex="-1"
+        tabIndex={-1}
         aria-hidden="true"
         className="fixed top-0 right-0 left-0 z-50 hidden h-[calc(100%-1rem)] w-full items-center justify-center overflow-y-auto overflow-x-hidden md:inset-0 md:h-full"
       >
@@ -1383,7 +1375,7 @@ function crud() {
                     id="name"
                     className="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 outline-none focus:border-blue-600 focus:ring-blue-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
                     placeholder="Type product name"
-                    required=""
+                    required
                   />
                 </div>
                 <div>
@@ -1397,7 +1389,7 @@ function crud() {
                     id="category"
                     className="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 outline-none focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
                   >
-                    <option selected="">Select category</option>
+                    <option selected>Select category</option>
                     <option value="TV">TV/Monitors</option>
                     <option value="PC">PC</option>
                     <option value="GA">Gaming/Console</option>
@@ -1417,7 +1409,7 @@ function crud() {
                     id="brand"
                     className="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 outline-none focus:border-blue-600 focus:ring-blue-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
                     placeholder="Product brand"
-                    required=""
+                    required
                   />
                 </div>
                 <div>
@@ -1433,7 +1425,7 @@ function crud() {
                     id="price"
                     className="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 outline-none focus:border-blue-600 focus:ring-blue-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
                     placeholder="$2999"
-                    required=""
+                    required
                   />
                 </div>
                 <div className="grid gap-4 sm:col-span-2 sm:grid-cols-4 md:gap-6">
@@ -1450,7 +1442,7 @@ function crud() {
                       id="weight"
                       className="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 outline-none focus:border-blue-600 focus:ring-blue-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
                       placeholder="12"
-                      required=""
+                      required
                     />
                   </div>
                   <div>
@@ -1466,7 +1458,7 @@ function crud() {
                       id="length"
                       className="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 outline-none focus:border-blue-600 focus:ring-blue-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
                       placeholder="105"
-                      required=""
+                      required
                     />
                   </div>
                   <div>
@@ -1482,7 +1474,7 @@ function crud() {
                       id="breadth"
                       className="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 outline-none focus:border-blue-600 focus:ring-blue-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
                       placeholder="15"
-                      required=""
+                      required
                     />
                   </div>
                   <div>
@@ -1498,7 +1490,7 @@ function crud() {
                       id="width"
                       className="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 outline-none focus:border-blue-600 focus:ring-blue-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
                       placeholder="23"
-                      required=""
+                      required
                     />
                   </div>
                 </div>
@@ -1511,7 +1503,7 @@ function crud() {
                   </label>
                   <textarea
                     id="description"
-                    rows="4"
+                    rows={4}
                     className="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 outline-none focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
                     placeholder="Write product description here"
                   ></textarea>
@@ -1550,7 +1542,7 @@ function crud() {
                 </div>
                 <div className="mr-4 flex items-center">
                   <input
-                    checked=""
+                    checked
                     id="inline-checked-checkbox"
                     type="checkbox"
                     value=""
@@ -1567,7 +1559,7 @@ function crud() {
               </div>
               <div className="mb-4">
                 <span className="mb-2 block text-sm font-medium text-gray-900 dark:text-white">
-                  Product Images
+                  Product imgs
                 </span>
                 <div className="flex w-full items-center justify-center">
                   <label
@@ -1652,7 +1644,7 @@ function crud() {
         action="#"
         id="drawer-update-product"
         className="fixed top-0 left-0 z-40 h-screen w-full max-w-3xl -translate-x-full overflow-y-auto bg-white p-4 transition-transform dark:bg-gray-800"
-        tabIndex="-1"
+        tabIndex={-1}
         aria-labelledby="drawer-update-product-label"
         aria-hidden="true"
       >
@@ -1699,7 +1691,7 @@ function crud() {
                 className="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 outline-none focus:border-blue-600 focus:ring-blue-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
                 value="Apple iMac 27&ldquo;"
                 placeholder="Type product name"
-                required=""
+                required
               />
             </div>
             <div>
@@ -1878,10 +1870,10 @@ function crud() {
                     data-popper-escaped=""
                     data-popper-placement="bottom"
                     style={{
-                      position: 'absolute',
-                      inset: '0px auto auto 0px',
-                      margin: '0px',
-                      transform: 'translate3d(0px, 335px, 0px)',
+                      position: "absolute",
+                      inset: "0px auto auto 0px",
+                      margin: "0px",
+                      transform: "translate3d(0px, 335px, 0px)",
                     }}
                   >
                     Show full screen
@@ -1891,10 +1883,10 @@ function crud() {
                 <div className="rounded-b-lg bg-white px-4 py-3 dark:bg-gray-800">
                   <textarea
                     id="description"
-                    rows="8"
+                    rows={8}
                     className="block w-full border-0 bg-white px-0 text-sm text-gray-800 outline-none focus:ring-0 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400"
                     placeholder="Write product description here"
-                    required=""
+                    required
                   >
                     Standard glass, 3.8GHz 8-core 10th-generation Intel Core i7
                     processor, Turbo Boost up to 5.0GHz, 16GB 2666MHz DDR4
@@ -1907,11 +1899,11 @@ function crud() {
             </div>
             <div className="mb-4">
               <span className="mb-2 block text-sm font-medium text-gray-900 dark:text-white">
-                Product Images
+                Product imgs
               </span>
               <div className="mb-4 grid grid-cols-3 gap-4">
                 <div className="relative rounded bg-gray-100 p-2 dark:bg-gray-700 sm:h-36 sm:w-36">
-                  <Image
+                  <img
                     src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-side-image.png"
                     alt="imac image"
                     width="32"
@@ -1938,7 +1930,7 @@ function crud() {
                   </button>
                 </div>
                 <div className="relative rounded bg-gray-100 p-2 dark:bg-gray-700 sm:h-36 sm:w-36">
-                  <Image
+                  <img
                     src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png"
                     alt="imac image"
                     width="32"
@@ -1965,7 +1957,7 @@ function crud() {
                   </button>
                 </div>
                 <div className="relative rounded bg-gray-100 p-2 dark:bg-gray-700 sm:h-36 sm:w-36">
-                  <Image
+                  <img
                     src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-back-image.png"
                     alt="imac image"
                     width="32"
@@ -1992,7 +1984,7 @@ function crud() {
                   </button>
                 </div>
                 <div className="relative rounded bg-gray-100 p-2 dark:bg-gray-700 sm:h-36 sm:w-36">
-                  <Image
+                  <img
                     src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-side-image.png"
                     alt="imac image"
                     width="32"
@@ -2106,7 +2098,7 @@ function crud() {
                 className="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 outline-none focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
                 value="Apple"
                 placeholder="Product Brand"
-                required=""
+                required
               />
             </div>
             <div>
@@ -2120,7 +2112,7 @@ function crud() {
                 id="category"
                 className="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 outline-none focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
               >
-                <option selected="">Electronics</option>
+                <option selected>Electronics</option>
                 <option value="TV">TV/Monitors</option>
                 <option value="PC">PC</option>
                 <option value="GA">Gaming/Console</option>
@@ -2141,7 +2133,7 @@ function crud() {
                 className="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 outline-none focus:border-blue-600 focus:ring-blue-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
                 value="12"
                 placeholder="Ex. 12"
-                required=""
+                required
               />
             </div>
             <div>
@@ -2158,7 +2150,7 @@ function crud() {
                 className="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 outline-none focus:border-blue-600 focus:ring-blue-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
                 value="105"
                 placeholder="Ex. 105"
-                required=""
+                required
               />
             </div>
             <div>
@@ -2175,7 +2167,7 @@ function crud() {
                 className="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 outline-none focus:border-blue-600 focus:ring-blue-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
                 value="15"
                 placeholder="Ex. 15"
-                required=""
+                required
               />
             </div>
             <div>
@@ -2192,7 +2184,7 @@ function crud() {
                 className="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 outline-none focus:border-blue-600 focus:ring-blue-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
                 value="23"
                 placeholder="Ex. 23"
-                required=""
+                required
               />
             </div>
           </div>
@@ -2228,7 +2220,7 @@ function crud() {
 
       <div
         id="delete-modal"
-        tabIndex="-1"
+        tabIndex={-1}
         className="fixed top-0 left-0 right-0 z-50 hidden h-[calc(100%-1rem)] max-h-full overflow-y-auto overflow-x-hidden p-4 md:inset-0"
       >
         <div className="relative h-auto max-h-full w-full max-w-md">
@@ -2292,7 +2284,7 @@ function crud() {
       </div>
       <Footer />
     </>
-  )
+  );
 }
 
-export default crud
+export default crud;

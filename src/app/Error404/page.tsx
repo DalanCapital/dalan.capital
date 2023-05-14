@@ -1,9 +1,8 @@
-import Head from 'next/head'
+import Head from "next/head";
 
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
-import { Header } from '@/components/Header'
-import { Footer } from '@/components/Footer'
+import { Button } from "@/components/Button";
+import { Container } from "@/components/Container";
+import { Footer } from "@/components/Footer";
 
 export default function Custom404() {
   return (
@@ -11,8 +10,6 @@ export default function Custom404() {
       <Head>
         <title>Wavvy - 404</title>
       </Head>
-
-      <Header />
 
       <section className="bg-amber-100 py-16 sm:py-20">
         <Container>
@@ -74,5 +71,5 @@ export default function Custom404() {
 
       <Footer />
     </>
-  )
+  );
 }

@@ -1,37 +1,37 @@
-'use client'
-import { Fragment } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import { Disclosure, Transition, Popover, Menu } from '@headlessui/react'
-import clsx from 'clsx'
-import { ChevronDownIcon, ChevronRightIcon } from '@heroicons/react/20/solid'
+"use client";
+import { Fragment } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Disclosure, Transition, Popover, Menu } from "@headlessui/react";
+import clsx from "clsx";
+import { ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
 
-import { Container } from '@/components/Container'
-import { Button } from '@/components/Button'
-import logo from '@/images/logo-dark.png'
-import logoIcon from '@/images/logo-icon.png'
+import { Container } from "@/components/Container";
+import { Button } from "@/components/Button";
+import logo from "@/images/logo-dark.png";
+import logoIcon from "@/images/logo-icon.png";
 
 const links = [
-  { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' },
-  { label: 'Pricing', href: '/pricing' },
-  { label: 'Contact', href: '/contact' },
-]
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "Contact", href: "/contact" },
+];
 
 const pages = [
-  { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' },
-  { label: 'Pricing', href: '/pricing' },
-  { label: 'Contact', href: '/contact' },
-  { label: 'Sign in', href: '/signin' },
-  { label: 'Sign up', href: '/signup' },
-  { label: 'Password reset', href: '/password-reset' },
-  { label: '404', href: '/404' },
-]
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "Contact", href: "/contact" },
+  { label: "Sign in", href: "/signin" },
+  { label: "Sign up", href: "/signup" },
+  { label: "Password reset", href: "/password-reset" },
+  { label: "404", href: "/404" },
+];
 
 export function Header() {
-  const pathname = usePathname()
+  const pathname = usePathname();
 
   function MenuIcon({ open }) {
     return (
@@ -40,30 +40,30 @@ export function Header() {
       >
         <span
           className={clsx(
-            open && 'top-1.5 left-1/2 w-0',
-            'absolute top-0 left-0 block h-0.5 w-full rotate-0 transform rounded-full bg-slate-600 opacity-100 transition duration-300 ease-in-out group-hover:bg-slate-900'
+            open && "top-1.5 left-1/2 w-0",
+            "absolute top-0 left-0 block h-0.5 w-full rotate-0 transform rounded-full bg-slate-600 opacity-100 transition duration-300 ease-in-out group-hover:bg-slate-900"
           )}
         />
         <span
           className={clsx(
-            open && 'rotate-45',
-            'absolute left-0 top-1.5 block h-0.5 w-full rotate-0 transform rounded-full bg-slate-600 opacity-100 transition duration-300 ease-in-out group-hover:bg-gray-900'
+            open && "rotate-45",
+            "absolute left-0 top-1.5 block h-0.5 w-full rotate-0 transform rounded-full bg-slate-600 opacity-100 transition duration-300 ease-in-out group-hover:bg-gray-900"
           )}
         />
         <span
           className={clsx(
-            open && '-rotate-45',
-            'absolute left-0 top-1.5 block h-0.5 w-full rotate-0 transform rounded-full bg-slate-600 opacity-100 transition duration-300 ease-in-out group-hover:bg-gray-900'
+            open && "-rotate-45",
+            "absolute left-0 top-1.5 block h-0.5 w-full rotate-0 transform rounded-full bg-slate-600 opacity-100 transition duration-300 ease-in-out group-hover:bg-gray-900"
           )}
         />
         <span
           className={clsx(
-            open && 'top-1.5 left-1/2 w-0',
-            'absolute left-0 top-3 block h-0.5 w-full rotate-0 transform rounded-full bg-slate-600 opacity-100 transition duration-300 ease-in-out group-hover:bg-gray-900'
+            open && "top-1.5 left-1/2 w-0",
+            "absolute left-0 top-3 block h-0.5 w-full rotate-0 transform rounded-full bg-slate-600 opacity-100 transition duration-300 ease-in-out group-hover:bg-gray-900"
           )}
         />
       </span>
-    )
+    );
   }
 
   function MobileNav() {
@@ -111,7 +111,7 @@ export function Header() {
                     >
                       <a
                         className={
-                          'block px-4 pt-4 pb-2 font-medium text-slate-700 hover:bg-amber-50 hover:text-slate-900'
+                          "block px-4 pt-4 pb-2 font-medium text-slate-700 hover:bg-amber-50 hover:text-slate-900"
                         }
                       >
                         {link.label}
@@ -125,16 +125,16 @@ export function Header() {
                         <Disclosure.Button
                           className={`group flex w-full items-center justify-between px-4 pb-2 pt-4 font-medium duration-150 ease-in-out ${
                             open
-                              ? 'bg-amber-50 text-slate-900'
-                              : 'text-slate-700 hover:bg-amber-50  hover:text-slate-900'
+                              ? "bg-amber-50 text-slate-900"
+                              : "text-slate-700 hover:bg-amber-50  hover:text-slate-900"
                           }`}
                         >
                           <span>Pages</span>
                           <ChevronRightIcon
                             className={`ml-2 h-5 w-5 duration-300 ${
                               open
-                                ? 'rotate-90 text-slate-900'
-                                : 'text-slate-600/90 group-hover:text-slate-900'
+                                ? "rotate-90 text-slate-900"
+                                : "text-slate-600/90 group-hover:text-slate-900"
                             }`}
                             aria-hidden="true"
                           />
@@ -173,7 +173,7 @@ export function Header() {
           </Transition.Child>
         </Transition.Root>
       </Popover>
-    )
+    );
   }
 
   return (
@@ -204,9 +204,9 @@ export function Header() {
                   <a
                     className={clsx(
                       pathname == link.href
-                        ? 'bg-amber-50 text-slate-900'
-                        : 'text-slate-700 hover:bg-amber-50 hover:text-slate-900',
-                      'inline-block px-4 py-2 font-medium'
+                        ? "bg-amber-50 text-slate-900"
+                        : "text-slate-700 hover:bg-amber-50 hover:text-slate-900",
+                      "inline-block px-4 py-2 font-medium"
                     )}
                   >
                     {link.label}
@@ -220,16 +220,16 @@ export function Header() {
                     <Menu.Button
                       className={`group flex items-center px-4  py-2  font-medium duration-150 ease-in-out ${
                         open
-                          ? 'bg-amber-50 text-slate-900'
-                          : 'text-slate-700 hover:bg-amber-50  hover:text-slate-900'
+                          ? "bg-amber-50 text-slate-900"
+                          : "text-slate-700 hover:bg-amber-50  hover:text-slate-900"
                       }`}
                     >
                       <span>Pages</span>
                       <ChevronDownIcon
                         className={`ml-2 h-5 w-5 duration-300 ${
                           open
-                            ? 'rotate-180 text-slate-900'
-                            : 'text-slate-600/90 group-hover:text-slate-900'
+                            ? "rotate-180 text-slate-900"
+                            : "text-slate-600/90 group-hover:text-slate-900"
                         }`}
                         aria-hidden="true"
                       />
@@ -242,8 +242,8 @@ export function Header() {
                             <a
                               className={`block py-3.5 px-5 font-medium ${
                                 pathname == subLink.href
-                                  ? 'bg-gray-secondary-100/60 text-slate-900'
-                                  : 'text-slate-700 transition duration-300 ease-in-out hover:bg-gray-secondary-100/60 hover:text-slate-900'
+                                  ? "bg-gray-secondary-100/60 text-slate-900"
+                                  : "text-slate-700 transition duration-300 ease-in-out hover:bg-gray-secondary-100/60 hover:text-slate-900"
                               }`}
                             >
                               {subLink.label}
@@ -278,5 +278,5 @@ export function Header() {
         </div>
       </Container>
     </header>
-  )
+  );
 }
