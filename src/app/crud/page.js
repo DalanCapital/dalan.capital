@@ -2225,7 +2225,6 @@ function crud() {
           </button>
         </div>
       </form>
-
       <div
         id="delete-modal"
         tabIndex="-1"
