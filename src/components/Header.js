@@ -27,7 +27,7 @@ const pages = [
   { label: "Sign in", href: "/signin" },
   { label: "Sign up", href: "/signup" },
   { label: "Password reset", href: "/password-reset" },
-  { label: "404", href: "/404" },
+  { label: "404", href: "/Error404" },
 ];
 
 export function Header() {
@@ -103,10 +103,10 @@ export function Header() {
             >
               <div>
                 <div className="flex flex-col divide-y divide-gray-secondary-400/75">
-                  {links.map((link) => (
+                  {links.map((link, index) => (
                     <Link
                       legacyBehavior
-                      key={`${link.name}-mobile`}
+                      key={`${index}-mobile`}
                       href={link.href}
                     >
                       <a
