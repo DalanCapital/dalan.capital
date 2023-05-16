@@ -1,14 +1,14 @@
 import Image from 'next/image'
 
 import { Container } from '@/components/Container'
-import logoChase from '@/images/logos/chase.svg'
-import logoDailyNews from '@/images/logos/daily-news-dark.svg'
-import logoEntrepreneur from '@/images/logos/entrepreneur-dark.svg'
-import logoQuartz from '@/images/logos/quartz-dark.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoNetflix from '@/images/logos/netflix.svg'
-import logoHubspot from '@/images/logos/hubspot.svg'
-import logoAmazon from '@/images/logos/amazon.svg'
+import logoChase from 'public/images/logos/chase.svg'
+import logoDailyNews from 'public/images/logos/daily-news-dark.svg'
+import logoEntrepreneur from 'public/images/logos/entrepreneur-dark.svg'
+import logoQuartz from 'public/images/logos/quartz-dark.svg'
+import logoFacebook from 'public/images/logos/facebook.svg'
+import logoNetflix from 'public/images/logos/netflix.svg'
+import logoHubspot from 'public/images/logos/hubspot.svg'
+import logoAmazon from 'public/images/logos/amazon.svg'
 
 const companies = [
   { name: 'Chase', logo: logoChase },

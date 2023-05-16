@@ -7,6 +7,27 @@ import { Disclosure, Transition, Popover, Menu } from "@headlessui/react";
 import clsx from "clsx";
 import { ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
 
+<<<<<<< HEAD
+import { Container } from '@/components/Container'
+import { Button } from '@/components/Button'
+import logo from 'public/images/logo-dark.png'
+import logoIcon from 'public/images/logo-icon.png'
+
+const links = [
+  { label: 'Home', href: '/' },
+  { label: 'Features', href: '/features' },
+  { label: 'Pricing', href: '/pricing' },
+  { label: 'About', href: '/about' },
+  { label: 'Contact', href: '/contact' },
+]
+
+const more = [
+  { label: 'Newsroom', href: '/blog/newsroom' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'Documentation', href: '/docs' },
+  { label: 'Open APIs', href: '/docs/apis' },
+]
+=======
 import { Container } from "@/components/Container";
 import { Button } from "@/components/Button";
 import logo from "@/images/logo-dark.png";
@@ -29,6 +50,7 @@ const pages = [
   { label: "Password reset", href: "/password-reset" },
   { label: "404", href: "/Error404" },
 ];
+>>>>>>> de557bc2b354bade399111d096affbd041d715a6
 
 export function Header() {
   const pathname = usePathname();
@@ -129,7 +151,7 @@ export function Header() {
                               : "text-slate-700 hover:bg-amber-50  hover:text-slate-900"
                           }`}
                         >
-                          <span>Pages</span>
+                          <span>More</span>
                           <ChevronRightIcon
                             className={`ml-2 h-5 w-5 duration-300 ${
                               open
@@ -141,7 +163,7 @@ export function Header() {
                         </Disclosure.Button>
 
                         <Disclosure.Panel className="z-20 space-y-0 px-4">
-                          {pages.map((subLink) => (
+                          {more.map((subLink) => (
                             <div
                               className="mt-2"
                               key={`${subLink.label}-dropdown-desktop`}
@@ -161,11 +183,11 @@ export function Header() {
                 <div className="mt-6">
                   <Button
                     size="md"
-                    href="/signin"
+                    href="/contact"
                     variant="ghost"
                     className="w-full"
                   >
-                    Sign in
+                    +447888872710
                   </Button>
                 </div>
               </div>
@@ -225,7 +247,7 @@ export function Header() {
                           : "text-slate-700 hover:bg-amber-50  hover:text-slate-900"
                       }`}
                     >
-                      <span>Pages</span>
+                      <span>More</span>
                       <ChevronDownIcon
                         className={`ml-2 h-5 w-5 duration-300 ${
                           open
@@ -237,7 +259,7 @@ export function Header() {
                     </Menu.Button>
 
                     <Menu.Items className="absolute right-0 z-20 mt-3 w-52 space-y-1 bg-gray-secondary-50 p-2.5 drop-shadow filter">
-                      {pages.map((subLink, i) => (
+                      {more.map((subLink, i) => (
                         <Menu.Item key={`${subLink.label}-dropdown-desktop`}>
                           <Link legacyBehavior href={subLink.href}>
                             <a
@@ -262,14 +284,14 @@ export function Header() {
           <div>
             <div className="flex items-center space-x-4">
               <div className="hidden lg:block">
-                <Link legacyBehavior href="/signin">
+                <Link legacyBehavior href="/contact">
                   <a className="inline-block px-4 py-2 font-medium text-slate-700 hover:bg-amber-50 hover:text-slate-900">
-                    Sign in
+                    +44 7888 872710
                   </a>
                 </Link>
               </div>
-              <Button size="md" href="/signup">
-                Sign up free
+              <Button size="md" href="/start">
+                Start Here
               </Button>
             </div>
           </div>

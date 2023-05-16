@@ -1,41 +1,43 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-import logo from '@/images/logo-light.png'
+import logo from 'public/images/logo-light.png'
 import { Container } from '@/components/Container'
 
 const navigation = {
   company: [
-    { name: 'About us', href: '/about' },
-    { name: 'Careers', href: '#' },
-    { name: 'Customers', href: '#' },
-    { name: 'Privacy', href: '#' },
-    { name: 'Contact us', href: '/contact' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Newsroom', href: '/blog/newsroom' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Success Stories', href: '/success-stories' },
   ],
   solutions: [
-    { name: 'For small creators', href: '#' },
-    { name: 'For professionals', href: '#' },
-    { name: 'For large companies', href: '#' },
-    { name: 'Webinars', href: '#' },
-    { name: 'Live shows', href: '#' },
-    { name: 'Virtual conferences', href: '#' },
+    { name: 'For Traders', href: '/traders' },
+    { name: 'For Personal Investors', href: '/personal-investors' },
+    { name: 'For Small Businesses', href: '/small-businesses' },
+    { name: 'For Hedge Funds', href: '/hedge-funds' },
+    { name: 'For Investment Banks', href: '/investment-banks' },
+    { name: 'For Enterprises', href: '/enterprise' },
   ],
-  integrations: [
-    { name: 'Youtube', href: '#' },
-    { name: 'Facebook', href: '#' },
-    { name: 'Twitter', href: '#' },
-    { name: 'Spotify', href: '#' },
-    { name: 'Tiktok', href: '#' },
-    { name: 'Apple Podcasts', href: '#' },
-    { name: 'Google Podcasts', href: '#' },
+  features: [
+    { name: 'Salary', href: '/features/salary' },
+    { name: 'Insurance', href: '/features/insurance' },
+    { name: 'Team', href: '/features/team' },
+    { name: 'Desk', href: '/features/desk' },
+    { name: 'Contract', href: '/features/contract' },
+    { name: 'Coaching', href: '/features/coaching' },
+    { name: 'FPA', href: '/features/fpa' },
   ],
   resources: [
-    { name: 'Blog', href: '#' },
-    { name: 'Tutorials', href: '#' },
-    { name: 'FAQ', href: '#' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Case studies', href: '#' },
-    { name: 'Help center', href: '#' },
+    { name: 'FAQ', href: '/faq' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Documents', href: '/docs' },
+    { name: 'Open APIs', href: '/docs/apis' },
+    { name: 'Reports', href: '/blog/reports' },
+    { name: 'Live Stats', href: '/live' },
+    { name: 'Integrations', href: '/integrations' },
   ],
 }
 
@@ -150,9 +152,9 @@ export function Footer() {
               </div>
             </div>
             <div className="col-span-6 md:col-span-3">
-              <p className="text-md font-semibold text-white">Integrations</p>
+              <p className="text-md font-semibold text-white">Features</p>
               <div className="mt-4 flex flex-col space-y-3">
-                {navigation.integrations.map((item) => (
+                {navigation.features.map((item) => (
                   <Link legacyBehavior key={item.name} href={item.href}>
                     <a className="text-md text-slate-100 duration-150 hover:text-white">
                       {item.name}
@@ -178,20 +180,20 @@ export function Footer() {
         <hr className="mt-16 border-gray-secondary-400/60" />
         <div className="flex w-full flex-col justify-between pt-8 sm:flex-row">
           <p className="text-md text-slate-200">
-            © 2022 Wavvy, Inc. All rights reserved.
+            © 2022-23 Dalan Capital, LLC. All rights reserved.
           </p>
           <div className="mt-5 flex gap-3 sm:mt-0">
-            <Link legacyBehavior href="#">
+            <Link legacyBehavior href="/terms">
               <a className="text-md text-slate-100 underline duration-150 hover:text-white">
                 Terms
               </a>
             </Link>
-            <Link legacyBehavior href="#">
+            <Link legacyBehavior href="/privacy">
               <a className="text-md text-slate-100 underline duration-150 hover:text-white">
                 Privacy
               </a>
             </Link>
-            <Link legacyBehavior href="#">
+            <Link legacyBehavior href="/cookies">
               <a className="text-md text-slate-100 underline duration-150 hover:text-white">
                 Cookies
               </a>

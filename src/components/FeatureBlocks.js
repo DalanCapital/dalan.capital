@@ -1,9 +1,16 @@
 import Image from "next/image";
 
+<<<<<<< HEAD
+import { Container } from '@/components/Container'
+import { Button } from '@/components/Button'
+import featureImage1 from 'public/images/stock/feature-image-01.jpg'
+import featureImage2 from 'public/images/stock/feature-image-02.jpg'
+=======
 import { Container } from "@/components/Container";
 import { Button } from "@/components/Button";
 import featureImage1 from "@/images/stock/feature-image-01.jpg";
 import featureImage2 from "@/images/stock/feature-image-02.jpg";
+>>>>>>> de557bc2b354bade399111d096affbd041d715a6
 
 export function FeatureBlocks() {
   return (

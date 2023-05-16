@@ -15,10 +15,9 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Wavvy - Everything you need to start a podcast</title>
-        <meta
-          name="description"
-          content="Wavvy takes the headaches out of your podcast hosting, and allows you to focus on what you love to do – record great content, and grow a loyal audience."
+        <title>Dalan Capital - Connect Market</title>
+        <meta name="description"
+          content="Dalan Capital is a platform that connects investors with traders."
         />
       </Head>
       <Header />

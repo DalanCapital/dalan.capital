@@ -1,14 +1,27 @@
+<<<<<<< HEAD:src/app/crud/page.js
+import { Button } from '@/components/Button'
+import { Footer } from '@/components/Footer'
+import { Header } from '@/components/Header'
+import ProductsFilter from '@/components/ProductsFilter'
+import Head from 'next/head'
+import Image from 'next/image'
+=======
 import { Button } from "@/components/Button";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import ProductsFilter from "@/components/ProductsFilter";
 import Head from "next/head";
 import Image from "next/image";
+>>>>>>> de557bc2b354bade399111d096affbd041d715a6:src/app/crud/page.tsx
 import {
   PencilSquareIcon,
   TrashIcon,
   ShoppingCartIcon,
+<<<<<<< HEAD:src/app/crud/page.js
+} from '@heroicons/react/24/outline'
+=======
 } from "@heroicons/react/24/outline";
+>>>>>>> de557bc2b354bade399111d096affbd041d715a6:src/app/crud/page.tsx
 function crud() {
   return (
     <>

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import MapImage from '@/images/map.png'
+import MapImage from 'public/images/map.png'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 

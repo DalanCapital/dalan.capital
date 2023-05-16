@@ -1,20 +1,14 @@
-import Head from "next/head";
-import Link from "next/link";
-import { UserIcon } from "@heroicons/react/24/outline";
-import { EnvelopeIcon } from "@heroicons/react/24/outline";
-import { LockClosedIcon } from "@heroicons/react/24/outline";
-import { XMarkIcon } from "@heroicons/react/24/outline";
-import Image from "next/image";
+import Head from 'next/head'
+import Link from 'next/link'
+import { UserIcon } from '@heroicons/react/24/outline'
+import { EnvelopeIcon } from '@heroicons/react/24/outline'
+import { LockClosedIcon } from '@heroicons/react/24/outline'
+import { XMarkIcon } from '@heroicons/react/24/outline'
+import Image from 'next/image'
 
-<<<<<<< HEAD:src/app/signup/page.js
 import logo from 'public/images/logo-icon.png'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
-=======
-import logo from "@/images/logo-icon.png";
-import { Button } from "@/components/Button";
-import { Container } from "@/components/Container";
->>>>>>> de557bc2b354bade399111d096affbd041d715a6:src/app/signup/page.tsx
 
 export default function Signup() {
   return (
@@ -33,7 +27,7 @@ export default function Signup() {
         <Container className="w-full">
           <div className="mx-auto flex max-w-lg flex-col items-center">
             <Link href="/" aria-label="Home" className="flex flex-shrink-0">
-              <Image alt="logo" src={logo} className="h-auto w-12 " />
+              <Image src={logo} className="h-auto w-12 " />
             </Link>
             <h1 className="mt-10 text-center text-4xl font-semibold text-slate-900">
               Sign up for an account
@@ -174,5 +168,5 @@ export default function Signup() {
         </Container>
       </section>
     </>
-  );
+  )
 }
