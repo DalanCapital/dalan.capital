@@ -1,8 +1,8 @@
-import Image from 'next/image'
+import Image from "next/image";
 
-import { Container } from '@/components/Container'
-import { Button } from '@/components/Button'
-import processImage from '@/images/stock/process.jpg'
+import { Container } from "@/components/Container";
+import { Button } from "@/components/Button";
+import processImage from "@/images/stock/process.jpg";
 
 export function Process() {
   return (
@@ -47,9 +47,10 @@ export function Process() {
         <Image
           src={processImage}
           className="h-full w-full object-cover object-right-top"
+          alt="proccess image"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-slate-700 to-white/0 lg:bg-gradient-to-r"></div>
       </div>
     </section>
-  )
+  );
 }

@@ -190,6 +190,7 @@ export function Header() {
                 />
                 <Image
                   src={logoIcon}
+                  alt="Dalan logo"
                   className="hidden h-7 w-auto md:block lg:hidden"
                 />
               </a>

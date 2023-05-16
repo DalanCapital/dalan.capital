@@ -1,9 +1,9 @@
-import Image from 'next/image'
+import Image from "next/image";
 
-import { Container } from '@/components/Container'
-import ctaImage1 from '@/images/stock/cta-image-01.jpg'
-import ctaImage2 from '@/images/stock/cta-image-02.jpg'
-import { Button } from '@/components/Button'
+import { Container } from "@/components/Container";
+import ctaImage1 from "@/images/stock/cta-image-01.jpg";
+import ctaImage2 from "@/images/stock/cta-image-02.jpg";
+import { Button } from "@/components/Button";
 
 export function CallToAction() {
   return (
@@ -26,10 +26,15 @@ export function CallToAction() {
           <Image
             src={ctaImage2}
             className="col-span-5 my-auto ml-px h-auto w-full"
+            alt="call to action"
           />
-          <Image src={ctaImage1} className="col-span-7 h-auto w-full" />
+          <Image
+            src={ctaImage1}
+            className="col-span-7 h-auto w-full"
+            alt="call to action"
+          />
         </div>
       </Container>
     </section>
-  )
+  );
 }
