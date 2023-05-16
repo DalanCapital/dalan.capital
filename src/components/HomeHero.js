@@ -1,10 +1,17 @@
-import { CheckCircleIcon } from '@heroicons/react/24/solid'
-import Image from 'next/image'
+import { CheckCircleIcon } from "@heroicons/react/24/solid";
+import Image from "next/image";
 
+<<<<<<< HEAD
 import Avatar from 'public/images/avatars/avatar-01.jpg'
 import homeHeroImg from 'public/images/stock/home-hero.jpg'
 import { Container } from '@/components/Container'
 import { Button } from '@/components/Button'
+=======
+import Avatar from "@/images/avatars/avatar-01.jpg";
+import homeHeroImg from "@/images/stock/home-hero.jpg";
+import { Container } from "@/components/Container";
+import { Button } from "@/components/Button";
+>>>>>>> de557bc2b354bade399111d096affbd041d715a6
 
 export function HomeHero() {
   return (
@@ -18,7 +25,7 @@ export function HomeHero() {
             <li className="flex items-center md:items-start xl:items-center">
               <CheckCircleIcon className="h-5 w-5 shrink-0 text-slate-800 md:h-6 md:w-6 xl:h-5 xl:w-5" />
               <p className="ml-3 text-slate-700 lg:ml-4 xl:ml-5 xl:text-lg">
-                One click integrations, that{' '}
+                One click integrations, that{" "}
                 <span className="font-medium text-slate-900">
                   work for you.
                 </span>
@@ -27,14 +34,14 @@ export function HomeHero() {
             <li className="flex items-center md:items-start xl:items-center">
               <CheckCircleIcon className="h-5 w-5 shrink-0 text-slate-800 md:h-6 md:w-6 xl:h-5 xl:w-5" />
               <p className="ml-3 text-slate-700 lg:ml-4 xl:ml-5 xl:text-lg">
-                Just record and hit publish, it’s that{' '}
+                Just record and hit publish, it’s that{" "}
                 <span className="font-medium text-slate-900">simple.</span>
               </p>
             </li>
             <li className="flex items-center md:items-start xl:items-center">
               <CheckCircleIcon className="h-5 w-5 shrink-0 text-slate-800 md:h-6 md:w-6 xl:h-5 xl:w-5" />
               <p className="ml-3 text-slate-700 lg:ml-4 xl:ml-5 xl:text-lg">
-                Get weekly reports straight to your inbox with{' '}
+                Get weekly reports straight to your inbox with{" "}
                 <span className="font-medium text-slate-900">key metrics.</span>
               </p>
             </li>
@@ -107,10 +114,11 @@ export function HomeHero() {
               src={homeHeroImg}
               className="h-auto w-full object-cover"
               priority
+              alt="hero image"
             />
           </div>
         </Container>
       </div>
     </section>
-  )
+  );
 }

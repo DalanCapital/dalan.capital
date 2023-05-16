@@ -1,20 +1,29 @@
-import Image from 'next/image'
-import clsx from 'clsx'
+import Image from "next/image";
+import clsx from "clsx";
 
+<<<<<<< HEAD
 import { Container } from '@/components/Container'
 import logoBuzzfeed from 'public/images/logos/buzzfeed.svg'
 import logoDailyNews from 'public/images/logos/daily-news.svg'
 import logoEntrepreneur from 'public/images/logos/entrepreneur.svg'
 import logoQuartz from 'public/images/logos/quartz.svg'
 import logoWired from 'public/images/logos/wired.svg'
+=======
+import { Container } from "@/components/Container";
+import logoBuzzfeed from "@/images/logos/buzzfeed.svg";
+import logoDailyNews from "@/images/logos/daily-news.svg";
+import logoEntrepreneur from "@/images/logos/entrepreneur.svg";
+import logoQuartz from "@/images/logos/quartz.svg";
+import logoWired from "@/images/logos/wired.svg";
+>>>>>>> de557bc2b354bade399111d096affbd041d715a6
 
 const companies = [
-  { name: 'Buzzfeed', logo: logoBuzzfeed },
-  { name: 'Daily News', logo: logoDailyNews },
-  { name: 'Entrepreneur', logo: logoEntrepreneur },
-  { name: 'Quartz', logo: logoQuartz },
-  { name: 'Wired', logo: logoWired },
-]
+  { name: "Buzzfeed", logo: logoBuzzfeed },
+  { name: "Daily News", logo: logoDailyNews },
+  { name: "Entrepreneur", logo: logoEntrepreneur },
+  { name: "Quartz", logo: logoQuartz },
+  { name: "Wired", logo: logoWired },
+];
 
 export function LogosRow() {
   return (
@@ -28,15 +37,20 @@ export function LogosRow() {
             <li
               key={company.name}
               className={clsx(
-                index <= 2 ? 'sm:col-span-2' : 'sm:col-span-3',
-                'flex justify-center sm:col-span-2 lg:col-span-1'
+                index <= 2 ? "sm:col-span-2" : "sm:col-span-3",
+                "flex justify-center sm:col-span-2 lg:col-span-1"
               )}
             >
-              <Image src={company.logo} alt={company.name} />
+              <Image
+                width={190}
+                height={40}
+                src={company.logo}
+                alt={company.name}
+              />
             </li>
           ))}
         </ul>
       </Container>
     </section>
-  )
+  );
 }

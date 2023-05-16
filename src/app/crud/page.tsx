@@ -1,10 +1,27 @@
+<<<<<<< HEAD:src/app/crud/page.js
 import { Button } from '@/components/Button'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import ProductsFilter from '@/components/ProductsFilter'
 import Head from 'next/head'
 import Image from 'next/image'
-
+=======
+import { Button } from "@/components/Button";
+import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
+import ProductsFilter from "@/components/ProductsFilter";
+import Head from "next/head";
+import Image from "next/image";
+>>>>>>> de557bc2b354bade399111d096affbd041d715a6:src/app/crud/page.tsx
+import {
+  PencilSquareIcon,
+  TrashIcon,
+  ShoppingCartIcon,
+<<<<<<< HEAD:src/app/crud/page.js
+} from '@heroicons/react/24/outline'
+=======
+} from "@heroicons/react/24/outline";
+>>>>>>> de557bc2b354bade399111d096affbd041d715a6:src/app/crud/page.tsx
 function crud() {
   return (
     <>
@@ -73,7 +90,6 @@ function crud() {
                         <input
                           id="checkbox-table-search-1"
                           type="checkbox"
-                          onClick="event.stopPropagation()"
                           className="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
                         />
                         <label
@@ -170,15 +186,7 @@ function crud() {
                     </td>
                     <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
                       <div className="flex items-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 24 24"
-                          fill="currentColor"
-                          className="mr-2 h-5 w-5 text-gray-400"
-                          aria-hidden="true"
-                        >
-                          <path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
-                        </svg>
+                        <ShoppingCartIcon className="mr-2 h-5 w-5 text-gray-400" />
                         1.6M
                       </div>
                     </td>
@@ -192,20 +200,7 @@ function crud() {
                           aria-controls="drawer-update-product"
                           className="flex items-center rounded bg-blue-700 py-2 px-3 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                         >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="mr-2 -ml-0.5 h-4 w-4"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            aria-hidden="true"
-                          >
-                            <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
-                            <path
-                              fillRule="evenodd"
-                              d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
+                          <PencilSquareIcon className="mr-2 -ml-0.5 h-4 w-4" />
                           Edit
                         </button>
 
@@ -215,19 +210,7 @@ function crud() {
                           data-modal-toggle="delete-modal"
                           className="flex items-center rounded border border-red-700 px-3 py-2 text-center text-sm font-medium text-red-700 hover:bg-red-800 hover:text-white focus:outline-none focus:ring-4 focus:ring-red-300 dark:border-red-500 dark:text-red-500 dark:hover:bg-red-600 dark:hover:text-white dark:focus:ring-red-900"
                         >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="mr-2 -ml-0.5 h-4 w-4"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            aria-hidden="true"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
+                          <TrashIcon className="mr-2 -ml-0.5 h-4 w-4" />
                           Delete
                         </button>
                       </div>
@@ -239,7 +222,6 @@ function crud() {
                         <input
                           id="checkbox-table-search-1"
                           type="checkbox"
-                          onClick="event.stopPropagation()"
                           className="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
                         />
                         <label
@@ -336,15 +318,7 @@ function crud() {
                     </td>
                     <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
                       <div className="flex items-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 24 24"
-                          fill="currentColor"
-                          className="mr-2 h-5 w-5 text-gray-400"
-                          aria-hidden="true"
-                        >
-                          <path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
-                        </svg>
+                        <ShoppingCartIcon className="mr-2 h-5 w-5 text-gray-400" />
                         6M
                       </div>
                     </td>
@@ -358,20 +332,7 @@ function crud() {
                           aria-controls="drawer-update-product"
                           className="flex items-center rounded bg-blue-700 py-2 px-3 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                         >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="mr-2 -ml-0.5 h-4 w-4"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            aria-hidden="true"
-                          >
-                            <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
-                            <path
-                              fillRule="evenodd"
-                              d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
+                          <PencilSquareIcon className="mr-2 -ml-0.5 h-4 w-4" />
                           Edit
                         </button>
 
@@ -381,19 +342,7 @@ function crud() {
                           data-modal-toggle="delete-modal"
                           className="flex items-center rounded border border-red-700 px-3 py-2 text-center text-sm font-medium text-red-700 hover:bg-red-800 hover:text-white focus:outline-none focus:ring-4 focus:ring-red-300 dark:border-red-500 dark:text-red-500 dark:hover:bg-red-600 dark:hover:text-white dark:focus:ring-red-900"
                         >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="mr-2 -ml-0.5 h-4 w-4"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            aria-hidden="true"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
+                          <TrashIcon className="mr-2 -ml-0.5 h-4 w-4" />
                           Delete
                         </button>
                       </div>
@@ -405,7 +354,6 @@ function crud() {
                         <input
                           id="checkbox-table-search-1"
                           type="checkbox"
-                          onClick="event.stopPropagation()"
                           className="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
                         />
                         <label
@@ -502,15 +450,7 @@ function crud() {
                     </td>
                     <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
                       <div className="flex items-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 24 24"
-                          fill="currentColor"
-                          className="mr-2 h-5 w-5 text-gray-400"
-                          aria-hidden="true"
-                        >
-                          <path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
-                        </svg>
+                        <ShoppingCartIcon className="mr-2 h-5 w-5 text-gray-400" />
                         1.2M
                       </div>
                     </td>
@@ -524,20 +464,7 @@ function crud() {
                           aria-controls="drawer-update-product"
                           className="flex items-center rounded bg-blue-700 py-2 px-3 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                         >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="mr-2 -ml-0.5 h-4 w-4"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            aria-hidden="true"
-                          >
-                            <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
-                            <path
-                              fillRule="evenodd"
-                              d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
+                          <PencilSquareIcon className="mr-2 -ml-0.5 h-4 w-4" />
                           Edit
                         </button>
 
@@ -547,19 +474,7 @@ function crud() {
                           data-modal-toggle="delete-modal"
                           className="flex items-center rounded border border-red-700 px-3 py-2 text-center text-sm font-medium text-red-700 hover:bg-red-800 hover:text-white focus:outline-none focus:ring-4 focus:ring-red-300 dark:border-red-500 dark:text-red-500 dark:hover:bg-red-600 dark:hover:text-white dark:focus:ring-red-900"
                         >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="mr-2 -ml-0.5 h-4 w-4"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            aria-hidden="true"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
+                          <TrashIcon className="mr-2 -ml-0.5 h-4 w-4" />
                           Delete
                         </button>
                       </div>
@@ -571,7 +486,6 @@ function crud() {
                         <input
                           id="checkbox-table-search-1"
                           type="checkbox"
-                          onClick="event.stopPropagation()"
                           className="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
                         />
                         <label
@@ -668,15 +582,7 @@ function crud() {
                     </td>
                     <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
                       <div className="flex items-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 24 24"
-                          fill="currentColor"
-                          className="mr-2 h-5 w-5 text-gray-400"
-                          aria-hidden="true"
-                        >
-                          <path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
-                        </svg>
+                        <ShoppingCartIcon className="mr-2 h-5 w-5 text-gray-400" />
                         298K
                       </div>
                     </td>
@@ -690,20 +596,7 @@ function crud() {
                           aria-controls="drawer-update-product"
                           className="flex items-center rounded bg-blue-700 py-2 px-3 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                         >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="mr-2 -ml-0.5 h-4 w-4"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            aria-hidden="true"
-                          >
-                            <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
-                            <path
-                              fillRule="evenodd"
-                              d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
+                          <PencilSquareIcon className="mr-2 -ml-0.5 h-4 w-4" />
                           Edit
                         </button>
 
@@ -713,19 +606,7 @@ function crud() {
                           data-modal-toggle="delete-modal"
                           className="flex items-center rounded border border-red-700 px-3 py-2 text-center text-sm font-medium text-red-700 hover:bg-red-800 hover:text-white focus:outline-none focus:ring-4 focus:ring-red-300 dark:border-red-500 dark:text-red-500 dark:hover:bg-red-600 dark:hover:text-white dark:focus:ring-red-900"
                         >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="mr-2 -ml-0.5 h-4 w-4"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            aria-hidden="true"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
+                          <TrashIcon className="mr-2 -ml-0.5 h-4 w-4" />
                           Delete
                         </button>
                       </div>
@@ -737,7 +618,6 @@ function crud() {
                         <input
                           id="checkbox-table-search-1"
                           type="checkbox"
-                          onClick="event.stopPropagation()"
                           className="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
                         />
                         <label
@@ -834,15 +714,7 @@ function crud() {
                     </td>
                     <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
                       <div className="flex items-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 24 24"
-                          fill="currentColor"
-                          className="mr-2 h-5 w-5 text-gray-400"
-                          aria-hidden="true"
-                        >
-                          <path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
-                        </svg>
+                        <ShoppingCartIcon className="mr-2 h-5 w-5 text-gray-400" />
                         99
                       </div>
                     </td>
@@ -856,20 +728,7 @@ function crud() {
                           aria-controls="drawer-update-product"
                           className="flex items-center rounded bg-blue-700 py-2 px-3 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                         >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="mr-2 -ml-0.5 h-4 w-4"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            aria-hidden="true"
-                          >
-                            <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
-                            <path
-                              fillRule="evenodd"
-                              d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
+                          <PencilSquareIcon className="mr-2 -ml-0.5 h-4 w-4" />
                           Edit
                         </button>
 
@@ -879,19 +738,7 @@ function crud() {
                           data-modal-toggle="delete-modal"
                           className="flex items-center rounded border border-red-700 px-3 py-2 text-center text-sm font-medium text-red-700 hover:bg-red-800 hover:text-white focus:outline-none focus:ring-4 focus:ring-red-300 dark:border-red-500 dark:text-red-500 dark:hover:bg-red-600 dark:hover:text-white dark:focus:ring-red-900"
                         >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="mr-2 -ml-0.5 h-4 w-4"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            aria-hidden="true"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
+                          <TrashIcon className="mr-2 -ml-0.5 h-4 w-4" />
                           Delete
                         </button>
                       </div>
@@ -903,7 +750,6 @@ function crud() {
                         <input
                           id="checkbox-table-search-1"
                           type="checkbox"
-                          onClick="event.stopPropagation()"
                           className="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
                         />
                         <label
@@ -1000,15 +846,7 @@ function crud() {
                     </td>
                     <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
                       <div className="flex items-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 24 24"
-                          fill="currentColor"
-                          className="mr-2 h-5 w-5 text-gray-400"
-                          aria-hidden="true"
-                        >
-                          <path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
-                        </svg>
+                        <ShoppingCartIcon className="mr-2 h-5 w-5 text-gray-400" />
                         2.1M
                       </div>
                     </td>
@@ -1022,20 +860,7 @@ function crud() {
                           aria-controls="drawer-update-product"
                           className="flex items-center rounded bg-blue-700 py-2 px-3 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                         >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="mr-2 -ml-0.5 h-4 w-4"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            aria-hidden="true"
-                          >
-                            <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
-                            <path
-                              fillRule="evenodd"
-                              d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
+                          <PencilSquareIcon className="mr-2 -ml-0.5 h-4 w-4" />
                           Edit
                         </button>
 
@@ -1045,19 +870,7 @@ function crud() {
                           data-modal-toggle="delete-modal"
                           className="flex items-center rounded border border-red-700 px-3 py-2 text-center text-sm font-medium text-red-700 hover:bg-red-800 hover:text-white focus:outline-none focus:ring-4 focus:ring-red-300 dark:border-red-500 dark:text-red-500 dark:hover:bg-red-600 dark:hover:text-white dark:focus:ring-red-900"
                         >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="mr-2 -ml-0.5 h-4 w-4"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            aria-hidden="true"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
+                          <TrashIcon className="mr-2 -ml-0.5 h-4 w-4" />
                           Delete
                         </button>
                       </div>
@@ -1069,7 +882,6 @@ function crud() {
                         <input
                           id="checkbox-table-search-1"
                           type="checkbox"
-                          onClick="event.stopPropagation()"
                           className="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
                         />
                         <label
@@ -1166,15 +978,7 @@ function crud() {
                     </td>
                     <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
                       <div className="flex items-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 24 24"
-                          fill="currentColor"
-                          className="mr-2 h-5 w-5 text-gray-400"
-                          aria-hidden="true"
-                        >
-                          <path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
-                        </svg>
+                        <ShoppingCartIcon className="mr-2 h-5 w-5 text-gray-400" />
                         989K
                       </div>
                     </td>
@@ -1188,20 +992,7 @@ function crud() {
                           aria-controls="drawer-update-product"
                           className="flex items-center rounded bg-blue-700 py-2 px-3 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                         >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="mr-2 -ml-0.5 h-4 w-4"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            aria-hidden="true"
-                          >
-                            <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
-                            <path
-                              fillRule="evenodd"
-                              d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
+                          <PencilSquareIcon className="mr-2 -ml-0.5 h-4 w-4" />
                           Edit
                         </button>
 
@@ -1211,19 +1002,7 @@ function crud() {
                           data-modal-toggle="delete-modal"
                           className="flex items-center rounded border border-red-700 px-3 py-2 text-center text-sm font-medium text-red-700 hover:bg-red-800 hover:text-white focus:outline-none focus:ring-4 focus:ring-red-300 dark:border-red-500 dark:text-red-500 dark:hover:bg-red-600 dark:hover:text-white dark:focus:ring-red-900"
                         >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="mr-2 -ml-0.5 h-4 w-4"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            aria-hidden="true"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
+                          <TrashIcon className="mr-2 -ml-0.5 h-4 w-4" />
                           Delete
                         </button>
                       </div>
@@ -1337,7 +1116,7 @@ function crud() {
       </section>
       <div
         id="createProductModal"
-        tabIndex="-1"
+        tabIndex={-1}
         aria-hidden="true"
         className="fixed top-0 right-0 left-0 z-50 hidden h-[calc(100%-1rem)] w-full items-center justify-center overflow-y-auto overflow-x-hidden md:inset-0 md:h-full"
       >
@@ -1383,7 +1162,7 @@ function crud() {
                     id="name"
                     className="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 outline-none focus:border-blue-600 focus:ring-blue-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
                     placeholder="Type product name"
-                    required=""
+                    required
                   />
                 </div>
                 <div>
@@ -1397,7 +1176,7 @@ function crud() {
                     id="category"
                     className="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 outline-none focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
                   >
-                    <option selected="">Select category</option>
+                    <option selected>Select category</option>
                     <option value="TV">TV/Monitors</option>
                     <option value="PC">PC</option>
                     <option value="GA">Gaming/Console</option>
@@ -1417,7 +1196,7 @@ function crud() {
                     id="brand"
                     className="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 outline-none focus:border-blue-600 focus:ring-blue-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
                     placeholder="Product brand"
-                    required=""
+                    required
                   />
                 </div>
                 <div>
@@ -1433,7 +1212,7 @@ function crud() {
                     id="price"
                     className="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 outline-none focus:border-blue-600 focus:ring-blue-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
                     placeholder="$2999"
-                    required=""
+                    required
                   />
                 </div>
                 <div className="grid gap-4 sm:col-span-2 sm:grid-cols-4 md:gap-6">
@@ -1450,7 +1229,7 @@ function crud() {
                       id="weight"
                       className="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 outline-none focus:border-blue-600 focus:ring-blue-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
                       placeholder="12"
-                      required=""
+                      required
                     />
                   </div>
                   <div>
@@ -1466,7 +1245,7 @@ function crud() {
                       id="length"
                       className="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 outline-none focus:border-blue-600 focus:ring-blue-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
                       placeholder="105"
-                      required=""
+                      required
                     />
                   </div>
                   <div>
@@ -1482,7 +1261,7 @@ function crud() {
                       id="breadth"
                       className="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 outline-none focus:border-blue-600 focus:ring-blue-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
                       placeholder="15"
-                      required=""
+                      required
                     />
                   </div>
                   <div>
@@ -1498,7 +1277,7 @@ function crud() {
                       id="width"
                       className="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 outline-none focus:border-blue-600 focus:ring-blue-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
                       placeholder="23"
-                      required=""
+                      required
                     />
                   </div>
                 </div>
@@ -1511,7 +1290,7 @@ function crud() {
                   </label>
                   <textarea
                     id="description"
-                    rows="4"
+                    rows={4}
                     className="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 outline-none focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
                     placeholder="Write product description here"
                   ></textarea>
@@ -1550,7 +1329,7 @@ function crud() {
                 </div>
                 <div className="mr-4 flex items-center">
                   <input
-                    checked=""
+                    checked
                     id="inline-checked-checkbox"
                     type="checkbox"
                     value=""
@@ -1652,7 +1431,7 @@ function crud() {
         action="#"
         id="drawer-update-product"
         className="fixed top-0 left-0 z-40 h-screen w-full max-w-3xl -translate-x-full overflow-y-auto bg-white p-4 transition-transform dark:bg-gray-800"
-        tabIndex="-1"
+        tabIndex={-1}
         aria-labelledby="drawer-update-product-label"
         aria-hidden="true"
       >
@@ -1699,7 +1478,7 @@ function crud() {
                 className="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 outline-none focus:border-blue-600 focus:ring-blue-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
                 value="Apple iMac 27&ldquo;"
                 placeholder="Type product name"
-                required=""
+                required
               />
             </div>
             <div>
@@ -1878,10 +1657,10 @@ function crud() {
                     data-popper-escaped=""
                     data-popper-placement="bottom"
                     style={{
-                      position: 'absolute',
-                      inset: '0px auto auto 0px',
-                      margin: '0px',
-                      transform: 'translate3d(0px, 335px, 0px)',
+                      position: "absolute",
+                      inset: "0px auto auto 0px",
+                      margin: "0px",
+                      transform: "translate3d(0px, 335px, 0px)",
                     }}
                   >
                     Show full screen
@@ -1891,10 +1670,10 @@ function crud() {
                 <div className="rounded-b-lg bg-white px-4 py-3 dark:bg-gray-800">
                   <textarea
                     id="description"
-                    rows="8"
+                    rows={8}
                     className="block w-full border-0 bg-white px-0 text-sm text-gray-800 outline-none focus:ring-0 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400"
                     placeholder="Write product description here"
-                    required=""
+                    required
                   >
                     Standard glass, 3.8GHz 8-core 10th-generation Intel Core i7
                     processor, Turbo Boost up to 5.0GHz, 16GB 2666MHz DDR4
@@ -2106,7 +1885,7 @@ function crud() {
                 className="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 outline-none focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
                 value="Apple"
                 placeholder="Product Brand"
-                required=""
+                required
               />
             </div>
             <div>
@@ -2120,7 +1899,7 @@ function crud() {
                 id="category"
                 className="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 outline-none focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
               >
-                <option selected="">Electronics</option>
+                <option selected>Electronics</option>
                 <option value="TV">TV/Monitors</option>
                 <option value="PC">PC</option>
                 <option value="GA">Gaming/Console</option>
@@ -2141,7 +1920,7 @@ function crud() {
                 className="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 outline-none focus:border-blue-600 focus:ring-blue-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
                 value="12"
                 placeholder="Ex. 12"
-                required=""
+                required
               />
             </div>
             <div>
@@ -2158,7 +1937,7 @@ function crud() {
                 className="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 outline-none focus:border-blue-600 focus:ring-blue-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
                 value="105"
                 placeholder="Ex. 105"
-                required=""
+                required
               />
             </div>
             <div>
@@ -2175,7 +1954,7 @@ function crud() {
                 className="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 outline-none focus:border-blue-600 focus:ring-blue-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
                 value="15"
                 placeholder="Ex. 15"
-                required=""
+                required
               />
             </div>
             <div>
@@ -2192,7 +1971,7 @@ function crud() {
                 className="block w-full rounded border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 outline-none focus:border-blue-600 focus:ring-blue-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
                 value="23"
                 placeholder="Ex. 23"
-                required=""
+                required
               />
             </div>
           </div>
@@ -2225,10 +2004,9 @@ function crud() {
           </button>
         </div>
       </form>
-
       <div
         id="delete-modal"
-        tabIndex="-1"
+        tabIndex={-1}
         className="fixed top-0 left-0 right-0 z-50 hidden h-[calc(100%-1rem)] max-h-full overflow-y-auto overflow-x-hidden p-4 md:inset-0"
       >
         <div className="relative h-auto max-h-full w-full max-w-md">
@@ -2292,7 +2070,7 @@ function crud() {
       </div>
       <Footer />
     </>
-  )
+  );
 }
 
-export default crud
+export default crud;

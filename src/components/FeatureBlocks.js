@@ -1,9 +1,16 @@
-import Image from 'next/image'
+import Image from "next/image";
 
+<<<<<<< HEAD
 import { Container } from '@/components/Container'
 import { Button } from '@/components/Button'
 import featureImage1 from 'public/images/stock/feature-image-01.jpg'
 import featureImage2 from 'public/images/stock/feature-image-02.jpg'
+=======
+import { Container } from "@/components/Container";
+import { Button } from "@/components/Button";
+import featureImage1 from "@/images/stock/feature-image-01.jpg";
+import featureImage2 from "@/images/stock/feature-image-02.jpg";
+>>>>>>> de557bc2b354bade399111d096affbd041d715a6
 
 export function FeatureBlocks() {
   return (
@@ -11,7 +18,11 @@ export function FeatureBlocks() {
       <Container>
         <div className="relative mx-auto w-full max-w-lg sm:max-w-xl lg:mx-0 lg:max-w-none">
           <div className="left-0 top-1/2 z-10 w-full lg:absolute lg:w-1/2 lg:-translate-y-1/2">
-            <Image src={featureImage1} className="h-auto w-full" />
+            <Image
+              src={featureImage1}
+              className="h-auto w-full"
+              alt="feature image"
+            />
             <div className="absolute right-0 top-0 w-64 -translate-y-24 bg-gray-secondary-100/95 p-6 backdrop-blur-sm sm:py-7 lg:left-0 lg:top-[unset] lg:bottom-0 lg:translate-y-24 2xl:-translate-x-16">
               <p className="text-4xl font-semibold text-slate-900 xl:text-5xl">
                 1000+
@@ -45,7 +56,11 @@ export function FeatureBlocks() {
 
         <div className="relative mx-auto mt-48 w-full max-w-lg sm:max-w-xl lg:mx-0 lg:mt-32 lg:max-w-none">
           <div className="right-0 top-1/2 z-10 w-full lg:absolute lg:w-1/2 lg:-translate-y-1/2">
-            <Image src={featureImage2} className="h-auto w-full" />
+            <Image
+              src={featureImage2}
+              className="h-auto w-full"
+              alt="feature image"
+            />
             <div className="absolute left-0 top-0 w-64 -translate-y-24 bg-gray-secondary-100/95 p-6 backdrop-blur-sm sm:py-7 lg:right-0 lg:top-[unset] lg:left-[unset] lg:bottom-0 lg:translate-y-24 2xl:translate-x-16">
               <p className="text-4xl font-semibold text-slate-900 xl:text-5xl">
                 3M+
@@ -78,5 +93,5 @@ export function FeatureBlocks() {
         </div>
       </Container>
     </section>
-  )
+  );
 }
