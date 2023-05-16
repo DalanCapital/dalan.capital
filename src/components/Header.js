@@ -73,7 +73,7 @@ export function Header() {
           className="group relative z-50 flex cursor-pointer items-center justify-center border border-gray-secondary-400/75 bg-gray-secondary-50 p-3 transition duration-300 ease-in-out focus:outline-none md:hidden"
           aria-label="Toggle Navigation"
         >
-          {({ open }) => <MenuIcon open={open} />}
+          {({ open }) => <MenuIcon />}
         </Popover.Button>
 
         <Transition.Root>
