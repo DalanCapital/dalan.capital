@@ -92,7 +92,7 @@ function crud() {
                       className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white"
                     >
                       <div className="mr-3 flex items-center">
-                        <img
+                        <Image
                           src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png"
                           alt="iMac Front Image"
                           className="mr-3 h-8 w-auto"
@@ -224,7 +224,7 @@ function crud() {
                       className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white"
                     >
                       <div className="mr-3 flex items-center">
-                        <img
+                        <Image
                           src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png"
                           alt="iMac Front Image"
                           className="mr-3 h-8 w-auto"
@@ -356,7 +356,7 @@ function crud() {
                       className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white"
                     >
                       <div className="mr-3 flex items-center">
-                        <img
+                        <Image
                           src="https://flowbite.s3.amazonaws.com/blocks/application-ui/devices/apple-iphone-14.png"
                           alt="iMac Front Image"
                           className="mr-3 h-8 w-auto"
@@ -488,7 +488,7 @@ function crud() {
                       className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white"
                     >
                       <div className="mr-3 flex items-center">
-                        <img
+                        <Image
                           src="https://flowbite.s3.amazonaws.com/blocks/application-ui/devices/apple-ipad-air.png"
                           alt="iMac Front Image"
                           className="mr-3 h-8 w-auto"
@@ -620,7 +620,7 @@ function crud() {
                       className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white"
                     >
                       <div className="mr-3 flex items-center">
-                        <img
+                        <Image
                           src="https://flowbite.s3.amazonaws.com/blocks/application-ui/devices/xbox-series-s.png"
                           alt="iMac Front Image"
                           className="mr-3 h-8 w-auto"
@@ -752,7 +752,7 @@ function crud() {
                       className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white"
                     >
                       <div className="mr-3 flex items-center">
-                        <img
+                        <Image
                           src="https://flowbite.s3.amazonaws.com/blocks/application-ui/devices/playstation-5.png"
                           alt="iMac Front Image"
                           className="mr-3 h-8 w-auto"
@@ -884,7 +884,7 @@ function crud() {
                       className="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white"
                     >
                       <div className="mr-3 flex items-center">
-                        <img
+                        <Image
                           src="https://flowbite.s3.amazonaws.com/blocks/application-ui/devices/xbox-series-x.png"
                           alt="iMac Front Image"
                           className="mr-3 h-8 w-auto"
@@ -1677,7 +1677,7 @@ function crud() {
               </span>
               <div className="mb-4 grid grid-cols-3 gap-4">
                 <div className="relative rounded bg-gray-100 p-2 dark:bg-gray-700 sm:h-36 sm:w-36">
-                  <img
+                  <Image
                     src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-side-image.png"
                     alt="imac image"
                     width="32"
@@ -1704,7 +1704,7 @@ function crud() {
                   </button>
                 </div>
                 <div className="relative rounded bg-gray-100 p-2 dark:bg-gray-700 sm:h-36 sm:w-36">
-                  <img
+                  <Image
                     src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png"
                     alt="imac image"
                     width="32"
@@ -1731,7 +1731,7 @@ function crud() {
                   </button>
                 </div>
                 <div className="relative rounded bg-gray-100 p-2 dark:bg-gray-700 sm:h-36 sm:w-36">
-                  <img
+                  <Image
                     src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-back-image.png"
                     alt="imac image"
                     width="32"
@@ -1758,7 +1758,7 @@ function crud() {
                   </button>
                 </div>
                 <div className="relative rounded bg-gray-100 p-2 dark:bg-gray-700 sm:h-36 sm:w-36">
-                  <img
+                  <Image
                     src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-side-image.png"
                     alt="imac image"
                     width="32"
