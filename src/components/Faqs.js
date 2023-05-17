@@ -3,13 +3,8 @@ import Image from "next/image";
 import clsx from "clsx";
 import { Disclosure, Transition } from "@headlessui/react";
 
-<<<<<<< HEAD
-import { Container } from '@/components/Container'
-import faqImage from 'public/images/stock/faq-image.jpg'
-=======
 import { Container } from "@/components/Container";
-import faqImage from "@/images/stock/faq-image.jpg";
->>>>>>> de557bc2b354bade399111d096affbd041d715a6
+import faqImage from "public/images/stock/faq-image.jpg";
 
 const faqs = [
   {

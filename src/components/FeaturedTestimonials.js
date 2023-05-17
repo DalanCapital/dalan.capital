@@ -1,26 +1,26 @@
-import clsx from 'clsx'
-import Image from 'next/image'
+import clsx from "clsx";
+import Image from "next/image";
 
-import { Container } from '@/components/Container'
-import podcastImage1 from 'public/images/stock/podcast-01.jpg'
-import podcastImage2 from 'public/images/stock/podcast-02.jpg'
+import { Container } from "@/components/Container";
+import podcastImage1 from "public/images/stock/podcast-01.jpg";
+import podcastImage2 from "public/images/stock/podcast-02.jpg";
 
 const testimonials = [
   {
-    person: 'Theo Von',
-    podcast: 'This Past Weekend',
+    person: "Theo Von",
+    podcast: "This Past Weekend",
     image: podcastImage1,
     quote:
-      'Wavvy has taken the headache out of our podcast hosting, and allowed us to focus on what we love to do – record great content, and grow a loyal audience.',
+      "Wavvy has taken the headache out of our podcast hosting, and allowed us to focus on what we love to do – record great content, and grow a loyal audience.",
   },
   {
-    person: 'John Doe',
-    podcast: 'The Fake Podcast',
+    person: "John Doe",
+    podcast: "The Fake Podcast",
     image: podcastImage2,
     quote:
       "I'm a podcast host, and Wavvy makes it so easy to upload and import our episodes. I also love the analytics I get, and the ease of communicating with listeners in the app!",
   },
-]
+];
 
 export function FeaturedTestimonials() {
   return (
@@ -39,14 +39,14 @@ export function FeaturedTestimonials() {
               >
                 <div
                   className={clsx(
-                    index % 2 == 0 ? 'lg:order-1' : undefined,
-                    'relative order-2 lg:mt-20 lg:w-1/2 lg:bg-gray-secondary-100'
+                    index % 2 == 0 ? "lg:order-1" : undefined,
+                    "relative order-2 lg:mt-20 lg:w-1/2 lg:bg-gray-secondary-100"
                   )}
                 >
                   <div
                     className={clsx(
-                      index % 2 == 0 ? 'lg:left-[15%]' : 'lg:right-[15%]',
-                      '-mt-24  w-full border border-gray-secondary-400/60 bg-gray-secondary-50/95 py-8 px-6 backdrop-blur-lg sm:p-8 lg:absolute lg:top-1/2 lg:mt-0 lg:-translate-y-1/2 lg:p-12 xl:p-14'
+                      index % 2 == 0 ? "lg:left-[15%]" : "lg:right-[15%]",
+                      "-mt-24  w-full border border-gray-secondary-400/60 bg-gray-secondary-50/95 py-8 px-6 backdrop-blur-lg sm:p-8 lg:absolute lg:top-1/2 lg:mt-0 lg:-translate-y-1/2 lg:p-12 xl:p-14"
                     )}
                   >
                     <svg
@@ -69,8 +69,8 @@ export function FeaturedTestimonials() {
                     <div className="mt-10 flex items-center space-x-3 text-base sm:mt-16 sm:text-[17px]">
                       <span className="font-medium text-slate-900">
                         {testimonial.person}
-                      </span>{' '}
-                      <span className="font-bold text-purple-dark">/</span>{' '}
+                      </span>{" "}
+                      <span className="font-bold text-purple-dark">/</span>{" "}
                       <span className="font-medium text-slate-500">
                         {testimonial.podcast}
                       </span>
@@ -81,8 +81,8 @@ export function FeaturedTestimonials() {
                   src={testimonial.image}
                   alt={testimonial.person}
                   className={clsx(
-                    index % 2 == 0 ? 'lg:order-2' : undefined,
-                    'order-1 object-cover object-center lg:w-1/2'
+                    index % 2 == 0 ? "lg:order-2" : undefined,
+                    "order-1 object-cover object-center lg:w-1/2"
                   )}
                 />
               </div>
@@ -91,5 +91,5 @@ export function FeaturedTestimonials() {
         </div>
       </Container>
     </section>
-  )
+  );
 }

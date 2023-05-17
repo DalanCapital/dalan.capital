@@ -1,14 +1,14 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import { UserIcon } from '@heroicons/react/24/outline'
-import { EnvelopeIcon } from '@heroicons/react/24/outline'
-import { LockClosedIcon } from '@heroicons/react/24/outline'
-import { XMarkIcon } from '@heroicons/react/24/outline'
-import Image from 'next/image'
+import Head from "next/head";
+import Link from "next/link";
+import { UserIcon } from "@heroicons/react/24/outline";
+import { EnvelopeIcon } from "@heroicons/react/24/outline";
+import { LockClosedIcon } from "@heroicons/react/24/outline";
+import { XMarkIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
 
-import logo from 'public/images/logo-icon.png'
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
+import logo from "public/images/logo-icon.png";
+import { Button } from "@/components/Button";
+import { Container } from "@/components/Container";
 
 export default function Signup() {
   return (
@@ -168,5 +168,5 @@ export default function Signup() {
         </Container>
       </section>
     </>
-  )
+  );
 }

@@ -1,17 +1,10 @@
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 
-<<<<<<< HEAD
-import Avatar from 'public/images/avatars/avatar-01.jpg'
-import homeHeroImg from 'public/images/stock/home-hero.jpg'
-import { Container } from '@/components/Container'
-import { Button } from '@/components/Button'
-=======
-import Avatar from "@/images/avatars/avatar-01.jpg";
-import homeHeroImg from "@/images/stock/home-hero.jpg";
+import Avatar from "public/images/avatars/avatar-01.jpg";
+import homeHeroImg from "public/images/stock/home-hero.jpg";
 import { Container } from "@/components/Container";
 import { Button } from "@/components/Button";
->>>>>>> de557bc2b354bade399111d096affbd041d715a6
 
 export function HomeHero() {
   return (

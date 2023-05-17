@@ -1,8 +1,8 @@
-import Image from 'next/image'
+import Image from "next/image";
 
-import MapImage from 'public/images/map.png'
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
+import MapImage from "public/images/map.png";
+import { Button } from "@/components/Button";
+import { Container } from "@/components/Container";
 
 export function Map() {
   return (
@@ -66,5 +66,5 @@ export function Map() {
         </div>
       </Container>
     </section>
-  )
+  );
 }

@@ -1,13 +1,13 @@
-import Image from 'next/image'
+import Image from "next/image";
 
-import Gallery01 from 'public/images/stock/gallery-01.jpg'
-import Gallery02 from 'public/images/stock/gallery-02.jpg'
-import Gallery03 from 'public/images/stock/gallery-03.jpg'
-import Gallery04 from 'public/images/stock/gallery-04.jpg'
-import Gallery05 from 'public/images/stock/gallery-05.jpg'
-import Gallery06 from 'public/images/stock/gallery-06.jpg'
-import Gallery07 from 'public/images/stock/gallery-07.jpg'
-import { Container } from '@/components/Container'
+import Gallery01 from "public/images/stock/gallery-01.jpg";
+import Gallery02 from "public/images/stock/gallery-02.jpg";
+import Gallery03 from "public/images/stock/gallery-03.jpg";
+import Gallery04 from "public/images/stock/gallery-04.jpg";
+import Gallery05 from "public/images/stock/gallery-05.jpg";
+import Gallery06 from "public/images/stock/gallery-06.jpg";
+import Gallery07 from "public/images/stock/gallery-07.jpg";
+import { Container } from "@/components/Container";
 
 export function AboutHero() {
   return (
@@ -96,5 +96,5 @@ export function AboutHero() {
         <div className="h-16 bg-vanilla sm:h-24"></div>
       </div>
     </section>
-  )
+  );
 }

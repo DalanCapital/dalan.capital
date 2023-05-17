@@ -1,7 +1,7 @@
-import Image from 'next/image'
+import Image from "next/image";
 
-import TeamImage from 'public/images/stock/team.jpg'
-import { Container } from '@/components/Container'
+import TeamImage from "public/images/stock/team.jpg";
+import { Container } from "@/components/Container";
 
 export function StoryWithStats() {
   return (
@@ -97,5 +97,5 @@ export function StoryWithStats() {
         </div>
       </Container>
     </section>
-  )
+  );
 }
