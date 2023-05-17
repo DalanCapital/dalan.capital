@@ -182,6 +182,14 @@ export function Footer() {
           <p className="text-md text-slate-200">
             © 2022-23 Dalan Capital, LLC. All rights reserved.
           </p>
+
+          <p className="text-md text-slate-200 sm:mt-0 mt-5">
+            Proudly part of{" "}
+            <a target="_blank" className="underline" href="https://briofy.net">
+              Briofy
+            </a>
+          </p>
+
           <div className="mt-5 flex gap-3 sm:mt-0">
             <Link legacyBehavior href="/terms">
               <a className="text-md text-slate-100 underline duration-150 hover:text-white">
