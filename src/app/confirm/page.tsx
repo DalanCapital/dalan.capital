@@ -11,14 +11,14 @@ import logo from "public/images/logo-icon.png";
 import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
 import { useState } from "react";
-import { useAuth } from "@/composables/useAuth";
+import { authService } from "@/composables/authService";
 import { IVerifyOTPPayload } from "@werify/id-ts/dist/modules/public/verifyOTP/interfaces/IVerifyOTP";
 
 export default function Signup() {
   let [code, setCode] = useState("");
 
   const verifyOTP = async () => {
-    const { auth } = await useAuth();
+    const { auth } = await authService();
 
     // Otp payload
     let OTPPayload = JSON.parse(

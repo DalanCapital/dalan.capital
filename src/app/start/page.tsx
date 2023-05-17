@@ -10,7 +10,7 @@ import logo from "public/images/logo-icon.png";
 import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
 import { useState } from "react";
-import { useAuth } from "@/composables/useAuth";
+import { authService } from "@/composables/authService";
 import { useRouter } from "next/navigation";
 
 export default function Signin() {
@@ -19,7 +19,7 @@ export default function Signin() {
   const router = useRouter();
   // request otp
   const requestOTP = async () => {
-    const { auth } = await useAuth();
+    const { auth } = await authService();
     auth.requestOTP(email, "/account/request-otp").then((res) => {
       if (res.succeed) {
         localStorage.setItem("OTPPayload", JSON.stringify(res.results));
