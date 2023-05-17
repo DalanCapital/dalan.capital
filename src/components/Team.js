@@ -1,63 +1,63 @@
-import Image from 'next/image'
+import Image from "next/image";
 
-import Team01 from 'public/images/avatars/team-01.jpg'
-import Team02 from 'public/images/avatars/team-02.jpg'
-import Team03 from 'public/images/avatars/team-03.jpg'
-import Team04 from 'public/images/avatars/team-04.jpg'
-import Team05 from 'public/images/avatars/team-05.jpg'
-import Team06 from 'public/images/avatars/team-06.jpg'
-import Team07 from 'public/images/avatars/team-07.jpg'
-import Team08 from 'public/images/avatars/team-08.jpg'
-import Team09 from 'public/images/avatars/team-09.jpg'
-import { Container } from '@/components/Container'
+import Team01 from "public/images/avatars/team-01.jpg";
+import Team02 from "public/images/avatars/team-02.jpg";
+import Team03 from "public/images/avatars/team-03.jpg";
+import Team04 from "public/images/avatars/team-04.jpg";
+import Team05 from "public/images/avatars/team-05.jpg";
+import Team06 from "public/images/avatars/team-06.jpg";
+import Team07 from "public/images/avatars/team-07.jpg";
+import Team08 from "public/images/avatars/team-08.jpg";
+import Team09 from "public/images/avatars/team-09.jpg";
+import { Container } from "@/components/Container";
 
 const team = [
   {
-    name: 'Amanda Smith',
-    role: 'CEO / Founder',
+    name: "Amanda Smith",
+    role: "CEO / Founder",
     avatar: Team01,
   },
   {
-    name: 'Orlando Katwala',
-    role: 'Cofounder',
+    name: "Orlando Katwala",
+    role: "Cofounder",
     avatar: Team02,
   },
   {
-    name: 'Daniel Johnson',
-    role: 'Product Manager',
+    name: "Daniel Johnson",
+    role: "Product Manager",
     avatar: Team03,
   },
   {
-    name: 'Amy Winehouse',
-    role: 'Product Designer',
+    name: "Amy Winehouse",
+    role: "Product Designer",
     avatar: Team04,
   },
   {
-    name: 'Emily Villa',
-    role: 'Sound Engineer',
+    name: "Emily Villa",
+    role: "Sound Engineer",
     avatar: Team05,
   },
   {
-    name: 'Hunter Pimblet',
-    role: 'Sound Engineer',
+    name: "Hunter Pimblet",
+    role: "Sound Engineer",
     avatar: Team06,
   },
   {
-    name: 'Billy Smith',
-    role: 'Software Developer',
+    name: "Billy Smith",
+    role: "Software Developer",
     avatar: Team07,
   },
   {
-    name: 'Veronica Guzman',
-    role: 'Frontend Developer',
+    name: "Veronica Guzman",
+    role: "Frontend Developer",
     avatar: Team08,
   },
   {
-    name: 'Elana Jackson',
-    role: 'Marketing Lead',
+    name: "Elana Jackson",
+    role: "Marketing Lead",
     avatar: Team09,
   },
-]
+];
 
 export function Team() {
   return (
@@ -160,5 +160,5 @@ export function Team() {
         </Container>
       </div>
     </section>
-  )
+  );
 }

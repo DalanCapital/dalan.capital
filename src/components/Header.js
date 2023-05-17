@@ -7,50 +7,25 @@ import { Disclosure, Transition, Popover, Menu } from "@headlessui/react";
 import clsx from "clsx";
 import { ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
 
-<<<<<<< HEAD
-import { Container } from '@/components/Container'
-import { Button } from '@/components/Button'
-import logo from 'public/images/logo-dark.png'
-import logoIcon from 'public/images/logo-icon.png'
-
-const links = [
-  { label: 'Home', href: '/' },
-  { label: 'Features', href: '/features' },
-  { label: 'Pricing', href: '/pricing' },
-  { label: 'About', href: '/about' },
-  { label: 'Contact', href: '/contact' },
-]
-
-const more = [
-  { label: 'Newsroom', href: '/blog/newsroom' },
-  { label: 'Blog', href: '/blog' },
-  { label: 'Documentation', href: '/docs' },
-  { label: 'Open APIs', href: '/docs/apis' },
-]
-=======
 import { Container } from "@/components/Container";
 import { Button } from "@/components/Button";
-import logo from "@/images/logo-dark.png";
-import logoIcon from "@/images/logo-icon.png";
+import logo from "public/images/logo-dark.png";
+import logoIcon from "public/images/logo-icon.png";
 
 const links = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
+  { label: "Features", href: "/features" },
   { label: "Pricing", href: "/pricing" },
+  { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
 
-const pages = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Pricing", href: "/pricing" },
-  { label: "Contact", href: "/contact" },
-  { label: "Sign in", href: "/signin" },
-  { label: "Sign up", href: "/signup" },
-  { label: "Password reset", href: "/password-reset" },
-  { label: "404", href: "/Error404" },
+const more = [
+  { label: "Newsroom", href: "/blog/newsroom" },
+  { label: "Blog", href: "/blog" },
+  { label: "Documentation", href: "/docs" },
+  { label: "Open APIs", href: "/docs/apis" },
 ];
->>>>>>> de557bc2b354bade399111d096affbd041d715a6
 
 export function Header() {
   const pathname = usePathname();
@@ -199,7 +174,7 @@ export function Header() {
   }
 
   return (
-    <header className="h-24 bg-amber-100">
+    <header className="h-24 sticky top-0 z-50 bg-amber-100">
       <Container className="flex h-full w-full items-center border-b border-gray-secondary-300/60">
         <nav className="relative z-50 flex w-full items-center justify-between ">
           <div className="flex items-center space-x-8 lg:space-x-12">

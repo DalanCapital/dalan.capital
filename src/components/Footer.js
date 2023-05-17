@@ -1,45 +1,45 @@
-import Link from 'next/link'
-import Image from 'next/image'
+import Link from "next/link";
+import Image from "next/image";
 
-import logo from 'public/images/logo-light.png'
-import { Container } from '@/components/Container'
+import logo from "public/images/logo-light.png";
+import { Container } from "@/components/Container";
 
 const navigation = {
   company: [
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Newsroom', href: '/blog/newsroom' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Success Stories', href: '/success-stories' },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
+    { name: "Pricing", href: "/pricing" },
+    { name: "Newsroom", href: "/blog/newsroom" },
+    { name: "Careers", href: "/careers" },
+    { name: "Success Stories", href: "/success-stories" },
   ],
   solutions: [
-    { name: 'For Traders', href: '/traders' },
-    { name: 'For Personal Investors', href: '/personal-investors' },
-    { name: 'For Small Businesses', href: '/small-businesses' },
-    { name: 'For Hedge Funds', href: '/hedge-funds' },
-    { name: 'For Investment Banks', href: '/investment-banks' },
-    { name: 'For Enterprises', href: '/enterprise' },
+    { name: "For Traders", href: "/traders" },
+    { name: "For Personal Investors", href: "/personal-investors" },
+    { name: "For Small Businesses", href: "/small-businesses" },
+    { name: "For Hedge Funds", href: "/hedge-funds" },
+    { name: "For Investment Banks", href: "/investment-banks" },
+    { name: "For Enterprises", href: "/enterprise" },
   ],
   features: [
-    { name: 'Salary', href: '/features/salary' },
-    { name: 'Insurance', href: '/features/insurance' },
-    { name: 'Team', href: '/features/team' },
-    { name: 'Desk', href: '/features/desk' },
-    { name: 'Contract', href: '/features/contract' },
-    { name: 'Coaching', href: '/features/coaching' },
-    { name: 'FPA', href: '/features/fpa' },
+    { name: "Salary", href: "/features/salary" },
+    { name: "Insurance", href: "/features/insurance" },
+    { name: "Team", href: "/features/team" },
+    { name: "Desk", href: "/features/desk" },
+    { name: "Contract", href: "/features/contract" },
+    { name: "Coaching", href: "/features/coaching" },
+    { name: "FPA", href: "/features/fpa" },
   ],
   resources: [
-    { name: 'FAQ', href: '/faq' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Documents', href: '/docs' },
-    { name: 'Open APIs', href: '/docs/apis' },
-    { name: 'Reports', href: '/blog/reports' },
-    { name: 'Live Stats', href: '/live' },
-    { name: 'Integrations', href: '/integrations' },
+    { name: "FAQ", href: "/faq" },
+    { name: "Blog", href: "/blog" },
+    { name: "Documents", href: "/docs" },
+    { name: "Open APIs", href: "/docs/apis" },
+    { name: "Reports", href: "/blog/reports" },
+    { name: "Live Stats", href: "/live" },
+    { name: "Integrations", href: "/integrations" },
   ],
-}
+};
 
 export function Footer() {
   return (
@@ -182,6 +182,14 @@ export function Footer() {
           <p className="text-md text-slate-200">
             © 2022-23 Dalan Capital, LLC. All rights reserved.
           </p>
+
+          <p className="text-md text-slate-200 sm:mt-0 mt-5">
+            Proudly part of{" "}
+            <a target="_blank" className="underline" href="https://briofy.net">
+              Briofy
+            </a>
+          </p>
+
           <div className="mt-5 flex gap-3 sm:mt-0">
             <Link legacyBehavior href="/terms">
               <a className="text-md text-slate-100 underline duration-150 hover:text-white">
@@ -202,5 +210,5 @@ export function Footer() {
         </div>
       </Container>
     </section>
-  )
+  );
 }

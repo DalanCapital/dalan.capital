@@ -6,15 +6,9 @@ import { LockClosedIcon } from "@heroicons/react/24/outline";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 
-<<<<<<< HEAD:src/app/signup/page.js
-import logo from 'public/images/logo-icon.png'
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
-=======
-import logo from "@/images/logo-icon.png";
+import logo from "public/images/logo-icon.png";
 import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
->>>>>>> de557bc2b354bade399111d096affbd041d715a6:src/app/signup/page.tsx
 
 export default function Signup() {
   return (

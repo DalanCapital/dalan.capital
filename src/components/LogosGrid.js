@@ -1,25 +1,25 @@
-import Image from 'next/image'
+import Image from "next/image";
 
-import { Container } from '@/components/Container'
-import logoChase from 'public/images/logos/chase.svg'
-import logoDailyNews from 'public/images/logos/daily-news-dark.svg'
-import logoEntrepreneur from 'public/images/logos/entrepreneur-dark.svg'
-import logoQuartz from 'public/images/logos/quartz-dark.svg'
-import logoFacebook from 'public/images/logos/facebook.svg'
-import logoNetflix from 'public/images/logos/netflix.svg'
-import logoHubspot from 'public/images/logos/hubspot.svg'
-import logoAmazon from 'public/images/logos/amazon.svg'
+import { Container } from "@/components/Container";
+import logoChase from "public/images/logos/chase.svg";
+import logoDailyNews from "public/images/logos/daily-news-dark.svg";
+import logoEntrepreneur from "public/images/logos/entrepreneur-dark.svg";
+import logoQuartz from "public/images/logos/quartz-dark.svg";
+import logoFacebook from "public/images/logos/facebook.svg";
+import logoNetflix from "public/images/logos/netflix.svg";
+import logoHubspot from "public/images/logos/hubspot.svg";
+import logoAmazon from "public/images/logos/amazon.svg";
 
 const companies = [
-  { name: 'Chase', logo: logoChase },
-  { name: 'Daily News', logo: logoDailyNews },
-  { name: 'Entrepreneur', logo: logoEntrepreneur },
-  { name: 'Quartz', logo: logoQuartz },
-  { name: 'Facebook', logo: logoFacebook },
-  { name: 'Netflix', logo: logoNetflix },
-  { name: 'Hubspot', logo: logoHubspot },
-  { name: 'Amazon', logo: logoAmazon },
-]
+  { name: "Chase", logo: logoChase },
+  { name: "Daily News", logo: logoDailyNews },
+  { name: "Entrepreneur", logo: logoEntrepreneur },
+  { name: "Quartz", logo: logoQuartz },
+  { name: "Facebook", logo: logoFacebook },
+  { name: "Netflix", logo: logoNetflix },
+  { name: "Hubspot", logo: logoHubspot },
+  { name: "Amazon", logo: logoAmazon },
+];
 
 export function LogosGrid() {
   return (
@@ -39,7 +39,7 @@ export function LogosGrid() {
               <li
                 key={company.name}
                 className={
-                  'flex items-center justify-center bg-gray-secondary-50 py-10'
+                  "flex items-center justify-center bg-gray-secondary-50 py-10"
                 }
               >
                 <Image src={company.logo} alt={company.name} />
@@ -49,5 +49,5 @@ export function LogosGrid() {
         </div>
       </Container>
     </section>
-  )
+  );
 }
