@@ -174,7 +174,7 @@ export function Header() {
   }
 
   return (
-    <header className="h-24 bg-amber-100">
+    <header className="h-24 sticky top-0 z-50 bg-amber-100">
       <Container className="flex h-full w-full items-center border-b border-gray-secondary-300/60">
         <nav className="relative z-50 flex w-full items-center justify-between ">
           <div className="flex items-center space-x-8 lg:space-x-12">
