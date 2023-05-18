@@ -1,6 +1,8 @@
+"use client";
 import Head from "next/head";
 import Link from "next/link";
-import { EnvelopeIcon } from "@heroicons/react/24/outline";
+// import { UserIcon } from "@heroicons/react/24/outline";
+// import { EnvelopeIcon } from "@heroicons/react/24/outline";
 import { LockClosedIcon } from "@heroicons/react/24/outline";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
@@ -8,12 +10,34 @@ import Image from "next/image";
 import logo from "public/images/logo-icon.png";
 import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
+import { useState } from "react";
+import { authService } from "@/composables/authService";
+import { IVerifyOTPPayload } from "@werify/id-ts/dist/modules/public/verifyOTP/interfaces/IVerifyOTP";
 
-export default function Signin() {
+export default function Signup() {
+  let [code, setCode] = useState("");
+
+  const verifyOTP = async () => {
+    const { auth } = await authService();
+
+    // Otp payload
+    let OTPPayload = JSON.parse(
+      localStorage.getItem("OTPPayload") as string
+    ) as IVerifyOTPPayload;
+    OTPPayload.otp = code;
+
+    auth.verifyOTP(OTPPayload, "/account/verify-otp").then((res) => {
+      if (res.succeed) {
+        localStorage.removeItem("OTPPayload");
+        localStorage.setItem("user", JSON.stringify(res.results));
+        location.replace("/");
+      }
+    });
+  };
   return (
     <>
       <Head>
-        <title>Wavvy - Sign in</title>
+        <title>Dalan Capital - Confirm</title>
       </Head>
 
       <section className="relative flex min-h-screen items-center justify-center bg-amber-100 py-16 sm:py-20">
@@ -26,23 +50,23 @@ export default function Signin() {
         <Container className="w-full">
           <div className="mx-auto flex max-w-lg flex-col items-center">
             <Link href="/" aria-label="Home" className="flex flex-shrink-0">
-              <Image alt="logo" src={logo} className="h-auto w-12" />
+              <Image alt="logo" src={logo} className="h-auto w-12 " />
             </Link>
             <h1 className="mt-10 text-center text-4xl font-semibold text-slate-900">
-              Welcome back
+              Verify your identity
             </h1>
-            <p className="mt-4 text-center leading-relaxed text-slate-600">
-              Don’t have an account yet?
+            {/* <p className="mt-4 text-center leading-relaxed text-slate-600">
+              Already have an account?
               <Link
-                href="/signup"
+                href="/signin"
                 className="block text-center font-medium text-slate-800 underline duration-150 hover:text-slate-900 sm:ml-1.5 sm:inline-block sm:text-left"
               >
-                Get started for free
+                Login to your account
               </Link>
               .
-            </p>
-            <div className="mt-8 flex flex-col items-center gap-4 sm:mt-10 sm:flex-row sm:gap-6">
-              <button className="flex w-full items-center border border-gray-secondary-400/60 bg-gray-secondary-50 px-5 py-3.5 text-md font-medium text-slate-800 duration-150 hover:bg-vanilla sm:w-auto sm:text-base">
+            </p> */}
+            {/* <div className="mt-8 flex flex-col items-center gap-4 sm:mt-10 sm:flex-row sm:gap-6">
+              <button className="flex w-full items-center border border-gray-secondary-400/60 bg-gray-secondary-50 py-3.5 px-5 text-md font-medium text-slate-800 duration-150 hover:bg-vanilla sm:w-auto sm:text-base">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={21}
@@ -68,9 +92,9 @@ export default function Signin() {
                     fill="#57A75C"
                   />
                 </svg>
-                Sign in with Google
+                Sign up with Google
               </button>
-              <button className="flex w-full items-center border border-gray-secondary-400/60 bg-gray-secondary-50 px-5 py-3.5 text-md font-medium text-slate-800 duration-150 hover:bg-vanilla sm:w-auto sm:text-base">
+              <button className="flex w-full items-center border border-gray-secondary-400/60 bg-gray-secondary-50 py-3.5 px-5 text-md font-medium text-slate-800 duration-150 hover:bg-vanilla sm:w-auto sm:text-base">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -88,26 +112,49 @@ export default function Signin() {
                     fill="black"
                   />
                 </svg>
-                Sign in with Apple
+                Sign up with Apple
               </button>
             </div>
             <div className="mt-10 flex w-full items-center">
               <div className="h-px flex-1 bg-gray-secondary-400/60"></div>
               <h4 className="flex-shrink-0 px-4 text-base tracking-wide text-slate-500">
-                or sign in with
+                or sign up with
               </h4>
               <div className="h-px flex-1 bg-gray-secondary-400/60"></div>
-            </div>
+            </div> */}
             <div className="mt-10 w-full">
-              <form action="#" method="POST">
-                <div>
+              <div>
+                <label
+                  htmlFor="name"
+                  className="block text-base font-medium text-slate-700"
+                >
+                  Code
+                </label>
+                <div className="relative mt-1.5">
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    required
+                    maxLength={6}
+                    placeholder="For Example, 413850"
+                    className="block w-full appearance-none border border-gray-secondary-400/60 bg-gray-secondary-50 py-2.5 pl-12 pr-8 text-slate-800 placeholder-slate-500/75 outline-none duration-150 hover:bg-vanilla focus:border-gray-secondary-200 focus:bg-vanilla focus:outline-none  focus:ring-gray-secondary-200"
+                    value={code}
+                    onInput={(e: any) => {
+                      setCode(e.target.value);
+                    }}
+                  />
+                  <LockClosedIcon className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400" />
+                </div>
+              </div>
+              {/* <div className="mt-7">
                   <label
                     htmlFor="email"
                     className="block text-base font-medium text-slate-700"
                   >
                     Email
-                  </label>
-                  <div className="relative mt-1.5">
+                  </label> */}
+              {/* <div className="relative mt-1.5">
                     <input
                       id="email"
                       name="email"
@@ -115,26 +162,19 @@ export default function Signin() {
                       autoComplete="email"
                       required
                       placeholder="foobar@email.com"
-                      className="block w-full appearance-none border border-gray-secondary-400/60 bg-gray-secondary-50 py-2.5 pl-12 pr-8 text-slate-800 placeholder-slate-500/75 outline-none duration-150 hover:bg-vanilla focus:border-gray-secondary-200 focus:bg-vanilla focus:outline-none focus:ring-gray-secondary-200"
+                      className="block w-full appearance-none border border-gray-secondary-400/60 bg-gray-secondary-50 py-2.5 pl-12 pr-8 text-slate-800 placeholder-slate-500/75 outline-none duration-150 hover:bg-vanilla focus:border-gray-secondary-200 focus:bg-vanilla focus:outline-none  focus:ring-gray-secondary-200"
                     />
                     <EnvelopeIcon className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400" />
                   </div>
-                </div>
-                <div className="mt-7">
-                  <div className="flex justify-between">
-                    <label
-                      htmlFor="password"
-                      className="text-base font-medium text-slate-700"
-                    >
-                      Password
-                    </label>
-                    <Link
-                      href="/password-reset"
-                      className="font-medium text-slate-800 underline duration-150 hover:text-slate-900"
-                    >
-                      Forgot password?
-                    </Link>
-                  </div>
+                </div> */}
+              {/* <div className="mt-7">
+                  <label
+                    htmlFor="password"
+                    className="text-base font-medium text-slate-700"
+                  >
+                    Password
+                  </label>
+
                   <div className="relative mt-1.5">
                     <input
                       id="password"
@@ -143,13 +183,14 @@ export default function Signin() {
                       autoComplete="current-password"
                       required
                       placeholder="Password (min. 6 characters)"
-                      className="block w-full appearance-none border border-gray-secondary-400/60 bg-gray-secondary-50 py-2.5 pl-12 pr-8 text-slate-800 placeholder-slate-500/75 outline-none duration-150 hover:bg-vanilla focus:border-gray-secondary-200 focus:bg-vanilla focus:outline-none focus:ring-gray-secondary-200"
+                      className="block w-full appearance-none border border-gray-secondary-400/60 bg-gray-secondary-50 py-2.5 pl-12 pr-8 text-slate-800 placeholder-slate-500/75 outline-none duration-150 hover:bg-vanilla focus:border-gray-secondary-200 focus:bg-vanilla focus:outline-none  focus:ring-gray-secondary-200"
                     />
                     <LockClosedIcon className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400" />
                   </div>
-                </div>
-                <Button className="mt-8 w-full sm:mt-10">Sign in</Button>
-              </form>
+                </div> */}
+              <Button className="mt-8 w-full sm:mt-10" onClick={verifyOTP}>
+                Sign up
+              </Button>
             </div>
           </div>
         </Container>

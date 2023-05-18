@@ -1,62 +1,62 @@
-import clsx from 'clsx'
-import { CheckCircleIcon } from '@heroicons/react/24/solid'
+import clsx from "clsx";
+import { CheckCircleIcon } from "@heroicons/react/24/solid";
 
-import { Container } from '@/components/Container'
-import { Button } from '@/components/Button'
+import { Container } from "@/components/Container";
+import { Button } from "@/components/Button";
 
 const tiers = [
   {
-    name: 'Hobby',
-    href: '#',
+    name: "Hobby",
+    href: "#",
     description:
-      'Lorem ipsum dolor sit amet molestie condimentum nisl mollis iaculis etiam. ',
+      "Lorem ipsum dolor sit amet molestie condimentum nisl mollis iaculis etiam. ",
     price: 19,
     features: [
-      'Unlimited recording ​​& editing',
-      'Up to 720p video quality',
-      '10GB of cloud storage',
-      '128 kbps audio quality',
-      '2 hours of automatic transcript generation',
-      '1 hour of clips',
+      "Unlimited recording ​​& editing",
+      "Up to 720p video quality",
+      "10GB of cloud storage",
+      "128 kbps audio quality",
+      "2 hours of automatic transcript generation",
+      "1 hour of clips",
     ],
   },
   {
-    name: 'Standard',
-    href: '#',
+    name: "Standard",
+    href: "#",
     description:
-      'Lorem ipsum dolor sit amet molestie condimentum nisl mollis iaculis etiam. ',
+      "Lorem ipsum dolor sit amet molestie condimentum nisl mollis iaculis etiam. ",
     price: 39,
     features: [
-      'Unlimited recording ​​& editing',
-      'Up to 1080p video quality',
-      '50GB of cloud storage',
-      '256 kbps audio quality',
-      '5 hours of automatic transcript generation',
-      '3 hour of clips',
-      'Listener analytics',
-      'Screen sharing',
+      "Unlimited recording ​​& editing",
+      "Up to 1080p video quality",
+      "50GB of cloud storage",
+      "256 kbps audio quality",
+      "5 hours of automatic transcript generation",
+      "3 hour of clips",
+      "Listener analytics",
+      "Screen sharing",
     ],
   },
   {
-    name: 'Pro',
-    href: '#',
+    name: "Pro",
+    href: "#",
     description:
-      'Lorem ipsum dolor sit amet molestie condimentum nisl mollis iaculis etiam. ',
+      "Lorem ipsum dolor sit amet molestie condimentum nisl mollis iaculis etiam. ",
     price: 59,
     features: [
-      'Unlimited recording ​​& editing',
-      'Up to 4k video quality',
-      'Unlimitted cloud storage',
-      '320 kbps audio quality',
-      'Unlimitted automatic transcript generation',
-      'Unlimitted clips',
-      'Listener analytics',
-      'Screen sharing',
-      'Team spaces',
-      '24/7 live support',
+      "Unlimited recording ​​& editing",
+      "Up to 4k video quality",
+      "Unlimitted cloud storage",
+      "320 kbps audio quality",
+      "Unlimitted automatic transcript generation",
+      "Unlimitted clips",
+      "Listener analytics",
+      "Screen sharing",
+      "Team spaces",
+      "24/7 live support",
     ],
   },
-]
+];
 
 export function PricingCards() {
   return (
@@ -85,8 +85,8 @@ export function PricingCards() {
               <div
                 key={tier.name}
                 className={clsx(
-                  index == 2 ? 'bg-purple-light' : 'bg-gray-secondary-50',
-                  'p-8 sm:p-10'
+                  index == 2 ? "bg-purple-light" : "bg-gray-secondary-50",
+                  "p-8 sm:p-10"
                 )}
               >
                 <h3 className="text-lg font-semibold text-slate-900">
@@ -133,7 +133,7 @@ export function PricingCards() {
                   eleifend malesuada dictumst vulputate rhoncus justo.
                 </p>
               </div>
-              <Button href="/signup" className="mt-8 lg:mt-0" variant="ghost">
+              <Button href="/start" className="mt-8 lg:mt-0" variant="ghost">
                 Get started for free
               </Button>
             </div>
@@ -143,5 +143,5 @@ export function PricingCards() {
 
       <div className="h-16 bg-vanilla sm:h-24"></div>
     </section>
-  )
+  );
 }

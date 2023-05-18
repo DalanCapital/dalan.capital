@@ -1,5 +1,5 @@
-import { Container } from '@/components/Container'
-import { Button } from '@/components/Button'
+import { Container } from "@/components/Container";
+import { Button } from "@/components/Button";
 
 export function FaqCTA() {
   return (
@@ -13,11 +13,11 @@ export function FaqCTA() {
           mauris dictumst aliqua purus praesent.
         </p>
         <div className="mt-10 flex w-full justify-center sm:mt-12">
-          <Button href="/signup" variant="ghost">
+          <Button href="/start" variant="ghost">
             Go to FAQs
           </Button>
         </div>
       </Container>
     </section>
-  )
+  );
 }

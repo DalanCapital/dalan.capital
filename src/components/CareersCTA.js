@@ -1,5 +1,5 @@
-import { Container } from '@/components/Container'
-import { Button } from '@/components/Button'
+import { Container } from "@/components/Container";
+import { Button } from "@/components/Button";
 
 export function CareersCTA() {
   return (
@@ -14,10 +14,10 @@ export function CareersCTA() {
             est platea fermentum tempus egestas.
           </p>
           <div className="mt-10 flex w-full justify-center sm:mt-12">
-            <Button href="/signup">See open positions</Button>
+            <Button href="/start">See open positions</Button>
           </div>
         </div>
       </Container>
     </section>
-  )
+  );
 }

@@ -40,7 +40,7 @@ export function HomeHero() {
             </li>
           </ul>
           <div className="mt-10 flex flex-col sm:flex-row sm:space-x-5 md:mt-12 md:justify-center xl:justify-start">
-            <Button href="/signup" className="w-full sm:w-auto">
+            <Button href="/start" className="w-full sm:w-auto">
               Get your free account
             </Button>
             <Button
