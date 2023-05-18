@@ -19,7 +19,7 @@ export function CallToAction() {
             odio.
           </p>
           <div className="mt-10 flex w-full justify-center md:justify-start">
-            <Button href="/signup">Get your free account</Button>
+            <Button href="/start">Get your free account</Button>
           </div>
         </div>
         <div className="col-span-6 hidden grid-cols-12 md:grid">

@@ -1,5 +1,8 @@
+// * only render on client side
 "use client";
-import { Fragment } from "react";
+
+// * imports
+import { Fragment, useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -11,7 +14,9 @@ import { Container } from "@/components/Container";
 import { Button } from "@/components/Button";
 import logo from "public/images/logo-dark.png";
 import logoIcon from "public/images/logo-icon.png";
+import UserMenu from "./user/UserMenu";
 
+// * mock data
 const links = [
   { label: "Home", href: "/" },
   { label: "Features", href: "/features" },
@@ -26,9 +31,15 @@ const more = [
   { label: "Documentation", href: "/docs" },
   { label: "Open APIs", href: "/docs/apis" },
 ];
+// * mock data
 
+// * header component
 export function Header() {
   const pathname = usePathname();
+  const [hydrated, setHydrated] = useState(false);
+  useEffect(() => {
+    setHydrated(true);
+  });
 
   function MenuIcon({ open }) {
     return (
@@ -173,6 +184,28 @@ export function Header() {
     );
   }
 
+  // * handle if user had token and user menu OBJECT
+  function LoggedInMenu() {
+    if (
+      hydrated &&
+      typeof window !== "undefined" &&
+      localStorage.getItem("user")
+    ) {
+      return (
+        <>
+          <UserMenu />
+        </>
+      );
+    }
+    return (
+      <>
+        <Button size="md" href="/start">
+          Start Here
+        </Button>
+      </>
+    );
+  }
+
   return (
     <header className="h-24 sticky top-0 z-50 bg-amber-100">
       <Container className="flex h-full w-full items-center border-b border-gray-secondary-300/60">
@@ -265,9 +298,7 @@ export function Header() {
                   </a>
                 </Link>
               </div>
-              <Button size="md" href="/start">
-                Start Here
-              </Button>
+              <LoggedInMenu />
             </div>
           </div>
         </nav>
