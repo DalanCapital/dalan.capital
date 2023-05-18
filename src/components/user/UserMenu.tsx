@@ -1,18 +1,21 @@
 "use client";
 import { Menu } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import { UserCircleIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 const more = [
-  { label: "Newsroom", href: "/blog/newsroom" },
-  { label: "Blog", href: "/blog" },
-  { label: "Documentation", href: "/docs" },
-  { label: "Open APIs", href: "/docs/apis" },
+  { label: "Sign out", href: "#" },
+  // { label: "Blog", href: "/blog" },
+  // { label: "Documentation", href: "/docs" },
+  // { label: "Open APIs", href: "/docs/apis" },
 ];
 
 function UserMenu() {
   const pathname = usePathname();
+  const [userData, setUserData] = useState({});
   return (
     <>
       <Menu as="div" className="relative">
@@ -25,7 +28,7 @@ function UserMenu() {
                   : "text-slate-700 hover:bg-amber-50  hover:text-slate-900"
               }`}
             >
-              <span>More</span>
+              <UserCircleIcon className="w-8" />
               <ChevronDownIcon
                 className={`ml-2 h-5 w-5 duration-300 ${
                   open
