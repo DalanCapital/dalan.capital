@@ -11,10 +11,6 @@ import { Header } from "@/components/Header";
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Wavvy - Contact</title>
-      </Head>
-
       <Header />
       <ContactHeader />
       <ContactInfo />
