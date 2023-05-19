@@ -4,9 +4,9 @@ import { Container } from '@/components/Container'
 
 const features = [
   {
-    name: 'Ambition',
+    name: 'Transparency and Trust',
     description:
-      'Lorem ipsum dolor sit amet orci platea suspendisse. Aliquam habitasse pellentesque lacinia blandit scelerisque blandit sagittis ac suspendisse arcu lectus fringilla.',
+      'Integrity is at the heart of our values. We believe in transparency, honesty, and fairness. Our traders and investors trust us to provide them with a platform that they can rely on, and we make it our mission to keep that trust and confidence.',
     className:
       "sm:after:content-[''] sm:after:right-0 sm:after:h-5/6 sm:after:w-px sm:after:absolute sm:after:bg-gray-secondary-400/80",
     icon: function AmbitionIcon() {
@@ -44,9 +44,9 @@ const features = [
     },
   },
   {
-    name: 'Resilience',
+    name: 'Innovating Trading and Investments',
     description:
-      'Lorem ipsum dolor sit amet orci platea suspendisse. Aliquam habitasse pellentesque lacinia blandit scelerisque blandit sagittis ac suspendisse arcu lectus fringilla.',
+      'Passion is what fuels our team at Dalan. We\'re passionate about creating a trading platform that can make a real difference, empowering traders, and making it easy for investors to earn returns.',
     className:
       "lg:after:content-[''] lg:after:right-0 lg:after:h-5/6 lg:after:w-px lg:after:absolute lg:after:bg-gray-secondary-400/80 before:top-0 before:w-full sm:before:w-5/6 before:h-px before:absolute before:bg-gray-secondary-400/80 before:content-[''] sm:before:h-0",
     icon: function ResilienceIcon() {
@@ -68,9 +68,9 @@ const features = [
     },
   },
   {
-    name: 'Teamwork',
+    name: 'Enabling Success for All',
     description:
-      'Lorem ipsum dolor sit amet orci platea suspendisse. Aliquam habitasse pellentesque lacinia blandit scelerisque blandit sagittis ac suspendisse arcu lectus fringilla.',
+      'Inclusivity is a vital part of our core values. Our platform is designed to give everyone the opportunity to invest and trade, regardless of their level of experience. We believe that by providing access to funding and the right tools, we can enable our users to reach their full potential.',
     className:
       "sm:after:content-[''] sm:after:right-0 sm:after:h-5/6 sm:after:w-px sm:after:absolute sm:after:bg-gray-secondary-400/80 lg:after:w-0 before:top-0 before:w-full sm:before:w-5/6 before:h-px before:absolute before:bg-gray-secondary-400/80 before:content-[''] lg:before:h-0",
     icon: function TeamworkIcon() {
@@ -112,9 +112,9 @@ const features = [
     },
   },
   {
-    name: 'Integrity',
+    name: 'Empowering Traders and Investors',
     description:
-      'Lorem ipsum dolor sit amet orci platea suspendisse. Aliquam habitasse pellentesque lacinia blandit scelerisque blandit sagittis ac suspendisse arcu lectus fringilla.',
+      'We believe that success should be shared. Our platform is built on the principle of collaboration between traders and investors, with both parties benefiting from mutual support.',
     className:
       "lg:after:content-[''] lg:after:right-0 lg:after:h-5/6 lg:after:w-px lg:after:absolute lg:after:bg-gray-secondary-400/80 before:top-0 before:w-full sm:before:w-5/6 before:h-px before:absolute before:bg-gray-secondary-400/80 before:content-['']",
     icon: function IntegrityIcon() {
@@ -143,74 +143,6 @@ const features = [
       )
     },
   },
-  {
-    name: 'Craftsmanship',
-    description:
-      'Lorem ipsum dolor sit amet orci platea suspendisse. Aliquam habitasse pellentesque lacinia blandit scelerisque blandit sagittis ac suspendisse arcu lectus fringilla.',
-    className:
-      "sm:after:content-[''] sm:after:right-0 sm:after:h-5/6 sm:after:w-px sm:after:absolute sm:after:bg-gray-secondary-400/80 before:top-0 before:w-full sm:before:w-5/6 before:h-px before:absolute before:bg-gray-secondary-400/80 before:content-['']",
-    icon: function MetricsIcon() {
-      return (
-        <svg
-          className="h-14 w-14 sm:h-16 sm:w-16"
-          xmlns="http://www.w3.org/2000/svg"
-          width={64}
-          height={64}
-          viewBox="0 0 64 64"
-          fill="none"
-        >
-          <path
-            d="M12.3868 35.097H4.1287C3.55786 35.097 3.09644 34.6356 3.09644 34.0647C3.09644 33.4939 3.55786 33.0325 4.1287 33.0325H12.3868C12.9576 33.0325 13.4191 33.4939 13.4191 34.0647C13.4191 34.6356 12.9576 35.097 12.3868 35.097Z"
-            fill="#9EADB2"
-          />
-          <path
-            d="M15.4103 27.7977C15.146 27.7977 14.8818 27.6966 14.6805 27.4953L8.84202 21.6568C8.4384 21.2532 8.4384 20.6009 8.84202 20.1972C9.24563 19.7936 9.89802 19.7936 10.3016 20.1972L16.1401 26.0357C16.5437 26.4393 16.5437 27.0917 16.1401 27.4953C15.9378 27.6966 15.6746 27.7977 15.4103 27.7977Z"
-            fill="#9EADB2"
-          />
-          <path
-            d="M62.9677 40.2581H1.03202C0.721307 40.2581 0.427112 40.3984 0.232015 40.639C0.035885 40.8795 -0.0415347 41.1953 0.0214333 41.4999C0.113305 41.9448 2.44106 52.2002 18.5805 52.6245V62.9676C18.5805 63.5385 19.0419 63.9999 19.6127 63.9999H52.6451C53.216 63.9999 53.6774 63.5385 53.6774 62.9676C53.6774 57.8446 57.8446 53.6774 62.9677 53.6774C63.5386 53.6774 64 53.2159 64 52.6451V41.2903C64 40.7195 63.5386 40.2581 62.9677 40.2581Z"
-            fill="#9EADB2"
-          />
-          <path
-            d="M58.5362 28.1737L48.3385 17.9761L40.6853 25.6292L50.883 35.8268C51.0843 36.0281 51.3486 36.1293 51.6128 36.1293C51.8771 36.1293 52.1413 36.0281 52.3426 35.8268L58.5362 29.6333C58.9398 29.2297 58.9398 28.5773 58.5362 28.1737Z"
-            fill="#9EADB2"
-          />
-          <path
-            d="M53.3749 8.56074L45.1168 0.302708C44.7132 -0.100903 44.0608 -0.100903 43.6572 0.302708L23.0119 20.9478C22.6083 21.3514 22.6083 22.0038 23.0119 22.4074L31.27 30.6654C31.4713 30.8667 31.7356 30.9679 31.9998 30.9679C32.2641 30.9679 32.5284 30.8667 32.7297 30.6654L53.3749 10.0203C53.7785 9.61673 53.7785 8.96435 53.3749 8.56074Z"
-            fill="#9EADB2"
-          />
-        </svg>
-      )
-    },
-  },
-  {
-    name: 'Self-improvement',
-    description:
-      'Lorem ipsum dolor sit amet orci platea suspendisse. Aliquam habitasse pellentesque lacinia blandit scelerisque blandit sagittis ac suspendisse arcu lectus fringilla.',
-    className:
-      "before:top-0 before:w-full sm:before:w-5/6 before:h-px before:absolute before:bg-gray-secondary-400/80 before:content-['']",
-    icon: function AudioIcon() {
-      return (
-        <svg
-          className="h-14 w-14 sm:h-16 sm:w-16"
-          xmlns="http://www.w3.org/2000/svg"
-          width={64}
-          height={64}
-          viewBox="0 0 64 64"
-          fill="none"
-        >
-          <path
-            d="M32 16C33.886 16 35.6947 15.1571 37.0283 13.6569C38.3619 12.1566 39.1111 10.1217 39.1111 8C39.1111 5.87827 38.3619 3.84344 37.0283 2.34315C35.6947 0.842854 33.886 0 32 0C30.114 0 28.3053 0.842854 26.9717 2.34315C25.6381 3.84344 24.8889 5.87827 24.8889 8C24.8889 10.1217 25.6381 12.1566 26.9717 13.6569C28.3053 15.1571 30.114 16 32 16Z"
-            fill="#9EADB2"
-          />
-          <path
-            d="M64 48V40C56.0356 40 49.2089 36.16 44.0889 29.28L39.3244 22.88C38.6629 21.9779 37.832 21.2518 36.8915 20.7538C35.9509 20.2559 34.924 19.9984 33.8844 20H30.1511C28.0533 20 26.0622 21.04 24.7111 22.88L19.9467 29.28C14.7911 36.16 7.96444 40 0 40V48C9.84889 48 18.4533 43.32 24.8889 35V44L11.0933 50.2C8.71111 51.28 7.11111 53.92 7.11111 56.84C7.11111 60.8 9.95556 64 13.4756 64H21.3333V62C21.3333 59.3478 22.2698 56.8043 23.9368 54.9289C25.6038 53.0536 27.8647 52 30.2222 52H40.8889C41.8844 52 42.6667 52.88 42.6667 54C42.6667 55.12 41.8844 56 40.8889 56H30.2222C27.2711 56 24.8889 58.68 24.8889 62V64H50.5244C54.0444 64 56.8889 60.8 56.8889 56.84C56.8889 53.92 55.2889 51.28 52.9067 50.2L39.1111 44V35C45.5467 43.32 54.1511 48 64 48Z"
-            fill="#9EADB2"
-          />
-        </svg>
-      )
-    },
-  },
 ]
 
 export function FeaturesGridDark() {
@@ -221,7 +153,7 @@ export function FeaturesGridDark() {
           <h2 className="text-4xl font-semibold leading-tight text-white sm:text-center sm:text-5xl sm:leading-tight">
             The values that drive us.
           </h2>
-          <div className="mt-10 grid sm:mt-16 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid sm:mt-16 sm:grid-cols-2 lg:grid-cols-2">
             {features.map((feature) => (
               <div
                 key={feature.name}

@@ -9,21 +9,14 @@ import { CareersCTA } from "@/components/CareersCTA";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 
-export default function Home() {
+export default function About() {
   return (
     <>
-      <Head>
-        <title>Wavvy - Everything you need to start a podcast</title>
-        <meta
-          name="description"
-          content="Wavvy is a small and passionate team in Los Angeles with the goal to simplify how podcasting is done."
-        />
-      </Head>
       <Header />
       <AboutHero />
       <StoryWithStats />
       <FeaturesGridDark />
-      <Team />
+      {/*<Team />*/}
       <LogosGrid />
       <CareersCTA />
       <Footer />
