@@ -139,7 +139,7 @@ export default function Signin() {
                     placeholder="foobar@email.com"
                     className="block w-full appearance-none border border-gray-secondary-400/60 bg-gray-secondary-50 py-2.5 pl-12 pr-8 text-slate-800 placeholder-slate-500/75 outline-none duration-150 hover:bg-vanilla focus:border-gray-secondary-200 focus:bg-vanilla focus:outline-none focus:ring-gray-secondary-200"
                     value={email}
-                    onInput={(e: any) => {
+                    onChange={(e: any) => {
                       setEmail(e.target.value);
                     }}
                   />
