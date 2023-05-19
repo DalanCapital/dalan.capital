@@ -48,7 +48,7 @@ export function StoryWithStats() {
                 As we delved deeper into the world of trading and investments, we realized that there was a significant gap between traders and investors. Our team worked tirelessly to design and build a platform that would enable traders to trade using funded accounts and investors to support skilled traders and earn returns on their investment.
               </p>
               <p className="mt-8 text-lg leading-relaxed text-slate-700">
-                Dalan the platform that addresses the needs of both traders and investors, providing them with easy and accessible ways to achieve their goals. From the beginning, we've kept our users at the center of everything we do - from designing features that cater to their specific needs to ensuring the highest level of security for all transactions.
+                Dalan the platform that addresses the needs of both traders and investors, providing them with easy and accessible ways to achieve their goals. From the beginning, we`ve kept our users at the center of everything we do - from designing features that cater to their specific needs to ensuring the highest level of security for all transactions.
               </p>
             </div>
           </div>
