@@ -9,9 +9,17 @@ import { CallToAction } from "@/components/CallToAction";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 
-export default function Pricing() {
+export default function Home() {
   return (
     <>
+      <Head>
+        <title>Wavvy - Pricing</title>
+        <meta
+          name="description"
+          content="Get our fully featured bundle for only $39 a month."
+        />
+      </Head>
+
       <Header />
       <PricingCards />
       <PlanFeatures />

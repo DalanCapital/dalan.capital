@@ -32,11 +32,10 @@ export function AboutHero() {
               />
             </svg>
 
-            <span>About Wavvy</span>
+            <span>About Dalan</span>
           </p>
           <h1 className="mt-5 text-center text-4xl font-semibold leading-snug text-slate-900 sm:mt-6 sm:text-5xl sm:leading-snug md:mx-auto md:max-w-4xl xl:mx-0">
-            We are a small and passionate team in Los Angeles with the goal to
-            simplify how podcasting is done.
+            Welcome to Dalan, Connect Market.
           </h1>
         </div>
       </Container>
