@@ -189,7 +189,7 @@ export default function Signup() {
                   </div>
                 </div> */}
               <Button className="mt-8 w-full sm:mt-10" onClick={verifyOTP}>
-                Sign up
+                Confirm Code
               </Button>
             </div>
           </div>

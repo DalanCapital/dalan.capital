@@ -23,12 +23,14 @@ const navigation = {
   ],
   features: [
     { name: "Salary", href: "/features/salary" },
+    { name: "Tax", href: "/features/tax" },
     { name: "Insurance", href: "/features/insurance" },
     { name: "Team", href: "/features/team" },
     { name: "Desk", href: "/features/desk" },
     { name: "Contract", href: "/features/contract" },
     { name: "Coaching", href: "/features/coaching" },
-    { name: "FPA", href: "/features/fpa" },
+    { name: "FP&A", href: "/features/fp-and-a" },
+    { name: "Pro Account", href: "/features/pro-account" },
   ],
   resources: [
     { name: "FAQ", href: "/faq" },
