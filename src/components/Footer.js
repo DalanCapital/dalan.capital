@@ -178,34 +178,36 @@ export function Footer() {
           </div>
         </div>
         <hr className="mt-16 border-gray-secondary-400/60" />
-        <div className="flex w-full flex-col justify-between pt-8 sm:flex-row">
-          <p className="text-md text-slate-200">
+        <div className="grid grid-cols-12 w-full pt-8 lg:space-y-0 space-y-3">
+          <p className="text-md lg:col-span-4 place-self-center col-span-full lg:place-self-start text-slate-200">
             © 2022-23 Dalan Capital, LLC. All rights reserved.
           </p>
 
-          <p className="text-md text-slate-200 sm:mt-0 mt-5">
+          <p className="text-md lg:place-self-center place-self-center lg:col-span-4 col-span-full text-slate-200">
             Proudly part of{" "}
             <a target="_blank" className="underline" href="https://briofy.net">
               Briofy
             </a>
           </p>
 
-          <div className="mt-5 flex gap-3 sm:mt-0">
-            <Link legacyBehavior href="/terms">
-              <a className="text-md text-slate-100 underline duration-150 hover:text-white">
-                Terms
-              </a>
-            </Link>
-            <Link legacyBehavior href="/privacy">
-              <a className="text-md text-slate-100 underline duration-150 hover:text-white">
-                Privacy
-              </a>
-            </Link>
-            <Link legacyBehavior href="/cookies">
-              <a className="text-md text-slate-100 underline duration-150 hover:text-white">
-                Cookies
-              </a>
-            </Link>
+          <div className="col-span-full place-self-center lg:col-span-4 lg:place-self-end">
+            <div className="mt-5 flex gap-3 sm:mt-0">
+              <Link legacyBehavior href="/terms">
+                <a className="text-md text-slate-100 underline duration-150 hover:text-white">
+                  Terms
+                </a>
+              </Link>
+              <Link legacyBehavior href="/privacy">
+                <a className="text-md text-slate-100 underline duration-150 hover:text-white">
+                  Privacy
+                </a>
+              </Link>
+              <Link legacyBehavior href="/cookies">
+                <a className="text-md text-slate-100 underline duration-150 hover:text-white">
+                  Cookies
+                </a>
+              </Link>
+            </div>
           </div>
         </div>
       </Container>
