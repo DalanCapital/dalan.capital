@@ -29,6 +29,11 @@ export default function Signin() {
     });
   };
 
+  // * form validation
+  const handleFormValidation = () => {
+    return email.length <= 0 ? true : false;
+  };
+
   // * component here
   return (
     <>
@@ -134,46 +139,19 @@ export default function Signin() {
                     placeholder="foobar@email.com"
                     className="block w-full appearance-none border border-gray-secondary-400/60 bg-gray-secondary-50 py-2.5 pl-12 pr-8 text-slate-800 placeholder-slate-500/75 outline-none duration-150 hover:bg-vanilla focus:border-gray-secondary-200 focus:bg-vanilla focus:outline-none focus:ring-gray-secondary-200"
                     value={email}
-                    onInput={(e: any) => {
+                    onChange={(e: any) => {
                       setEmail(e.target.value);
                     }}
                   />
                   <EnvelopeIcon className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400" />
                 </div>
               </div>
-              {/* <div className="mt-7">
-                  <div className="flex justify-between">
-                    <label
-                      htmlFor="password"
-                      className="text-base font-medium text-slate-700"
-                    >
-                      Password
-                    </label>
-                    <Link
-                      href="/password-reset"
-                      className="font-medium text-slate-800 underline duration-150 hover:text-slate-900"
-                    >
-                      Forgot password?
-                    </Link>
-                  </div>
-                  <div className="relative mt-1.5">
-                    <input
-                      id="password"
-                      name="password"
-                      type="password"
-                      autoComplete="current-password"
-                      required
-                      placeholder="Password (min. 6 characters)"
-                      className="block w-full appearance-none border border-gray-secondary-400/60 bg-gray-secondary-50 py-2.5 pl-12 pr-8 text-slate-800 placeholder-slate-500/75 outline-none duration-150 hover:bg-vanilla focus:border-gray-secondary-200 focus:bg-vanilla focus:outline-none focus:ring-gray-secondary-200"
-                      value={password}
-                      onInput={(e: any) => {
-                        setPassword(e.target.value);
-                      }}
-                    />
-                    <LockClosedIcon className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400" />
-                  </div>
-                </div> */}
-              <Button className="mt-8 w-full sm:mt-10" onClick={requestOTP}>
+
+              <Button
+                className="mt-8 w-full sm:mt-10 disabled:!bg-gray-400 disabled:cursor-not-allowed"
+                disabled={handleFormValidation()}
+                onClick={requestOTP}
+              >
                 Sign in
               </Button>
             </div>
