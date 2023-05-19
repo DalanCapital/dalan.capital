@@ -1,8 +1,6 @@
 "use client";
-import Head from "next/head";
 import Link from "next/link";
 import { EnvelopeIcon } from "@heroicons/react/24/outline";
-import { LockClosedIcon } from "@heroicons/react/24/outline";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 
@@ -15,9 +13,12 @@ import { useRouter } from "next/navigation";
 
 export default function Signin() {
   // Variables
-  let [email, setEmail] = useState("");
+  const [email, setEmail] = useState("");
+
+  // router
   const router = useRouter();
-  // request otp
+
+  // * request otp with werify
   const requestOTP = async () => {
     const { auth } = await authService();
     auth.requestOTP(email, "/account/request-otp").then((res) => {
@@ -28,12 +29,9 @@ export default function Signin() {
     });
   };
 
+  // * component here
   return (
     <>
-      <Head>
-        <title>Dalan Capital - Sign in</title>
-      </Head>
-
       <section className="relative flex min-h-screen items-center justify-center bg-amber-100 py-16 sm:py-20">
         <Link
           href="/"
