@@ -1,7 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
+import { inputStates } from "./reducers/inputStates";
 
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    inputStates: inputStates.reducer,
+  },
   devTools: process.env.NODE_ENV !== "production",
 });
 
