@@ -1,5 +1,3 @@
-import Head from "next/head";
-
 import { PricingCards } from "@/components/PricingCards";
 import { PlanFeatures } from "@/components/PlanFeatures";
 import { FeaturedTestimonials } from "@/components/FeaturedTestimonials";
@@ -13,9 +11,9 @@ export default function Pricing() {
   return (
     <>
       <Header />
-      <PricingCards />
-      <PlanFeatures />
-      <FeaturedTestimonials />
+      {/*<PricingCards />*/}
+      {/*<PlanFeatures />*/}
+      {/*<FeaturedTestimonials />*/}
       <PlansTable />
       <Faqs />
       <CallToAction />

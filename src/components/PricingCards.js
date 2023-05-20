@@ -6,11 +6,11 @@ import { Button } from "@/components/Button";
 
 const tiers = [
   {
-    name: "Hobby",
+    name: "Standard",
     href: "#",
     description:
       "Lorem ipsum dolor sit amet molestie condimentum nisl mollis iaculis etiam. ",
-    price: 19,
+    price: 159,
     features: [
       "Unlimited recording ​​& editing",
       "Up to 720p video quality",
@@ -21,11 +21,11 @@ const tiers = [
     ],
   },
   {
-    name: "Standard",
+    name: "Pro",
     href: "#",
     description:
       "Lorem ipsum dolor sit amet molestie condimentum nisl mollis iaculis etiam. ",
-    price: 39,
+    price: 699,
     features: [
       "Unlimited recording ​​& editing",
       "Up to 1080p video quality",
@@ -38,11 +38,11 @@ const tiers = [
     ],
   },
   {
-    name: "Pro",
+    name: "Advance",
     href: "#",
     description:
       "Lorem ipsum dolor sit amet molestie condimentum nisl mollis iaculis etiam. ",
-    price: 59,
+    price: 3599,
     features: [
       "Unlimited recording ​​& editing",
       "Up to 4k video quality",
@@ -64,12 +64,10 @@ export function PricingCards() {
       <Container>
         <div className="mx-auto flex max-w-lg flex-col items-center sm:max-w-xl md:max-w-2xl lg:mx-0 lg:max-w-none">
           <h1 className="text-center text-4xl font-semibold leading-snug text-slate-900 sm:text-5xl sm:leading-snug md:mx-auto md:max-w-4xl xl:mx-0">
-            Choose a plan that is right for you
+            A right place, for the right price.
           </h1>
           <p className="mx-auto mt-5 max-w-xl text-center text-lg leading-relaxed text-slate-700 sm:mt-6">
-            Lorem ipsum dolor sit amet dapibus fusce sed. Aliquet porta bibendum
-            est platea fermentum tempus egestas. Luctus volutpat mauris quisque
-            dictum et rhoncus habitasse.
+            Get started with our free plan, or upgrade to unlock all potentials of our best features.
           </p>
         </div>
       </Container>

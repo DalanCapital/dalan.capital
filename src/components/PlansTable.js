@@ -2,139 +2,102 @@ import Link from 'next/link'
 import { CheckCircleIcon } from '@heroicons/react/24/solid'
 
 import { Container } from '@/components/Container'
+import {Button} from "@/components/Button";
 
-const tiers = ['free', 'hobby', 'standard', 'pro']
+const tiers = ['free', 'standard', 'pro', 'advance']
 
 const features = [
   {
-    name: 'Video quality',
-    tiers: { free: '720p', hobby: '720p', standard: '1080p', pro: '4k' },
+    name: 'Application Fee',
+    tiers: {free:'Free', standard:'$159', pro:'$699', advance:'$3599'}
   },
   {
-    name: 'Audio quality',
-    tiers: {
-      free: '64 kbps',
-      hobby: '128 kbps',
-      standard: '256 kbps',
-      pro: '320 kbps',
-    },
+    name: 'Start Balance',
+    tiers: {free:'$100', standard:'$1000', pro:'$10,000', advance:'$100,000'}
   },
   {
-    name: 'Cloud storage',
-    tiers: {
-      free: '2GB',
-      hobby: '10GB',
-      standard: '50GB',
-      pro: 'Unlimited',
-    },
+    name: 'Max. Balance',
+    tiers: {free:'$1000', standard:'$10,000', pro:'$100,000', advance:'$1,000,000'}
   },
   {
-    name: 'Transcript generation',
-    tiers: {
-      free: '1 hour',
-      hobby: '2 hours',
-      standard: '5 hours',
-      pro: 'Unlimited',
-    },
+    name: 'Scale Program',
+    tiers: {free:'4X', standard:'2X', pro:'2X', advance:'2X'}
   },
   {
-    name: 'Clip generation',
-    tiers: {
-      free: '30 minutes',
-      hobby: '1 hour',
-      standard: '3 hours',
-      pro: 'Unlimited',
-    },
+    name: 'Salary',
+    tiers: { free: 'Not Available', standard: '2% AUM', pro: '3% AUM', advance: '5% AUM' },
   },
   {
-    name: 'Recording software',
-    tiers: {
-      free: true,
-      hobby: true,
-      standard: true,
-      pro: true,
-    },
+    name: 'Salary Max. Amount',
+    tiers: { free: 'Not Available', standard: 'Up to 200 USD', pro: 'Up to 3000 USD', advance: 'Up to 40,000 USD' },
   },
   {
-    name: 'Editing software',
-    tiers: {
-      free: true,
-      hobby: true,
-      standard: true,
-      pro: true,
-    },
+    name: 'Salary Min. Amount',
+    tiers: { free: 'Not Available', standard: '$100', pro: '$300', advance: '$5000' },
   },
   {
-    name: 'Audio support',
-    tiers: {
-      free: true,
-      hobby: true,
-      standard: true,
-      pro: true,
-    },
+    name: 'Target',
+    tiers: { free: '10%', standard: '10%', pro: '10%', advance: '10%' },
   },
   {
-    name: 'Video support',
-    tiers: {
-      free: false,
-      hobby: true,
-      standard: true,
-      pro: true,
-    },
+    name: 'Profit Split',
+    tiers: { free: 'Not Available', standard: 'From 30%', pro: 'From 50%', advance: 'From 80%' },
   },
   {
-    name: 'Listener analytics',
-    tiers: {
-      free: false,
-      hobby: false,
-      standard: true,
-      pro: true,
-    },
+    name: 'Max. Drawdown',
+    tiers: { free: '5%', standard: '5%', pro: '3%', advance: '2%' },
   },
   {
-    name: 'Screen sharing',
-    tiers: {
-      free: false,
-      hobby: false,
-      standard: true,
-      pro: true,
-    },
+    name: 'Max. Daily Loss',
+    tiers: { free: '3%', standard: '3%', pro: '2%', advance: '1%' },
   },
   {
-    name: 'Custom backdrops',
-    tiers: {
-      free: false,
-      hobby: false,
-      standard: true,
-      pro: true,
-    },
+    name: 'Drowdown Method',
+    tiers: { free: 'Start Balance', standard: 'Relative', pro: 'Relative', advance: 'Relative' },
   },
   {
-    name: 'Team spaces',
-    tiers: {
-      free: false,
-      hobby: false,
-      standard: false,
-      pro: true,
-    },
+    name: 'Leverage',
+    tiers: { free: '>1:100', standard: '1:10', pro: '1:10', advance: '1:10' },
   },
   {
-    name: '24/7 live support',
-    tiers: {
-      free: false,
-      hobby: false,
-      standard: false,
-      pro: true,
-    },
+    name: 'Min. Monthly Gain',
+    tiers: { free: '1%', standard: '2%', pro: '3%', advance: '5%'},
   },
   {
-    name: 'Live streaming',
-    tiers: {
-      free: false,
-      hobby: false,
-      standard: false,
-      pro: true,
-    },
+    name: 'Max. Daily Volume',
+    tiers: { free: '500', standard: '2K', pro: '5K', advance: '20K'},
+  },
+  {
+    name: 'Withdrawal Period',
+    tiers: { free: 'Monthly', standard: 'Monthly', pro: 'Bi-Weekly', advance: 'Weekly'},
+  },
+  {
+    name: 'Coaching',
+    tiers: { free: true, standard: true, pro: true, advance: true},
+  },
+  {
+    name: '24/7 Live Support',
+    tiers: { free: true, standard: true, pro: true, advance: true},
+  },
+  {
+    name: 'Verification',
+    tiers: { free: false, standard: true, pro: true, advance: true},
+  },
+  {
+    name: 'Insurance',
+    tiers: { free: false, standard: false, pro: true, advance: true},
+  },
+  {
+    name: 'Pro Account',
+    tiers: { free: false, standard: false, pro: true, advance: true },
+  },
+  {
+    name: 'Tax Coverage',
+    tiers: { free: false, standard: false, pro: false, advance: true},
+  },
+  {
+    name: 'FP&A',
+    tiers: { free: false, standard: false, pro: false, advance: true},
   },
 ]
 
@@ -147,10 +110,10 @@ export function PlansTable() {
       <Container>
         <div className="mx-auto flex max-w-lg flex-col items-center sm:max-w-xl md:max-w-2xl lg:mx-0 lg:max-w-none">
           <h1 className="text-center text-4xl font-semibold leading-snug text-slate-900 sm:text-5xl sm:leading-snug md:mx-auto md:max-w-4xl xl:mx-0">
-            A detailed comparison of our plans
+            A right place, for the right price.
           </h1>
           <div className="mx-auto mt-5 max-w-xl text-center text-lg leading-relaxed text-slate-700">
-            Compare the features and benifits of each plan. If you’re still
+            Compare the features and benefits of each plan. If you’re still
             unsure about anything feel free to{' '}
             <Link legacyBehavior href="/contact">
               <a className="font-medium text-slate-900 underline">
@@ -209,6 +172,25 @@ export function PlansTable() {
                 </tr>
               ))}
             </tbody>
+            <tfoot className="border-t border-gray-secondary-100">
+                <tr>
+                  <td>
+                    <Button href="#" className="mt-8 w-full">
+                      Get Started
+                    </Button>
+                  </td>
+                  <td>
+                    <Button href="#" className="mt-8 w-full">
+                      Get Started
+                    </Button>
+                  </td>
+                  <td>
+                    <Button href="#" className="mt-8 w-full">
+                      Get Started
+                    </Button>
+                  </td>
+                </tr>
+            </tfoot>
           </table>
         </div>
       </Container>
