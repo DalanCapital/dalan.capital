@@ -8,49 +8,49 @@ import faqImage from "public/images/stock/faq-image.jpg";
 
 const faqs = [
   {
-    question: "Do I need specific tech?",
+    question: "Do I need specific skill and/or document to apply?",
     answer:
-      "Lorem ipsum dolor sit amet vestibulum nullam bibendum. Odio velit curabitur purus tortor laoreet massa diam blandit pulvinar duis ornare. Interdum vestibulum molestie lacinia maecenas tortor lacus nibh pretium faucibus do.",
+      "No, We are welcome to all people around the world, We belive in people. However trading statements, trading forecasts/analytics, and trading certificates can effect on your application.",
   },
   {
-    question: "Where are my podcasts stored?",
+    question: "Which payment methods supported?",
     answer:
-      "Lorem ipsum dolor sit amet vestibulum nullam bibendum. Odio velit curabitur purus tortor laoreet massa diam blandit pulvinar duis ornare. Interdum vestibulum molestie lacinia maecenas tortor lacus nibh pretium faucibus do.",
+      "We accept Paypal, Visa, MasterCard, American Express, and Discover. You can also pay with Apple Pay and Google Pay. Also, We accept payments in cryptocurrencies.",
   },
   {
-    question: "What if I want to move to a different platform later?",
+    question: "Is Dalan regulated company?",
     answer:
-      "Lorem ipsum dolor sit amet vestibulum nullam bibendum. Odio velit curabitur purus tortor laoreet massa diam blandit pulvinar duis ornare. Interdum vestibulum molestie lacinia maecenas tortor lacus nibh pretium faucibus do.",
+      "Yes, We registered in UAE, Dubai as technology company that produce platform to connect traders and investors.",
   },
   {
-    question: "Are larger podcasts more expensive?",
+    question: "Which countries allowed to apply?",
     answer:
-      "Lorem ipsum dolor sit amet vestibulum nullam bibendum. Odio velit curabitur purus tortor laoreet massa diam blandit pulvinar duis ornare. Interdum vestibulum molestie lacinia maecenas tortor lacus nibh pretium faucibus do.",
+      "We are welcome to all countries, except Cuba, North Korea, Iran, Syria, based on U.S. Department of Commerce restrictions.",
   },
   {
-    question: "Is it secure?",
+    question: "What documents is required to verification?",
     answer:
-      "Lorem ipsum dolor sit amet vestibulum nullam bibendum. Odio velit curabitur purus tortor laoreet massa diam blandit pulvinar duis ornare. Interdum vestibulum molestie lacinia maecenas tortor lacus nibh pretium faucibus do.",
+      "We need your ID card or passport, and proof of address. You can upload them in your profile.",
   },
   {
-    question: "What if I don’t do video?",
+    question: "What happened if I brake rules?",
     answer:
-      "Lorem ipsum dolor sit amet vestibulum nullam bibendum. Odio velit curabitur purus tortor laoreet massa diam blandit pulvinar duis ornare. Interdum vestibulum molestie lacinia maecenas tortor lacus nibh pretium faucibus do.",
+      "No worries, You can get another trading account to max redemption(3 trading accounts), If you lose your 3rd trading account, You will be banned from Dalan platform, and you will not be able to apply again for next six months.",
   },
   {
-    question: "How does automatic transcription work?",
+    question: "Which withdrawals methods supported?",
     answer:
-      "Lorem ipsum dolor sit amet vestibulum nullam bibendum. Odio velit curabitur purus tortor laoreet massa diam blandit pulvinar duis ornare. Interdum vestibulum molestie lacinia maecenas tortor lacus nibh pretium faucibus do.",
+      "We support cryptocurrencies, Paypal, bank wire, and Deel platform. You can choose your preferred method in your profile.",
   },
   {
-    question: "What if I decide to cancel in the future?",
+    question: "How long it will take to get account?",
     answer:
-      "Lorem ipsum dolor sit amet vestibulum nullam bibendum. Odio velit curabitur purus tortor laoreet massa diam blandit pulvinar duis ornare. Interdum vestibulum molestie lacinia maecenas tortor lacus nibh pretium faucibus do.",
+      "It depends on your application, It can take from 1 day to 1 week. We will send you an email when your application is approved.",
   },
   {
-    question: "Do you offer a free plan?",
+    question: "How long it will take to withdrawal processed?",
     answer:
-      "Lorem ipsum dolor sit amet vestibulum nullam bibendum. Odio velit curabitur purus tortor laoreet massa diam blandit pulvinar duis ornare. Interdum vestibulum molestie lacinia maecenas tortor lacus nibh pretium faucibus do.",
+      "It depends on your withdrawal method, It can take from 1 day to 21 days(for SWIFT transfer in some cases). We will send you an email when your withdrawal request is approved.",
   },
 ];
 
