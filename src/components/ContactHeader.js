@@ -4,7 +4,7 @@ import { Button } from '@/components/Button'
 const contactCards = [
   {
     title: 'Chat with us now',
-    text: 'Lorem ipsum dolor sit amet aliqua vitae curabitur libero urna dolore orci adipiscing.',
+    text: 'Need immediate support? Our customer service representatives are available 24/7 to answer your questions and concerns',
     href: '#',
     buttonLabel: 'Chat with us',
     icon: function ChatIcon() {
@@ -30,7 +30,7 @@ const contactCards = [
   },
   {
     title: 'Send us a message',
-    text: 'Lorem ipsum dolor sit amet aliqua vitae curabitur libero urna dolore orci adipiscing.',
+    text: 'At Dalan, we value your feedback, suggestions, and concerns. If you have any questions or need assistance with our platform, our customer service team is here to help you.',
     href: '#',
     buttonLabel: 'Send message',
     icon: function MessageIcon() {
@@ -61,8 +61,7 @@ export function ContactHeader() {
             Contact us
           </h1>
           <p className="mx-auto mt-5 max-w-xl text-center text-lg leading-relaxed text-slate-700 sm:mt-6">
-            Lorem ipsum dolor sit amet dapibus fusce sed. Aliquet porta bibendum
-            est platea fermentum tempus egestas.
+          Contacting us is quick and easy. You can reach us through phone, email, or live chat.
           </p>
         </div>
       </Container>

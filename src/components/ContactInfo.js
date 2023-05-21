@@ -4,7 +4,7 @@ const contactCards = [
   {
     title: 'General enquiries',
     label: 'Email address',
-    value: 'info@wavy.com',
+    value: 'info@dalan.capital',
     icon: function MailIcon() {
       return (
         <svg
@@ -38,7 +38,7 @@ const contactCards = [
   {
     title: 'Phone support',
     label: 'Phone number',
-    value: '(323) 123-4567',
+    value: '+447888872710',
     icon: function PhoneIcon() {
       return (
         <svg
@@ -67,7 +67,7 @@ const contactCards = [
   {
     title: 'Sales',
     label: 'Email address',
-    value: 'sales@wavy.com',
+    value: 'sales@dalan.capital',
     icon: function RocketIcon() {
       return (
         <svg
@@ -105,9 +105,9 @@ const contactCards = [
     },
   },
   {
-    title: 'Press and media',
+    title: 'Support',
     label: 'Email address',
-    value: 'press@wavy.com',
+    value: 'support@dalan.capital',
     icon: function PressIcon() {
       return (
         <svg
@@ -144,8 +144,7 @@ export function ContactInfo() {
               Contact Information
             </h1>
             <p className="mt-4 max-w-sm leading-relaxed text-slate-700 lg:mt-5">
-              Pellentesque massa consequat eleifend turpis eiusmod cras
-              facilisis faucibus enim habitasse at vivamus pharetra.
+            At Dalan, our customers are at the forefront of everything we do. We're proud to provide exceptional customer service and support to help you achieve your financial goals. 
             </p>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:col-span-7 lg:gap-5 xl:gap-8">
