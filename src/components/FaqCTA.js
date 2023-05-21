@@ -9,8 +9,7 @@ export function FaqCTA() {
           See our FAQs
         </h1>
         <p className="mx-auto mt-5 max-w-xl text-center text-lg leading-relaxed text-slate-700">
-          Lorem ipsum dolor sit amet porta augue quisque enim. Vel ornare fames
-          mauris dictumst aliqua purus praesent.
+        Find out what you need to know with our FAQs. From account setup to our features, we've got you covered. 
         </p>
         <div className="mt-10 flex w-full justify-center sm:mt-12">
           <Button href="/start" variant="ghost">

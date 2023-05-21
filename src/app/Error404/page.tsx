@@ -8,7 +8,7 @@ export default function Custom404() {
   return (
     <>
       <Head>
-        <title>Wavvy - 404</title>
+        <title>Dalan - 404</title>
       </Head>
 
       <section className="bg-amber-100 py-16 sm:py-20">
