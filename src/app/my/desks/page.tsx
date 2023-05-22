@@ -112,7 +112,7 @@ export default function DeskList() {
       <Container className="my-10">
         <div className="flex justify-end mb-5">
           <Link href="/my/desks/add">
-            <Button size="md">Add new Desk +</Button>
+            <Button size="md">Add new item +</Button>
           </Link>
         </div>
         <div className="relative overflow-x-auto">
