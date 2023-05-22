@@ -31,7 +31,7 @@ export function FeatureBlocks() {
             </h2>
             <p className="mt-6 leading-relaxed text-slate-700 sm:mt-8 sm:text-lg sm:leading-8">
             At Dalan, we understand that investing can be complex and overwhelming. 
-            That's why we've designed our platform to make personal investing easy and accessible for everyone.
+            That`s why we`ve designed our platform to make personal investing easy and accessible for everyone.
             With Dalan, personal investors gain access to a network of skilled traders who can help them make informed investment decisions. 
             Our platform offers real-time analytics that enable investors to track their investments and adjust their portfolio as needed. 
             With our risk management system, personal investors can trade with confidence, knowing that their investments are protected.

@@ -31,7 +31,7 @@ export function FeatureBlocks() {
             <p className="mt-6 leading-relaxed text-slate-700 sm:mt-8 sm:text-lg sm:leading-8">
             Investment banking trading requires the ability to make quick decisions, mitigate risk, 
             and access advanced tools for analytics, all while ensuring compliance with industry standards. 
-            At Dalan, we understand the needs of investment banks, and we've developed a platform that provides comprehensive access to a variety of markets while offering fast,
+            At Dalan, we understand the needs of investment banks, and we`ve developed a platform that provides comprehensive access to a variety of markets while offering fast,
              secure, and customizable workflows.Our customizable workflow and API connectivity allows investment banks to integrate seamlessly with other systems and tools without sacrificing efficiency or data fidelity.
             </p>
             <Button
