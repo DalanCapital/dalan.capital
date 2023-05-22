@@ -16,7 +16,8 @@ export default function Home() {
     <>
       <Head>
         <title>Dalan Capital - Connect Market</title>
-        <meta name="description"
+        <meta
+          name="description"
           content="Dalan Capital is a platform that connects investors with traders."
         />
       </Head>
