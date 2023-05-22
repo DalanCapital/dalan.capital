@@ -16,8 +16,9 @@ export const apiService = async (
   return await fetch(baseURL + endpoint, {
     headers: {
       Authorization: token,
-      ...headerOptions,
+      "Content-Type": "application/json",
     },
+    ...headerOptions,
   }).then(async (response) => {
     if (response.ok) {
       return await response.json();
