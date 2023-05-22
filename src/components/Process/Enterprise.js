@@ -10,7 +10,7 @@ export function Process() {
       <Container>
         <div className="relative z-10 mx-auto w-full max-w-lg sm:max-w-xl lg:mx-0">
           <h2 className="text-4xl font-semibold leading-tight text-white sm:text-5xl sm:leading-tight">
-          Enterprise in Dalan
+          Enterprises at Dalan
           </h2>
           <div className="mt-12 space-y-8 divide-y divide-gray-secondary-400/90 sm:mt-16">
             <div className="flex items-center space-x-10">

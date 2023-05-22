@@ -16,24 +16,24 @@ export function HomeHero() {
             <li className="flex items-center md:items-start xl:items-center">
               <CheckCircleIcon className="h-5 w-5 shrink-0 text-slate-800 md:h-6 md:w-6 xl:h-5 xl:w-5" />
               <p className="ml-3 text-slate-700 lg:ml-4 xl:ml-5 xl:text-lg">
-              Invest with confidence with risk management on {" "}
+              Trade with  {" "}
                 <span className="font-medium text-slate-900">
-                  Dalan.
+                Peace of Mind.
                 </span>
               </p>
             </li>
             <li className="flex items-center md:items-start xl:items-center">
               <CheckCircleIcon className="h-5 w-5 shrink-0 text-slate-800 md:h-6 md:w-6 xl:h-5 xl:w-5" />
               <p className="ml-3 text-slate-700 lg:ml-4 xl:ml-5 xl:text-lg">
-              <span className="font-medium text-slate-900">Expert traders</span>
-                {" "}  are at your fingertips.
+              <span className="font-medium text-slate-900">Stay confident</span>
+                {" "} in every aspect.
               </p>
             </li>
             <li className="flex items-center md:items-start xl:items-center">
               <CheckCircleIcon className="h-5 w-5 shrink-0 text-slate-800 md:h-6 md:w-6 xl:h-5 xl:w-5" />
               <p className="ml-3 text-slate-700 lg:ml-4 xl:ml-5 xl:text-lg">
-              Empower yourself with real-time analytics on {" "}
-                <span className="font-medium text-slate-900">Dalan.</span>
+              Protect your health, secure your {" "}
+                <span className="font-medium text-slate-900">future.</span>
               </p>
             </li>
           </ul>

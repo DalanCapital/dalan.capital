@@ -18,7 +18,7 @@ export function FeatureBlocks() {
             />
             <div className="absolute right-0 top-0 w-64 -translate-y-24 bg-gray-secondary-100/95 p-6 backdrop-blur-sm sm:py-7 lg:left-0 lg:top-[unset] lg:bottom-0 lg:translate-y-24 2xl:-translate-x-16">
               <p className="text-4xl font-semibold text-slate-900 xl:text-5xl">
-              Insurance Coverage 
+              Insurance  
               </p>
               <p className="mt-5 text-slate-700">
               Health and Wealth Go Hand in Hand

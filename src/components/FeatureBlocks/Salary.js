@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Container } from "@/components/Container";
 import { Button } from "@/components/Button";
 import featureImage1 from "public/images/stock/feature-image-01.jpg";
+import featureImage2 from "public/images/stock/feature-image-02.jpg";
 
 export function FeatureBlocks() {
   return (
@@ -17,27 +18,22 @@ export function FeatureBlocks() {
             />
             <div className="absolute right-0 top-0 w-64 -translate-y-24 bg-gray-secondary-100/95 p-6 backdrop-blur-sm sm:py-7 lg:left-0 lg:top-[unset] lg:bottom-0 lg:translate-y-24 2xl:-translate-x-16">
               <p className="text-4xl font-semibold text-slate-900 xl:text-5xl">
-                100+
+              Dalan
               </p>
               <p className="mt-5 text-slate-700">
-              Boost Your Collaborations with Contract
+              Earn Income Based on Your Trading Efforts
               </p>
             </div>
           </div>
           <div className="w-full border border-gray-secondary-400/60 bg-gray-secondary-50 px-6 py-10 sm:p-14 lg:ml-auto lg:w-7/12 lg:py-32 lg:pl-28 xl:pl-36 xl:pr-20">
             <h2 className="text-4xl font-semibold leading-tight text-slate-900 xl:text-5xl xl:leading-tight">
-            Boost Your Collaborations with Contract
+            Empowering Traders with Profitable Earnings
             </h2>
             <p className="mt-6 leading-relaxed text-slate-700 sm:mt-8 sm:text-lg sm:leading-8">
-<<<<<<< HEAD
-            We`re excited to announce our latest feature - Contract, designed to help investors and traders work together, 
-=======
-            We`re excited to announce our latest feature - Contract, designed to help investors and traders work together,
->>>>>>> 1683f8db896b0f8c492c8430911ab375d0947f55
-            have secure contracts between each other, communicate better, and achieve more.
-            Contract is a feature that connects traders and investors on our platform in a unique and powerful way. 
-            Our goal is to offer a secure and decentralized solution that enables traders and investors to create, negotiate, 
-            and execute contracts for investments. 
+            Welcome to Dalan, the trading program dedicated to helping you earn income based on your trading efforts.
+            We offer two salary programs: Level 2 traders can earn a salary of 3% of the AUM amount up to $1000 USD, while
+            Level 3 traders can earn a salary of 5% of the AUM amount up to $40,000 USD. These salaries provide reliable sources of income that vou can reinvest or use
+            separately. Join our program today and maximize your profits with our AUM-based salary program.
             </p>
             <Button
               href="#"

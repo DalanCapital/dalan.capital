@@ -23,8 +23,6 @@ export default function Home() {
       <FeatureBlocks />
       <FeaturesGrid />
       <Process />
-      <Faqs />
-      <CallToAction />
       <Footer />
     </>
   );

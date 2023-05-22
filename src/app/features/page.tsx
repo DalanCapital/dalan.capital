@@ -25,8 +25,6 @@ export default function Home() {
       <PlanFeatures />
       <FeaturedTestimonials />
       <PlansTable />
-      <Faqs />
-      <CallToAction />
       <Footer />
     </>
   );

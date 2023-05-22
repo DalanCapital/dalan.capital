@@ -26,12 +26,18 @@ export function FeatureBlocks() {
           </div>
           <div className="w-full border border-gray-secondary-400/60 bg-gray-secondary-50 px-6 py-10 sm:p-14 lg:ml-auto lg:w-7/12 lg:py-32 lg:pl-28 xl:pl-36 xl:pr-20">
             <h2 className="text-4xl font-semibold leading-tight text-slate-900 xl:text-5xl xl:leading-tight">
-            Achieve More with Community-Driven Investing
+            Achieve More with Community-Driven Trading
             </h2>
             <p className="mt-6 leading-relaxed text-slate-700 sm:mt-8 sm:text-lg sm:leading-8">
+<<<<<<< HEAD
+            We`re excited to announce our latest feature - Team, designed to help traders trade together, communicate better, and achieve more.
+            Team is a feature that connects traders on our platform in a unique and powerful way. Our goal is to create a sense of community and collaboration, 
+            allowing traders to work together and achieve more than they could on their own. 
+=======
             We`re excited to announce our latest feature - Desk, designed to help investors invest together, communicate better, and achieve more.
             Desk is a feature that connects investors on our platform in a unique and powerful way. Our goal is to create a sense of community and collaboration, 
             allowing investors to work together and achieve more than they could on their own. 
+>>>>>>> 1683f8db896b0f8c492c8430911ab375d0947f55
             </p>
             <Button
               href="#"

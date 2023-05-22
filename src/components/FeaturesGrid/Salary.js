@@ -5,9 +5,9 @@ import { Button } from '@/components/Button'
 
 const features = [
   {
-    name: 'Better decision-aking',
+    name: 'Level 1 Traders',
     description:
-      "FP&A provides the essential information you need to make informed decisions and achieve financial goals.",
+      "Level 1 traders do not have a dedicated salary.Our program encourages productive tradina and maximizing profits, which enables traders to earn more in the long run based on their efforts.",
     href: '#',
     className:
       "sm:after:content-[''] sm:after:right-0 sm:after:h-5/6 sm:after:w-px sm:after:absolute sm:after:bg-gray-secondary-400/60",
@@ -41,9 +41,9 @@ const features = [
     },
   },
   {
-    name: 'Customizable Reports',
+    name: 'Level 2 Traders',
     description:
-      "FP&A feature allows you to create customizable reports and dashboards according to your unique needs.",
+      "Our program offers a salary of 3% of the AUM amount up to $1000 USD to Level 2 traders.Build a profitable asset portfolio, manage it effectively, and enjoy a steady income.",
     href: '#',
     className:
       "lg:after:content-[''] lg:after:right-0 lg:after:h-5/6 lg:after:w-px lg:after:absolute lg:after:bg-gray-secondary-400/60 before:top-0 before:w-5/6 before:h-px before:absolute before:bg-gray-secondary-400/60 before:content-[''] sm:before:h-0",
@@ -74,9 +74,9 @@ const features = [
     },
   },
   {
-    name: 'Centralized Data Management',
+    name: 'Level 3 Traders',
     description:
-      "FP&A feature streamlines all your financial data into one centralized platform, making it easier for you to manage your finances.",
+      "Earning a salary of 5% of the AUM amount up to $40,000 USD is a great way for Level 3 traders to build a stable income while growing their trading business.",
     href: '#',
     className:
       "sm:after:content-[''] sm:after:right-0 sm:after:h-5/6 sm:after:w-px sm:after:absolute sm:after:bg-gray-secondary-400/60 lg:after:w-0 before:top-0 before:w-5/6 before:h-px before:absolute before:bg-gray-secondary-400/60 before:content-[''] lg:before:h-0",
@@ -106,14 +106,15 @@ const features = [
       )
     },
   },
-  ]
+]
+
 export function FeaturesGrid() {
   return (
     <section className="relative overflow-hidden bg-amber-50 pt-20 pb-8 lg:pt-28 lg:pb-12">
       <Container>
         <div className="relative mx-auto w-full max-w-lg sm:max-w-3xl lg:mx-0 lg:max-w-none">
           <h2 className="mx-auto max-w-2xl text-center text-4xl font-semibold leading-tight text-slate-900 sm:text-5xl sm:leading-tight">
-            Professional podcasting without the hassle
+            Salary at Dalan
           </h2>
           <div className="mt-10 grid sm:mt-16 sm:grid-cols-2 lg:mt-24 lg:grid-cols-3">
             {features.map((feature, index) => (

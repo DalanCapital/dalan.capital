@@ -32,7 +32,11 @@ export function FeatureBlocks() {
             <p className="mt-6 leading-relaxed text-slate-700 sm:mt-8 sm:text-lg sm:leading-8">
             We understand the challenges that hedge funds face, from managing risk to staying compliant with regulations. 
             Hedge funds demand fast, informed trading decisions in order to stay ahead of the competition. 
+<<<<<<< HEAD
+            That`s why our platform is designed with the latest security features, ensuring that all transactions are fully encrypted and shielded from fraudulent activities. 
+=======
             That`s why our platform is designed with the latest security features, ensuring that all transactions are fully encrypted and shielded from fraudulent activities.
+>>>>>>> 1683f8db896b0f8c492c8430911ab375d0947f55
             Our risk management system is engineered to minimize your exposure to risk, while API connectivity allows for customizable reporting and analysis.
             </p>
             <Button
