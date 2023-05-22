@@ -1,12 +1,12 @@
-import clsx from 'clsx'
+import clsx from "clsx";
 
-import { Container } from '@/components/Container'
+import { Container } from "@/components/Container";
 
 const features = [
   {
-    name: 'Transparency and Trust',
+    name: "Transparency and Trust",
     description:
-      'Integrity is at the heart of our values. We believe in transparency, honesty, and fairness. Our traders and investors trust us to provide them with a platform that they can rely on, and we make it our mission to keep that trust and confidence.',
+      "Integrity is at the heart of our values. We believe in transparency, honesty, and fairness. Our traders and investors trust us to provide them with a platform that they can rely on, and we make it our mission to keep that trust and confidence.",
     className:
       "sm:after:content-[''] sm:after:right-0 sm:after:h-5/6 sm:after:w-px sm:after:absolute sm:after:bg-gray-secondary-400/80",
     icon: function AmbitionIcon() {
@@ -40,13 +40,13 @@ const features = [
             fill="#9EADB2"
           />
         </svg>
-      )
+      );
     },
   },
   {
-    name: 'Innovating Trading and Investments',
+    name: "Innovating Trading and Investments",
     description:
-      'Passion is what fuels our team at Dalan. We\'re passionate about creating a trading platform that can make a real difference, empowering traders, and making it easy for investors to earn returns.',
+      "Passion is what fuels our team at Dalan. We're passionate about creating a trading platform that can make a real difference, empowering traders, and making it easy for investors to earn returns.",
     className:
       "lg:after:content-[''] lg:after:right-0 lg:after:h-5/6 lg:after:w-px lg:after:absolute lg:after:bg-gray-secondary-400/80 before:top-0 before:w-full sm:before:w-5/6 before:h-px before:absolute before:bg-gray-secondary-400/80 before:content-[''] sm:before:h-0",
     icon: function ResilienceIcon() {
@@ -64,13 +64,13 @@ const features = [
             fill="#9EADB2"
           />
         </svg>
-      )
+      );
     },
   },
   {
-    name: 'Enabling Success for All',
+    name: "Enabling Success for All",
     description:
-      'Inclusivity is a vital part of our core values. Our platform is designed to give everyone the opportunity to invest and trade, regardless of their level of experience. We believe that by providing access to funding and the right tools, we can enable our users to reach their full potential.',
+      "Inclusivity is a vital part of our core values. Our platform is designed to give everyone the opportunity to invest and trade, regardless of their level of experience. We believe that by providing access to funding and the right tools, we can enable our users to reach their full potential.",
     className:
       "sm:after:content-[''] sm:after:right-0 sm:after:h-5/6 sm:after:w-px sm:after:absolute sm:after:bg-gray-secondary-400/80 lg:after:w-0 before:top-0 before:w-full sm:before:w-5/6 before:h-px before:absolute before:bg-gray-secondary-400/80 before:content-[''] lg:before:h-0",
     icon: function TeamworkIcon() {
@@ -108,13 +108,13 @@ const features = [
             fill="#9EADB2"
           />
         </svg>
-      )
+      );
     },
   },
   {
-    name: 'Empowering Traders and Investors',
+    name: "Empowering Traders and Investors",
     description:
-      'We believe that success should be shared. Our platform is built on the principle of collaboration between traders and investors, with both parties benefiting from mutual support.',
+      "We believe that success should be shared. Our platform is built on the principle of collaboration between traders and investors, with both parties benefiting from mutual support.",
     className:
       "lg:after:content-[''] lg:after:right-0 lg:after:h-5/6 lg:after:w-px lg:after:absolute lg:after:bg-gray-secondary-400/80 before:top-0 before:w-full sm:before:w-5/6 before:h-px before:absolute before:bg-gray-secondary-400/80 before:content-['']",
     icon: function IntegrityIcon() {
@@ -140,10 +140,10 @@ const features = [
             fill="#9EADB2"
           />
         </svg>
-      )
+      );
     },
   },
-]
+];
 
 export function FeaturesGridDark() {
   return (
@@ -159,7 +159,7 @@ export function FeaturesGridDark() {
                 key={feature.name}
                 className={clsx(
                   feature.className,
-                  'relative flex flex-col items-center justify-center py-10 px-0 sm:py-12 sm:px-8 xl:py-16 xl:px-12'
+                  "relative flex flex-col items-center justify-center py-10 px-0 sm:py-12 sm:px-8 xl:py-16 xl:px-12"
                 )}
               >
                 <div className="flex flex-1 flex-col">
@@ -177,5 +177,5 @@ export function FeaturesGridDark() {
         </div>
       </Container>
     </section>
-  )
+  );
 }
