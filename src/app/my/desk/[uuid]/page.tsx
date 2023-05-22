@@ -18,25 +18,24 @@ import { useEffect, useState } from "react";
 export default function addDesk() {
   const router = useRouter();
   const params = useParams();
-  const [deskData, setDeskData] = useState({} as any);
 
   // * formik and form submition
   const { values, handleChange, handleSubmit, handleBlur, errors, touched } =
     useFormik({
       initialValues: {
-        title: deskData.title,
-        description: deskData.description,
-        is_public: deskData.is_public,
+        title: "",
+        description: "",
+        is_public: 0,
       },
       validationSchema: addDeskSchema,
       onSubmit(formValues) {
         // @ts-ignore
         formValues.is_public = formValues.is_public === "1" ? true : false;
-        apiService("/my/desks", {
-          method: "post",
+        apiService(`/my/desks/${params.uuid}`, {
+          method: "put",
           body: JSON.stringify(formValues),
         })
-          .then((res) => {
+          .then(() => {
             router.push("/my/desk");
             // toast.success(res.message);
           })
@@ -46,15 +45,16 @@ export default function addDesk() {
       },
     });
 
-  const fetchSingleItem = () => {
-    apiService(`/my/desks/${params.uuid}`).then((res) => {
-      console.log(res);
-    });
-  };
+  // ! TEMP COMMENTED
+  // const fetchSingleItem = () => {
+  //   apiService(`/my/desks/${params.uuid}`).then((res) => {
+  //     console.log(res);
+  //   });
+  // };
 
-  useEffect(() => {
-    fetchSingleItem();
-  }, []);
+  // useEffect(() => {
+  //   fetchSingleItem();
+  // }, []);
 
   return (
     <>

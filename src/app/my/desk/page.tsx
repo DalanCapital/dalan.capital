@@ -134,7 +134,7 @@ function desk() {
               </tr>
             </thead>
             <tbody>
-              {deskList.map((singleItem, singleIndex) => (
+              {deskList.map((singleItem: any, singleIndex) => (
                 <tr
                   className="bg-white border-b hover:bg-gray-200 cursor-pointer dark:bg-gray-800 dark:border-gray-700"
                   key={singleIndex}
@@ -145,11 +145,13 @@ function desk() {
                   >
                     {singleItem.title}
                   </th> */}
-                  {Object.values(singleItem).map((singleTD, singleTDIdx) => (
-                    <td key={`item-${singleTDIdx}`} className="px-6 py-4">
-                      {singleTD}
-                    </td>
-                  ))}
+                  {Object.values(singleItem).map(
+                    (singleTD: any, singleTDIdx) => (
+                      <td key={`item-${singleTDIdx}`} className="px-6 py-4">
+                        {singleTD}
+                      </td>
+                    )
+                  )}
                   <td className="px-6 py-4">
                     <div className="flex space-x-2">
                       <Button
