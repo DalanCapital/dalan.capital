@@ -1,9 +1,9 @@
 import Head from "next/head";
 
-import { HomeHero } from "@/components/HomeHero/Traders";
-import { FeatureBlocks } from "@/components/FeatureBlocks/Traders";
-import { FeaturesGrid } from "@/components/FeaturesGrid/Traders";
-import { Process } from "@/components/Process/Traders";
+import { HomeHero } from "@/components/HomeHero/ProAccount";
+import { FeatureBlocks } from "@/components/FeatureBlocks/ProAccount";
+import { FeaturesGridDark } from "@/components/FeaturesGridDark/ProAccount";
+import { Process } from "@/components/Process/HedgeFunds";
 import { Faqs } from "@/components/Faqs";
 import { CallToAction } from "@/components/CallToAction";
 import { Footer } from "@/components/Footer";
@@ -21,9 +21,7 @@ export default function Home() {
       <Header />
       <HomeHero />
       <FeatureBlocks />
-      <FeaturesGrid />     
-      <Process />
-      <CallToAction />
+      <FeaturesGridDark />
       <Footer />
     </>
   );

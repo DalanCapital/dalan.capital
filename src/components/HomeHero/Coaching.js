@@ -1,7 +1,5 @@
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
-
-import Avatar from "public/images/avatars/avatar-01.jpg";
 import homeHeroImg from "public/images/stock/home-hero.jpg";
 import { Container } from "@/components/Container";
 import { Button } from "@/components/Button";
@@ -12,7 +10,7 @@ export function HomeHero() {
       <Container>
         <div className="mx-auto max-w-lg pb-14 md:mx-0 md:max-w-none md:pb-48 lg:pb-52 xl:max-w-xl xl:pb-14">
           <h1 className="text-5xl font-semibold leading-tighter text-slate-900 md:mx-auto md:max-w-2xl md:text-center xl:mx-0 xl:text-left xl:text-6xl xl:leading-tighter">
-          Level Up Trading
+          Full Trading Potential with Coaching  
           </h1>
           <ul className="mt-6 flex flex-col space-y-4 md:mx-auto md:mt-8 md:max-w-3xl md:flex-row md:space-y-0 md:space-x-2 lg:space-x-4 xl:mx-0 xl:flex-col xl:space-y-4 xl:space-x-0">
             <li className="flex items-center md:items-start xl:items-center">
@@ -62,42 +60,7 @@ export function HomeHero() {
           <div className="mx-auto max-w-lg pt-20 pb-8 pl-4 md:mx-0 md:max-w-md lg:max-w-lg lg:pt-28 lg:pb-16 xl:max-w-xl xl:py-12 xl:pl-14 2xl:pl-0">
             <blockquote>
               <div className="relative leading-relaxed text-slate-700 xl:text-lg">
-                <svg
-                  className="absolute left-0 -top-12 h-8 w-8 transform text-gray-secondary-200 xl:top-0 xl:-left-5 xl:-translate-x-full xl:-translate-y-2"
-                  height="48"
-                  width="48"
-                  viewBox="0 0 48 48"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g>
-                    <path
-                      d="M21.66145,33.81676c0,4.29661-3.96109,8.22346-8.91304,8.22346C4.56585,42.04022,1,35.98671,1,27.90615 c0-9.27484,9.34862-18.21943,17.83035-21.94637l2.26574,3.64916C14.10766,12.9954,8.88433,17.58691,8.14413,25.28492h2.89106 c3.09587,0,6.31198,0.4991,8.45903,2.72402C21.02498,29.59761,21.66145,31.62025,21.66145,33.81676z M47,33.81676 c0,4.29661-3.96109,8.22346-8.91304,8.22346c-8.18256,0-11.74842-6.05352-11.74842-14.13408 c0-9.27484,9.34862-18.21943,17.83035-21.94637l2.26574,3.64916c-6.98843,3.38646-12.21176,7.97797-12.95195,15.67598 c3.15316,0,5.76908-0.11425,8.09925,0.71955C45.21084,27.30299,47,30.10812,47,33.81676z"
-                      fill="currentColor"
-                    />
-                  </g>
-                </svg>
-
-                <p className="relative">
-                As a trader using Dalan, I can effortlessly manage my portfolio, analyze market trends, and make swift trading decisions. This enables me to stay ahead of the competition, make profitable trades, and achieve my financial objectives with ease.
-                </p>
-              </div>
-              <div className="mt-7 flex items-center">
-                <div className="h-14 w-14 rounded-full bg-gray-secondary-100">
-                  <Image
-                    className="h-full w-full rounded-full object-cover object-center"
-                    width={56}
-                    src={Avatar}
-                    alt="Home Hero Testimonial"
-                  />
                 </div>
-                <div className="ml-5">
-                  <p className="font-medium text-slate-900">Courtland Allen</p>
-
-                  <p className="font-medium text-slate-500">
-                    Trader
-                  </p>
-                </div>
-              </div>
             </blockquote>
           </div>
           <div className="absolute bottom-0 right-6 hidden w-1/3 bg-gray-secondary-100 md:block lg:right-12 xl:-right-0 xl:w-full xl:max-w-xl 2xl:-right-32 2xl:max-w-[640px]">

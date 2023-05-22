@@ -3,7 +3,6 @@ import Image from "next/image";
 import { Container } from "@/components/Container";
 import { Button } from "@/components/Button";
 import featureImage1 from "public/images/stock/feature-image-01.jpg";
-import featureImage2 from "public/images/stock/feature-image-02.jpg";
 
 export function FeatureBlocks() {
   return (
@@ -18,23 +17,23 @@ export function FeatureBlocks() {
             />
             <div className="absolute right-0 top-0 w-64 -translate-y-24 bg-gray-secondary-100/95 p-6 backdrop-blur-sm sm:py-7 lg:left-0 lg:top-[unset] lg:bottom-0 lg:translate-y-24 2xl:-translate-x-16">
               <p className="text-4xl font-semibold text-slate-900 xl:text-5xl">
-                1000+
+                100+
               </p>
               <p className="mt-5 text-slate-700">
-                Traders use Dalan to ease their Trading
+              Boost Your Collaborations with Contract
               </p>
             </div>
           </div>
           <div className="w-full border border-gray-secondary-400/60 bg-gray-secondary-50 px-6 py-10 sm:p-14 lg:ml-auto lg:w-7/12 lg:py-32 lg:pl-28 xl:pl-36 xl:pr-20">
             <h2 className="text-4xl font-semibold leading-tight text-slate-900 xl:text-5xl xl:leading-tight">
-            Start Your Trading Journey with Level 1 Program
+            Boost Your Collaborations with Contract
             </h2>
             <p className="mt-6 leading-relaxed text-slate-700 sm:mt-8 sm:text-lg sm:leading-8">
-            Our Level 1 program is an excellent place to start! No verification process is required, making trading accessible to everyone.
-             With our 10% return target and the guidance of our team of professionals, striving for success is not only challenging but 
-             achievable. Plus, with an AUM range of $1,000 to $10,000 and a manageable daily lot size, beginners can practice their skills 
-             without undue risk. While Level 1 traders do not have access to our Pro Account or dedicated health insurance, our team is 
-             committed to helping all traders, regardless of their level. Join now and begin your journey to trading success!
+            We're excited to announce our latest feature - Contract, designed to help investors and traders work together, 
+            have secure contracts between each other, communicate better, and achieve more.
+            Contract is a feature that connects traders and investors on our platform in a unique and powerful way. 
+            Our goal is to offer a secure and decentralized solution that enables traders and investors to create, negotiate, 
+            and execute contracts for investments. 
             </p>
             <Button
               href="#"

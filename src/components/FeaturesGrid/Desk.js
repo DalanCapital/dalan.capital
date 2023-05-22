@@ -5,9 +5,9 @@ import { Button } from '@/components/Button'
 
 const features = [
   {
-    name: 'Trade together',
+    name: 'Invest together',
     description:
-      'By joining or creating a team, traders can pool their resources and trade together towards a common goal.Our Team feature allows traders collaborate on market analysis, and share trading strategies for even greater success.',
+      ' By joining or creating a desk, investors can pool their resources and invest together towards a common goal.',
     href: '#',
     className:
       "sm:after:content-[''] sm:after:right-0 sm:after:h-5/6 sm:after:w-px sm:after:absolute sm:after:bg-gray-secondary-400/60",
@@ -41,9 +41,9 @@ const features = [
     },
   },
   {
-    name: 'Reduce trading risks',
+    name: 'Team up with investors',
     description:
-      'Get valuable feedback, advice, and suggestions from team members to help make informed trading decisions. By teaming up, you can share the risks, reduce the likelihood of losses, and diversify your portfolio.',
+      'Desk allows you to team up with investors who share similar interests and goals. This community is a great resource where you can learn from each other, trade ideas, and gain new perspectives that can significantly influence your investment decisions',
     href: '#',
     className:
       "lg:after:content-[''] lg:after:right-0 lg:after:h-5/6 lg:after:w-px lg:after:absolute lg:after:bg-gray-secondary-400/60 before:top-0 before:w-5/6 before:h-px before:absolute before:bg-gray-secondary-400/60 before:content-[''] sm:before:h-0",
@@ -74,9 +74,9 @@ const features = [
     },
   },
   {
-    name: 'Trading network',
+    name: 'Diversify your portfolio',
     description:
-      "Build a strong trading network with Dalan's Team feature. Connect with traders who share your goals and interests and gain access to potential partners from different regions and backgrounds.",
+      " With Desk, you can pool your resources with other investors, enabling you to diversify your portfolio and minimize your risks. This feature provides a level of security that would be difficult or even impossible to achieve with individual investments.",
     href: '#',
     className:
       "sm:after:content-[''] sm:after:right-0 sm:after:h-5/6 sm:after:w-px sm:after:absolute sm:after:bg-gray-secondary-400/60 lg:after:w-0 before:top-0 before:w-5/6 before:h-px before:absolute before:bg-gray-secondary-400/60 before:content-[''] lg:before:h-0",
@@ -109,7 +109,7 @@ const features = [
   {
     name: 'Achive More',
     description:
-      ' Our platform connects traders from diverse backgrounds and levels of experience, fostering mentorship, learning, and growth for everyone. Working together, traders can achieve financial goals that would have been impossible alone.',
+      ' Investors can achieve more when they work together, and Desk makes it possible. With features like mentorship, learning, and growth, Desk provides a platform that facilitates connections between investors of all levels and backgrounds. This helps everyone achieve their financial goals.',
     href: '#',
     className:
       "lg:after:content-[''] lg:after:right-0 lg:after:h-5/6 lg:after:w-px lg:after:absolute lg:after:bg-gray-secondary-400/60 before:top-0 before:w-5/6 before:h-px before:absolute before:bg-gray-secondary-400/60 before:content-['']",
@@ -146,7 +146,7 @@ const features = [
   {
     name: 'Amplify your knowledge',
     description:
-      "Connect with traders worldwide, gain valuable insights into trading strategies, market trends. Enhance your skills and knowledge with Dalan's Team feature, which brings together traders from different regions, backgrounds, and areas of expertise.",
+      "Connect with investirs worldwide, gain valuable insights into investing strategies, market trends. Enhance your skills and knowledge with Dalan's Desk feature, which brings investors toaghter",
     href: '#',
     className:
       "sm:after:content-[''] sm:after:right-0 sm:after:h-5/6 sm:after:w-px sm:after:absolute sm:after:bg-gray-secondary-400/60 before:top-0 before:w-5/6 before:h-px before:absolute before:bg-gray-secondary-400/60 before:content-['']",
@@ -199,7 +199,7 @@ const features = [
   {
     name: 'Communicate better',
     description:
-      "Team comes with a suite of communication tools, allowing traders to stay connected and informed about market events, trading opportunities, and strategy updates.",
+      "Desk comes with a suite of communication tools, allowing investors to stay connected and informed about market events, investment opportunities, and strategy updates.",
     href: '#',
     className:
       "before:top-0 before:w-5/6 before:h-px before:absolute before:bg-gray-secondary-400/60 before:content-['']",
@@ -233,7 +233,7 @@ export function FeaturesGrid() {
       <Container>
         <div className="relative mx-auto w-full max-w-lg sm:max-w-3xl lg:mx-0 lg:max-w-none">
           <h2 className="mx-auto max-w-2xl text-center text-4xl font-semibold leading-tight text-slate-900 sm:text-5xl sm:leading-tight">
-            Professional podcasting without the hassle
+            Desk
           </h2>
           <div className="mt-10 grid sm:mt-16 sm:grid-cols-2 lg:mt-24 lg:grid-cols-3">
             {features.map((feature, index) => (
@@ -253,14 +253,6 @@ export function FeaturesGrid() {
                     {feature.description}
                   </p>
                 </div>
-                <Button
-                  size="md"
-                  href={feature.href}
-                  variant="ghost"
-                  className="mt-12 sm:mt-16"
-                >
-                  Learn more
-                </Button>
               </div>
             ))}
           </div>

@@ -5,9 +5,9 @@ import { Button } from '@/components/Button'
 
 const features = [
   {
-    name: 'Access to Expert Traders',
+    name: 'No Verification Required',
     description:
-      'Dalan connects personal investors with a diverse network of expert traders who provide invaluable insights and advice.',
+      "We don't require Level 1 traders to complete a KYC verification process. Doing so removes a barrier to entry, making trading more accessible to everyone.",
     href: '#',
     className:
       "sm:after:content-[''] sm:after:right-0 sm:after:h-5/6 sm:after:w-px sm:after:absolute sm:after:bg-gray-secondary-400/60",
@@ -41,9 +41,9 @@ const features = [
     },
   },
   {
-    name: 'Invest with Confidence',
+    name: '10% Return Target',
     description:
-      'Invest with confidence on Dalan. Our risk management system sets limits and stop-loss mechanisms to safeguard your investments.',
+      "Our achievable 10% return target motivates and challenges traders to perform their best.This target is set to challenge traders, but also to be realistic, based on the available resources. It's not just a goal, it's a requirement for progressing to the next level.",
     href: '#',
     className:
       "lg:after:content-[''] lg:after:right-0 lg:after:h-5/6 lg:after:w-px lg:after:absolute lg:after:bg-gray-secondary-400/60 before:top-0 before:w-5/6 before:h-px before:absolute before:bg-gray-secondary-400/60 before:content-[''] sm:before:h-0",
@@ -74,9 +74,9 @@ const features = [
     },
   },
   {
-    name: 'Real-Time Analytics',
+    name: 'AUM Range: $1000-$10K',
     description:
-      'Dalan offers real-time analytics tools for personal investors. Our advanced interface visualizes data to give valuable insights for portfolio management.',
+      "At Level 1, we've designed a program that gives traders enough funds to trade without overwhelming them or exposing them to undue risks. With the AUM range of $1,000 to $10,000, traders can learn the ropes of trading in live market conditions with sufficient funds to refine their skills.",
     href: '#',
     className:
       "sm:after:content-[''] sm:after:right-0 sm:after:h-5/6 sm:after:w-px sm:after:absolute sm:after:bg-gray-secondary-400/60 lg:after:w-0 before:top-0 before:w-5/6 before:h-px before:absolute before:bg-gray-secondary-400/60 before:content-[''] lg:before:h-0",
@@ -107,9 +107,9 @@ const features = [
     },
   },
   {
-    name: 'Security is Our Top Priority',
+    name: 'Daily Lot Size',
     description:
-      'At Dalan, we use the latest encryption technology to keep your personal information and investments secure for confident investing.',
+      'Lot size is important for determining the risk and reward of trades. Our Level 1 program sets a manageable daily lot size of 1 lot (100K units of base currency) ideal for beginners, aiming to provide a solid and progressive learning experience for long-term success.',
     href: '#',
     className:
       "lg:after:content-[''] lg:after:right-0 lg:after:h-5/6 lg:after:w-px lg:after:absolute lg:after:bg-gray-secondary-400/60 before:top-0 before:w-5/6 before:h-px before:absolute before:bg-gray-secondary-400/60 before:content-['']",
@@ -144,9 +144,9 @@ const features = [
     },
   },
   {
-    name: 'Community of Knowledge-Sharing',
+    name: 'No Dedicated Insurance and Salary',
     description:
-      "Join our community platform at Dalan for knowledge-sharing and mutual support. Collaborate with experienced investors on Dalan's community platform for informed decision-making and shared learning.",
+      "Level 1 traders do not have a dedicated health insurance plan and salary.Our program encourages productive trading and maximizing profits, which enables traders to earn more in the long run based on their efforts.",
     href: '#',
     className:
       "sm:after:content-[''] sm:after:right-0 sm:after:h-5/6 sm:after:w-px sm:after:absolute sm:after:bg-gray-secondary-400/60 before:top-0 before:w-5/6 before:h-px before:absolute before:bg-gray-secondary-400/60 before:content-['']",
@@ -197,9 +197,9 @@ const features = [
     },
   },
   {
-    name: 'Take control of your investing journey ',
+    name: 'No Access to Pro Account',
     description:
-      "Take control of your investing journey on Dalan's platform. Our intuitive tools empower personal investors to make their own informed decisions.",
+      "The Pro Account is exclusively for Level 2 and Level 3 advanced traders. However, our team of professionals is dedicated to supporting all traders, including Level 1, to be successful.",
     href: '#',
     className:
       "before:top-0 before:w-5/6 before:h-px before:absolute before:bg-gray-secondary-400/60 before:content-['']",
@@ -233,7 +233,7 @@ export function FeaturesGrid() {
       <Container>
         <div className="relative mx-auto w-full max-w-lg sm:max-w-3xl lg:mx-0 lg:max-w-none">
           <h2 className="mx-auto max-w-2xl text-center text-4xl font-semibold leading-tight text-slate-900 sm:text-5xl sm:leading-tight">
-            Professional podcasting without the hassle
+            Level 1 Traders
           </h2>
           <div className="mt-10 grid sm:mt-16 sm:grid-cols-2 lg:mt-24 lg:grid-cols-3">
             {features.map((feature, index) => (
@@ -253,14 +253,6 @@ export function FeaturesGrid() {
                     {feature.description}
                   </p>
                 </div>
-                <Button
-                  size="md"
-                  href={feature.href}
-                  variant="ghost"
-                  className="mt-12 sm:mt-16"
-                >
-                  Learn more
-                </Button>
               </div>
             ))}
           </div>

@@ -253,14 +253,6 @@ export function FeaturesGrid() {
                     {feature.description}
                   </p>
                 </div>
-                <Button
-                  size="md"
-                  href={feature.href}
-                  variant="ghost"
-                  className="mt-12 sm:mt-16"
-                >
-                  Learn more
-                </Button>
               </div>
             ))}
           </div>
