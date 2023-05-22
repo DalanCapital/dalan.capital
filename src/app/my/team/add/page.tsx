@@ -1,17 +1,12 @@
-"use client";
 import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-// * react toastify
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 function addDesk() {
   return (
     <>
       <Header />
-      <ToastContainer theme="colored" />
       <Container className="my-10">
         <section className="bg-white dark:bg-gray-900">
           <div className="mx-auto">
@@ -20,12 +15,28 @@ function addDesk() {
             </h2>
             <form action="#">
               <div className="grid gap-4 sm:grid-cols-2 sm:gap-6">
+                <div className="sm:col-span-2">
+                  <label
+                    htmlFor="name"
+                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >
+                    Product Name
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                    placeholder="Type product name"
+                    required
+                  />
+                </div>
                 <div className="w-full">
                   <label
                     htmlFor="brand"
                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                   >
-                    Title
+                    Brand
                   </label>
                   <input
                     type="text"
@@ -33,6 +44,22 @@ function addDesk() {
                     id="brand"
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                     placeholder="Product brand"
+                    required
+                  />
+                </div>
+                <div className="w-full">
+                  <label
+                    htmlFor="price"
+                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >
+                    Price
+                  </label>
+                  <input
+                    type="number"
+                    name="price"
+                    id="price"
+                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                    placeholder="$2999"
                     required
                   />
                 </div>
@@ -49,11 +76,28 @@ function addDesk() {
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                   >
                     <option>Select category</option>
-                    <option value="false">Private</option>
-                    <option value="true">Public</option>
+                    <option value="TV">TV/Monitors</option>
+                    <option value="PC">PC</option>
+                    <option value="GA">Gaming/Console</option>
+                    <option value="PH">Phones</option>
                   </select>
                 </div>
-
+                <div>
+                  <label
+                    htmlFor="item-weight"
+                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >
+                    Item Weight (kg)
+                  </label>
+                  <input
+                    type="number"
+                    name="item-weight"
+                    id="item-weight"
+                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                    placeholder="12"
+                    required
+                  />
+                </div>
                 <div className="sm:col-span-2">
                   <label
                     htmlFor="description"
@@ -77,14 +121,7 @@ function addDesk() {
               </button>
             </form>
           </div>
-          <Button
-            size="md"
-            onClick={() => {
-              toast.success("Success");
-            }}
-          >
-            Submit
-          </Button>
+          <Button size="md">Submit</Button>
         </section>
       </Container>
       <Footer />
