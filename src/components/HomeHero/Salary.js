@@ -10,30 +10,30 @@ export function HomeHero() {
       <Container>
         <div className="mx-auto max-w-lg pb-14 md:mx-0 md:max-w-none md:pb-48 lg:pb-52 xl:max-w-xl xl:pb-14">
           <h1 className="text-5xl font-semibold leading-tighter text-slate-900 md:mx-auto md:max-w-2xl md:text-center xl:mx-0 xl:text-left xl:text-6xl xl:leading-tighter">
-          Tax Reporting Made Easy
+          Trade, Earn, Succeed
           </h1>
           <ul className="mt-6 flex flex-col space-y-4 md:mx-auto md:mt-8 md:max-w-3xl md:flex-row md:space-y-0 md:space-x-2 lg:space-x-4 xl:mx-0 xl:flex-col xl:space-y-4 xl:space-x-0">
             <li className="flex items-center md:items-start xl:items-center">
               <CheckCircleIcon className="h-5 w-5 shrink-0 text-slate-800 md:h-6 md:w-6 xl:h-5 xl:w-5" />
               <p className="ml-3 text-slate-700 lg:ml-4 xl:ml-5 xl:text-lg">
-              Stay Compliant and  {" "}
+              Secure Your  {" "}
                 <span className="font-medium text-slate-900">
-                Minimize Risks.
+                Financial Future.
                 </span>
               </p>
             </li>
             <li className="flex items-center md:items-start xl:items-center">
               <CheckCircleIcon className="h-5 w-5 shrink-0 text-slate-800 md:h-6 md:w-6 xl:h-5 xl:w-5" />
               <p className="ml-3 text-slate-700 lg:ml-4 xl:ml-5 xl:text-lg">
-                  Advanced {" "}
-                <span className="font-medium text-slate-900">Tax Coverage.</span>
+              <span className="font-medium text-slate-900">Maximize</span>
+                {" "}  Your Profits.
               </p>
             </li>
             <li className="flex items-center md:items-start xl:items-center">
               <CheckCircleIcon className="h-5 w-5 shrink-0 text-slate-800 md:h-6 md:w-6 xl:h-5 xl:w-5" />
               <p className="ml-3 text-slate-700 lg:ml-4 xl:ml-5 xl:text-lg">
-              Optimize Your  {" "}
-                <span className="font-medium text-slate-900">Tax Performance.</span>
+              Secure Your  {" "}
+                <span className="font-medium text-slate-900">Financial Future.</span>
               </p>
             </li>
           </ul>

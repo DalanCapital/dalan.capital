@@ -233,7 +233,7 @@ export function FeaturesGrid() {
       <Container>
         <div className="relative mx-auto w-full max-w-lg sm:max-w-3xl lg:mx-0 lg:max-w-none">
           <h2 className="mx-auto max-w-2xl text-center text-4xl font-semibold leading-tight text-slate-900 sm:text-5xl sm:leading-tight">
-            Professional podcasting without the hassle
+          Hedge Funds at Dalan
           </h2>
           <div className="mt-10 grid sm:mt-16 sm:grid-cols-2 lg:mt-24 lg:grid-cols-3">
             {features.map((feature, index) => (

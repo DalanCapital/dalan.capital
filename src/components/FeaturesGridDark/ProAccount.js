@@ -183,7 +183,7 @@ export function FeaturesGridDark() {
       <Container>
         <div className="relative mx-auto w-full max-w-lg px-4 sm:max-w-3xl sm:px-0 lg:mx-0 lg:max-w-none">
           <h2 className="text-4xl font-semibold leading-tight text-white sm:text-center sm:text-5xl sm:leading-tight">
-            The values that drive us.
+            Pro Account
           </h2>
           <div className="mt-10 grid sm:mt-16 sm:grid-cols-2 lg:grid-cols-2">
             {features.map((feature) => (

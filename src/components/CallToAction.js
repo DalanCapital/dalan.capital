@@ -14,7 +14,7 @@ export function CallToAction() {
             Make a decision, Enter the Market.
           </h2>
           <p className="mt-6 text-center text-[17px] leading-relaxed text-slate-700 sm:text-lg sm:leading-relaxed md:text-left ">
-            Dalan is here to help you make the right decision. We introduce you to right persons, teams, and companies to make the right decision, and the right time to enter the market.
+            Dalan is here to help you make the right decision. We introduce you to right persons, teams,to make the right decision, and the right time to enter the market.
           </p>
           <div className="mt-10 flex w-full justify-center md:justify-start">
             <Button href="/start">Get Started</Button>
