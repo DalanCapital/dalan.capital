@@ -30,12 +30,12 @@ export function FeatureBlocks() {
             Secure Your Health and Financial Future
             </h2>
             <p className="mt-6 leading-relaxed text-slate-700 sm:mt-8 sm:text-lg sm:leading-8">
-            We're delighted to introduce our newest offering, which provides health insurance for our traders.
+            We`re delighted to introduce our newest offering, which provides health insurance for our traders.
             As a trader, you understand the importance of securing your financial future. 
             But what about your health? At Dalan, we believe that financial security and physical well-being go hand in hand. 
-            That's why we're proud to offer health insurance coverage that's tailored to your needs.
-            At Dalan, we're harnessing the power of technology to create a trading and investment community that's more than just a platform. 
-            We're dedicated to providing our traders with the tools they need to succeed, both financially and personally.
+            That`s why we`re proud to offer health insurance coverage that`s tailored to your needs.
+            At Dalan, we`re harnessing the power of technology to create a trading and investment community that`s more than just a platform. 
+            We`re dedicated to providing our traders with the tools they need to succeed, both financially and personally.
             Our health insurance coverage is provided by reputable global insurers and is available to all eligible traders on our platform.
             </p>
             <Button

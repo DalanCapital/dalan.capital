@@ -20,7 +20,7 @@ export function FeatureBlocks() {
                 100+
               </p>
               <p className="mt-5 text-slate-700">
-              Collaborate and Achieve More with Dalan's Team
+              Collaborate and Achieve More with Dalan`s Team
               </p>
             </div>
           </div>
@@ -29,7 +29,7 @@ export function FeatureBlocks() {
             Achieve More with Community-Driven Investing
             </h2>
             <p className="mt-6 leading-relaxed text-slate-700 sm:mt-8 sm:text-lg sm:leading-8">
-            We're excited to announce our latest feature - Desk, designed to help investors invest together, communicate better, and achieve more.
+            We`re excited to announce our latest feature - Desk, designed to help investors invest together, communicate better, and achieve more.
             Desk is a feature that connects investors on our platform in a unique and powerful way. Our goal is to create a sense of community and collaboration, 
             allowing investors to work together and achieve more than they could on their own. 
             </p>

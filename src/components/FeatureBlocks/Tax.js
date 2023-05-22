@@ -30,9 +30,9 @@ export function FeatureBlocks() {
             Tax Coverage
             </h2>
             <p className="mt-6 leading-relaxed text-slate-700 sm:mt-8 sm:text-lg sm:leading-8">
-            Our advanced tax coverage features include automated tax calculations that ensure that your enterprise's tax obligations 
+            Our advanced tax coverage features include automated tax calculations that ensure that your enterprise`s tax obligations 
             are calculated with maximum accuracy, reducing the risk of penalties and fines. Our platform also provides intuitive tax 
-            analytics that offer unique insights into your enterprise's tax reporting, helping you make informed decisions about how 
+            analytics that offer unique insights into your enterprise`s tax reporting, helping you make informed decisions about how 
             to optimize your tax performance while staying compliant with industry regulations.
             </p>
             <Button
