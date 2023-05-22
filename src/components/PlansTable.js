@@ -173,18 +173,18 @@ export function PlansTable() {
               ))}
             </tbody>
             <tfoot className="border-t border-gray-secondary-100">
-                <tr>
-                  <td>
+                <tr style={{ display: 'flex', justifyContent: 'center' }}>
+                  <td >
                     <Button href="#" className="mt-8 w-full">
                       Get Started
                     </Button>
                   </td>
-                  <td>
+                  <td className="text-center">
                     <Button href="#" className="mt-8 w-full">
                       Get Started
                     </Button>
                   </td>
-                  <td>
+                  <td className="text-center">
                     <Button href="#" className="mt-8 w-full">
                       Get Started
                     </Button>

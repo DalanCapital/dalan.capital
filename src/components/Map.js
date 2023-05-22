@@ -32,7 +32,7 @@ export function Map() {
               <span>Our office</span>
             </p>
             <h1 className="mt-3 text-center text-4xl font-semibold leading-snug text-slate-900 sm:mt-4 sm:max-w-xl sm:text-[40px] sm:leading-snug md:mx-auto lg:mx-0 lg:text-left">
-              Come and visit us
+            Visit Our Office
             </h1>
           </div>
 
@@ -45,11 +45,11 @@ export function Map() {
             <div className="flex flex-col border border-gray-secondary-400/60 bg-gray-secondary-50 p-8 sm:flex-row sm:items-center sm:justify-between sm:p-10 lg:absolute lg:right-0 lg:top-1/2 lg:w-1/3 lg:-translate-y-1/2 lg:flex-col lg:items-start">
               <div>
                 <h3 className="text-2xl font-semibold text-slate-900">
-                  Wavy Offices
+                  Dalan Office
                 </h3>
                 <p className="mt-5 leading-relaxed text-slate-700">
-                  4974 Duck Creek Road <br />
-                  San Francisco, CA 94108
+                Nook, One JLT,<br />
+                Jumeirah Lakes Towers, Dubai
                 </p>
               </div>
 

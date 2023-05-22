@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Wavvy - Pricing</title>
+        <title>Dalan - Pricing</title>
         <meta
           name="description"
           content="Get our fully featured bundle for only $39 a month."
