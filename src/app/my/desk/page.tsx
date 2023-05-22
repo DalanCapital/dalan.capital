@@ -152,7 +152,13 @@ function desk() {
                   ))}
                   <td className="px-6 py-4">
                     <div className="flex space-x-2">
-                      <Button size="sm" className="px-2 py-1">
+                      <Button
+                        size="sm"
+                        className="px-2 py-1"
+                        onClick={() => {
+                          changeRoute(singleItem.uuid);
+                        }}
+                      >
                         Edit
                       </Button>
                       <Button
