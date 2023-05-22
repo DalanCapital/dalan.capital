@@ -14,7 +14,7 @@ import { useFormik } from "formik";
 import { apiService } from "@/composables/apiService";
 import { addDeskSchema } from "@/composables/form-validations";
 
-export default function addDesk() {
+export default function DeskSingle() {
   const router = useRouter();
   const params = useParams();
 

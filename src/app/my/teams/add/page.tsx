@@ -14,7 +14,7 @@ import { useFormik } from "formik";
 import { apiService } from "@/composables/apiService";
 import { addDeskSchema } from "@/composables/form-validations";
 
-function addDesk() {
+export default function AddTeam() {
   const router = useRouter();
   // * formik and form submition
   const { values, handleChange, handleSubmit, handleBlur, errors, touched } =
@@ -122,5 +122,3 @@ function addDesk() {
     </>
   );
 }
-
-export default addDesk;

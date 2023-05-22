@@ -13,9 +13,8 @@ import "react-toastify/dist/ReactToastify.css";
 import { useFormik } from "formik";
 import { apiService } from "@/composables/apiService";
 import { addDeskSchema } from "@/composables/form-validations";
-import { useEffect, useState } from "react";
 
-export default function addDesk() {
+export default function EditDesk() {
   const router = useRouter();
   const params = useParams();
 

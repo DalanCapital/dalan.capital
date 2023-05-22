@@ -68,7 +68,7 @@ const tableHeaders = [
   "synced_at",
 ];
 
-function desk() {
+export default function AccountsList() {
   const [deskList, setDeskList] = useState([]);
 
   const router = useRouter();
@@ -194,5 +194,3 @@ function desk() {
     </>
   );
 }
-
-export default desk;

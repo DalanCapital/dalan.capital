@@ -68,7 +68,7 @@ const tableHeaders = [
   "synced_at",
 ];
 
-export default function desk() {
+export default function TeamsList() {
   const [list, setList] = useState([]);
 
   const router = useRouter();
