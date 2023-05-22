@@ -68,16 +68,16 @@ const tableHeaders = [
   "synced_at",
 ];
 
-function desk() {
-  const [deskList, setDeskList] = useState([]);
+export default function desk() {
+  const [list, setList] = useState([]);
 
   const router = useRouter();
   const changeRoute = (uuid: string) => {
-    router.push(`/my/desk/${uuid}`);
+    router.push(`/my/teams/${uuid}`);
   };
 
   const deleteItem = (uuid: string) => {
-    apiService(`/my/desks/${uuid}`, { method: "delete" })
+    apiService(`/my/teams/${uuid}`, { method: "delete" })
       .then((res) => {
         console.log(res);
 
@@ -85,16 +85,16 @@ function desk() {
         fetchDeskList();
       })
       .catch((err) => {
-        console.log(err, "sss");
+        console.log(err);
 
         toast.error("Something went wrong");
       });
   };
 
   const fetchDeskList = () => {
-    apiService("/my/desks")
+    apiService("/my/teams")
       .then((res) => {
-        setDeskList(res.results);
+        setList(res.results);
       })
       .catch((err) => {
         console.log(err);
@@ -111,8 +111,8 @@ function desk() {
       <ToastContainer theme="colored" />
       <Container className="my-10">
         <div className="flex justify-end mb-5">
-          <Link href="/my/desk/add">
-            <Button size="md">Add new Desk +</Button>
+          <Link href="/my/teams/add">
+            <Button size="md">Add new Team +</Button>
           </Link>
         </div>
         <div className="relative overflow-x-auto">
@@ -134,7 +134,7 @@ function desk() {
               </tr>
             </thead>
             <tbody>
-              {deskList.map((singleItem: any, singleIndex) => (
+              {list.map((singleItem: any, singleIndex) => (
                 <tr
                   className="bg-white border-b hover:bg-gray-200 cursor-pointer dark:bg-gray-800 dark:border-gray-700"
                   key={singleIndex}
@@ -194,5 +194,3 @@ function desk() {
     </>
   );
 }
-
-export default desk;

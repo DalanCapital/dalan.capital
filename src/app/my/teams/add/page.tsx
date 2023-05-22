@@ -21,19 +21,18 @@ function addDesk() {
     useFormik({
       initialValues: {
         title: "",
-        description: "",
         is_public: 0,
       },
       validationSchema: addDeskSchema,
       onSubmit(formValues) {
         // @ts-ignore
         formValues.is_public = formValues.is_public === "1" ? true : false;
-        apiService("/my/desks", {
+        apiService("/my/teams", {
           method: "post",
           body: JSON.stringify(formValues),
         })
           .then((res) => {
-            router.push("/my/desk");
+            router.push("/my/teams");
             // toast.success(res.message);
           })
           .catch(() => {
@@ -66,7 +65,7 @@ function addDesk() {
                     name="title"
                     id="title"
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-none focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                    placeholder="desk title here"
+                    placeholder="team title here"
                     value={values.title}
                     onChange={handleChange}
                     onBlur={handleBlur}
@@ -95,7 +94,7 @@ function addDesk() {
                   </select>
                 </div>
 
-                <div className="sm:col-span-2">
+                {/* <div className="sm:col-span-2">
                   <label
                     htmlFor="description"
                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -110,7 +109,7 @@ function addDesk() {
                     value={values.description}
                     onChange={handleChange}
                   ></textarea>
-                </div>
+                </div> */}
               </div>
               <Button size="md" type="submit" className="mt-5">
                 Submit

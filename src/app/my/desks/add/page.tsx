@@ -3,7 +3,7 @@ import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { useRouter, useParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 // * react toastify
 import { ToastContainer, toast } from "react-toastify";
@@ -13,12 +13,9 @@ import "react-toastify/dist/ReactToastify.css";
 import { useFormik } from "formik";
 import { apiService } from "@/composables/apiService";
 import { addDeskSchema } from "@/composables/form-validations";
-import { useEffect, useState } from "react";
 
-export default function addDesk() {
+function addDesk() {
   const router = useRouter();
-  const params = useParams();
-
   // * formik and form submition
   const { values, handleChange, handleSubmit, handleBlur, errors, touched } =
     useFormik({
@@ -31,12 +28,12 @@ export default function addDesk() {
       onSubmit(formValues) {
         // @ts-ignore
         formValues.is_public = formValues.is_public === "1" ? true : false;
-        apiService(`/my/desks/${params.uuid}`, {
-          method: "put",
+        apiService("/my/desks", {
+          method: "post",
           body: JSON.stringify(formValues),
         })
-          .then(() => {
-            router.push("/my/desk");
+          .then((res) => {
+            router.push("/my/desks");
             // toast.success(res.message);
           })
           .catch(() => {
@@ -44,17 +41,6 @@ export default function addDesk() {
           });
       },
     });
-
-  // ! TEMP COMMENTED
-  // const fetchSingleItem = () => {
-  //   apiService(`/my/desks/${params.uuid}`).then((res) => {
-  //     console.log(res);
-  //   });
-  // };
-
-  // useEffect(() => {
-  //   fetchSingleItem();
-  // }, []);
 
   return (
     <>
@@ -137,3 +123,5 @@ export default function addDesk() {
     </>
   );
 }
+
+export default addDesk;
