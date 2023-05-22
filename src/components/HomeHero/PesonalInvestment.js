@@ -78,7 +78,7 @@ export function HomeHero() {
                 </svg>
 
                 <p className="relative">
-                Dalan transformed Sarah's investment journey. With expert traders, real-time analytics, and risk management tools, she invest with ease and confidence.
+                Dalan transformed Sarah`s investment journey. With expert traders, real-time analytics, and risk management tools, she invest with ease and confidence.
                 </p>
               </div>
               <div className="mt-7 flex items-center">

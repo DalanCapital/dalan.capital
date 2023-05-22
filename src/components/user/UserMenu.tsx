@@ -3,19 +3,23 @@ import { Menu } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { UserCircleIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
+import { usePathname, useRouter } from "next/navigation";
 
 const more = [
-  { label: "Sign out", href: "#" },
-  // { label: "Blog", href: "/blog" },
-  // { label: "Documentation", href: "/docs" },
-  // { label: "Open APIs", href: "/docs/apis" },
+  { label: "Accounts", href: "/my/desks/accounts" },
+  { label: "Desk", href: "/my/desks" },
+  { label: "Trader", href: "/my/teams/traders" },
+  { label: "Team", href: "/my/teams" },
 ];
 
 function UserMenu() {
+  const router = useRouter();
   const pathname = usePathname();
-  const [userData, setUserData] = useState({});
+  const signOutUser = () => {
+    localStorage.removeItem("user");
+    router.replace("/");
+  };
+
   return (
     <>
       <Menu as="div" className="relative">
@@ -55,6 +59,17 @@ function UserMenu() {
                   </Link>
                 </Menu.Item>
               ))}
+              <Menu.Item>
+                <a
+                  className="block py-3.5 px-5 font-medium 
+                    text-slate-700 transition duration-300 ease-in-out hover:bg-gray-secondary-100/60 hover:text-slate-900 cursor-pointer"
+                  onClick={() => {
+                    signOutUser();
+                  }}
+                >
+                  Sign out
+                </a>
+              </Menu.Item>
             </Menu.Items>
           </>
         )}

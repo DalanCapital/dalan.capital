@@ -25,15 +25,15 @@ const features = [
   },
   {
     name: 'Salary',
-    tiers: { free: 'Not Available', standard: '2% AUM', pro: '3% AUM', advance: '5% AUM' },
+    tiers: { free: 'Not Available', standard: 'Not Available', pro: '1% AUM', advance: '3% AUM' },
   },
   {
     name: 'Salary Max. Amount',
-    tiers: { free: 'Not Available', standard: 'Up to 200 USD', pro: 'Up to 3000 USD', advance: 'Up to 40,000 USD' },
+    tiers: { free: 'Not Available', standard: 'Not Available', pro: 'Up to 850 USD', advance: 'Up to 25,000 USD' },
   },
   {
     name: 'Salary Min. Amount',
-    tiers: { free: 'Not Available', standard: '$100', pro: '$300', advance: '$5000' },
+    tiers: { free: 'Not Available', standard: 'Not Available', pro: '$300', advance: '$5000' },
   },
   {
     name: 'Target',
@@ -41,7 +41,7 @@ const features = [
   },
   {
     name: 'Profit Split',
-    tiers: { free: 'Not Available', standard: 'From 30%', pro: 'From 50%', advance: 'From 80%' },
+    tiers: { free: 'Not Available', standard: 'From 30%', pro: 'From 40%', advance: 'From 50%' },
   },
   {
     name: 'Max. Drawdown',
@@ -61,7 +61,7 @@ const features = [
   },
   {
     name: 'Min. Monthly Gain',
-    tiers: { free: '1%', standard: '2%', pro: '3%', advance: '5%'},
+    tiers: { free: '2%', standard: '5%', pro: '8%', advance: '10%'},
   },
   {
     name: 'Max. Daily Volume',

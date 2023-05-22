@@ -3,7 +3,7 @@ import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { useRouter } from "next/navigation";
+import { useRouter, useParams } from "next/navigation";
 
 // * react toastify
 import { ToastContainer, toast } from "react-toastify";
@@ -14,26 +14,27 @@ import { useFormik } from "formik";
 import { apiService } from "@/composables/apiService";
 import { addDeskSchema } from "@/composables/form-validations";
 
-function addDesk() {
+export default function EditContract() {
   const router = useRouter();
+  const params = useParams();
+
   // * formik and form submition
   const { values, handleChange, handleSubmit, handleBlur, errors, touched } =
     useFormik({
       initialValues: {
         title: "",
-        description: "",
         is_public: 0,
       },
       validationSchema: addDeskSchema,
       onSubmit(formValues) {
         // @ts-ignore
         formValues.is_public = formValues.is_public === "1" ? true : false;
-        apiService("/my/desks", {
-          method: "post",
+        apiService(`/my/contracts/${params.uuid}`, {
+          method: "put",
           body: JSON.stringify(formValues),
         })
-          .then((res) => {
-            router.push("/my/desk");
+          .then(() => {
+            router.push("/my/contracts");
             // toast.success(res.message);
           })
           .catch(() => {
@@ -41,6 +42,17 @@ function addDesk() {
           });
       },
     });
+
+  // ! TEMP COMMENTED
+  // const fetchSingleItem = () => {
+  //   apiService(`/my/desks/${params.uuid}`).then((res) => {
+  //     console.log(res);
+  //   });
+  // };
+
+  // useEffect(() => {
+  //   fetchSingleItem();
+  // }, []);
 
   return (
     <>
@@ -95,7 +107,7 @@ function addDesk() {
                   </select>
                 </div>
 
-                <div className="sm:col-span-2">
+                {/* <div className="sm:col-span-2">
                   <label
                     htmlFor="description"
                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -110,7 +122,7 @@ function addDesk() {
                     value={values.description}
                     onChange={handleChange}
                   ></textarea>
-                </div>
+                </div> */}
               </div>
               <Button size="md" type="submit" className="mt-5">
                 Submit
@@ -123,5 +135,3 @@ function addDesk() {
     </>
   );
 }
-
-export default addDesk;

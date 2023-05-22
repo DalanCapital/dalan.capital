@@ -68,16 +68,16 @@ const tableHeaders = [
   "synced_at",
 ];
 
-function desk() {
+export default function AccountsList() {
   const [deskList, setDeskList] = useState([]);
 
   const router = useRouter();
   const changeRoute = (uuid: string) => {
-    router.push(`/my/desk/${uuid}`);
+    router.push(`/my/desks/accounts/${uuid}`);
   };
 
   const deleteItem = (uuid: string) => {
-    apiService(`/my/desks/${uuid}`, { method: "delete" })
+    apiService(`/my/desks/accounts/${uuid}`, { method: "delete" })
       .then((res) => {
         console.log(res);
 
@@ -92,7 +92,7 @@ function desk() {
   };
 
   const fetchDeskList = () => {
-    apiService("/my/desks")
+    apiService("/my/desks/accounts")
       .then((res) => {
         setDeskList(res.results);
       })
@@ -111,8 +111,8 @@ function desk() {
       <ToastContainer theme="colored" />
       <Container className="my-10">
         <div className="flex justify-end mb-5">
-          <Link href="/my/desk/add">
-            <Button size="md">Add new Desk +</Button>
+          <Link href="/my/desks/accounts/add">
+            <Button size="md">Add new item +</Button>
           </Link>
         </div>
         <div className="relative overflow-x-auto">
@@ -194,5 +194,3 @@ function desk() {
     </>
   );
 }
-
-export default desk;
