@@ -39,7 +39,7 @@ export function Header() {
   const [hydrated, setHydrated] = useState(false);
   useEffect(() => {
     setHydrated(true);
-  });
+  }, []);
 
   function MenuIcon({ open }) {
     return (
