@@ -8,6 +8,12 @@ import { Faqs } from "@/components/Faqs";
 import { CallToAction } from "@/components/CallToAction";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import {FBlocks} from "@/components/FBlocks";
+
+const levels = [
+    {id: 1, title: "Level 1",},
+    {id: 2, title: "Level 2",},
+]
 
 export default function Home() {
   return (
@@ -20,6 +26,9 @@ export default function Home() {
       </Head>
       <Header />
       <HomeHero />
+        {levels.map((level) => (
+            <FBlocks key={level.id} {...level} />
+        ))}
       <FeatureBlocks />
       <FeaturesGrid />     
       <Process />
