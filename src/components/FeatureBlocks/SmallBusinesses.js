@@ -30,7 +30,7 @@ export function FeatureBlocks() {
             For Small Businesses
             </h2>
             <p className="mt-6 leading-relaxed text-slate-700 sm:mt-8 sm:text-lg sm:leading-8">
-            Whether you're a startup or a small business, Dalan offers the tools, resources, and support you need to succeed in the trading world. 
+            Whether you`re a startup or a small business, Dalan offers the tools, resources, and support you need to succeed in the trading world. 
             With Dalan, you gain access to a network of skilled traders who can provide invaluable insights and advice on your trading activities. 
             Our platform enables you to track your investments with real-time analytics, making informed decisions with data at your fingertips. 
             similer to Personal Investing Made Easy with Dalan

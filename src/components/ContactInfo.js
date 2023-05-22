@@ -144,7 +144,7 @@ export function ContactInfo() {
               Contact Information
             </h1>
             <p className="mt-4 max-w-sm leading-relaxed text-slate-700 lg:mt-5">
-            At Dalan, our customers are at the forefront of everything we do. We're proud to provide exceptional customer service and support to help you achieve your financial goals. 
+            At Dalan, our customers are at the forefront of everything we do. We`re proud to provide exceptional customer service and support to help you achieve your financial goals.
             </p>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:col-span-7 lg:gap-5 xl:gap-8">

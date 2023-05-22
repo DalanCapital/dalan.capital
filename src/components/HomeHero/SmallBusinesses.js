@@ -79,7 +79,7 @@ export function HomeHero() {
 
                 <p className="relative">
                 Meet Sally, the ambitious owner of a small trading business.
-                With Dalan's platform and skilled network of traders, Sally found success by gaining valuable insights and recommendations, 
+                With Dalan`s platform and skilled network of traders, Sally found success by gaining valuable insights and recommendations,
                 which helped her make informed decisions in the fast-paced world of trading.
                 </p>
               </div>

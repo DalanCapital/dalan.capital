@@ -30,7 +30,7 @@ export function FeatureBlocks() {
             </h2>
             <p className="mt-6 leading-relaxed text-slate-700 sm:mt-8 sm:text-lg sm:leading-8">
             Dalan - the trading and investment platform that understands the importance of having control over your finances. 
-            We're excited to introduce our latest feature - FP&A, designed to help you make informed decisions about your financial goals.
+            We`re excited to introduce our latest feature - FP&A, designed to help you make informed decisions about your financial goals.
             FP&A is a feature that provides you with innovative financial planning and analysis tools that give you a greater understanding 
             of your financial performance and potential. Our platform uses advanced data analytics and forecasting methodologies, 
             allowing you to create sound financial plans and make smarter investment decisions. 

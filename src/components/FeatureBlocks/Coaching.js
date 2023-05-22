@@ -29,7 +29,7 @@ export function FeatureBlocks() {
             Connect with Experienced Coaches
             </h2>
             <p className="mt-6 leading-relaxed text-slate-700 sm:mt-8 sm:text-lg sm:leading-8">
-            We're excited to introduce our latest feature - Coaching, designed to help traders like you take their trading to the next level.
+            We`re excited to introduce our latest feature - Coaching, designed to help traders like you take their trading to the next level.
             Coaching is a feature that provides traders with access to expert coaches who give direction and guidance on how to maximize their trading potential. 
             Our coaches are experienced traders who understand the trading world, and they are committed to providing you with practical advice and guidance that will improve your performance. 
             </p>

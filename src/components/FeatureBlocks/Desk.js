@@ -20,16 +20,16 @@ export function FeatureBlocks() {
                 100+
               </p>
               <p className="mt-5 text-slate-700">
-              Collaborate and Achieve More with Dalan's Team
+              Collaborate and Achieve More with Dalan`s Team
               </p>
             </div>
           </div>
           <div className="w-full border border-gray-secondary-400/60 bg-gray-secondary-50 px-6 py-10 sm:p-14 lg:ml-auto lg:w-7/12 lg:py-32 lg:pl-28 xl:pl-36 xl:pr-20">
             <h2 className="text-4xl font-semibold leading-tight text-slate-900 xl:text-5xl xl:leading-tight">
-            Collaborate and Achieve More with Dalan's Team
+            Collaborate and Achieve More with Dalan`s Team
             </h2>
             <p className="mt-6 leading-relaxed text-slate-700 sm:mt-8 sm:text-lg sm:leading-8">
-            We're excited to announce our latest feature - Team, designed to help traders trade together, communicate better, and achieve more.
+            We`re excited to announce our latest feature - Team, designed to help traders trade together, communicate better, and achieve more.
             Team is a feature that connects traders on our platform in a unique and powerful way. Our goal is to create a sense of community and collaboration, 
             allowing traders to work together and achieve more than they could on their own. 
             </p>

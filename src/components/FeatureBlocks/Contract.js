@@ -29,7 +29,7 @@ export function FeatureBlocks() {
             Boost Your Collaborations with Contract
             </h2>
             <p className="mt-6 leading-relaxed text-slate-700 sm:mt-8 sm:text-lg sm:leading-8">
-            We're excited to announce our latest feature - Contract, designed to help investors and traders work together, 
+            We`re excited to announce our latest feature - Contract, designed to help investors and traders work together,
             have secure contracts between each other, communicate better, and achieve more.
             Contract is a feature that connects traders and investors on our platform in a unique and powerful way. 
             Our goal is to offer a secure and decentralized solution that enables traders and investors to create, negotiate, 
