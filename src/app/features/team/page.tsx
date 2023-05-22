@@ -1,11 +1,8 @@
 import Head from "next/head";
-
 import { HomeHero } from "@/components/HomeHero/Team";
 import { FeatureBlocks } from "@/components/FeatureBlocks/Team";
 import { FeaturesGrid } from "@/components/FeaturesGrid/Team";
 import { Process } from "@/components/Process/Team";
-import { Faqs } from "@/components/Faqs";
-import { CallToAction } from "@/components/CallToAction";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 
