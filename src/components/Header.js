@@ -20,6 +20,7 @@ import UserMenu from "./user/UserMenu";
 const links = [
   { label: "Home", href: "/" },
   { label: "Features", href: "/features" },
+  { label: "Solutions", href: "/solutions" },
   { label: "Pricing", href: "/pricing" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
