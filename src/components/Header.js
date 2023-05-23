@@ -10,6 +10,10 @@ import { Disclosure, Transition, Popover, Menu } from "@headlessui/react";
 import clsx from "clsx";
 import { ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
 
+// * react toastify
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import { Container } from "@/components/Container";
 import { Button } from "@/components/Button";
 import logo from "public/images/logo-dark.png";
@@ -209,6 +213,8 @@ export function Header() {
 
   return (
     <header className="h-24 sticky top-0 z-50 bg-amber-100">
+      <ToastContainer theme="colored" />
+
       <Container className="flex h-full w-full items-center border-b border-gray-secondary-300/60">
         <nav className="relative z-50 flex w-full items-center justify-between ">
           <div className="flex items-center space-x-8 lg:space-x-12">

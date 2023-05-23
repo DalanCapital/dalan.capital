@@ -6,7 +6,7 @@ import { Header } from "@/components/Header";
 import { useRouter } from "next/navigation";
 
 // * react toastify
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 // * formik
@@ -34,24 +34,12 @@ export default function AddDesk() {
     },
     validationSchema: addDeskSchema,
     onSubmit(formValues) {
-      console.log(formValues.logo);
-
-      const fd = new FormData();
-      fd.append("logo", formValues.logo);
-      fd.append("title", formValues.title);
-      fd.append("description", formValues.description);
-      // @ts-ignore
-      formValues.is_public = formValues.is_public === "1" ? true : false;
-      // @ts-ignore
-      fd.append("is_public", formValues.is_public);
-      // @ts-ignore
       apiService("/my/desks", {
         method: "post",
-        body: fd,
+        body: JSON.stringify(formValues),
       })
         .then((res) => {
           router.push("/my/desks");
-          // toast.success(res.message);
         })
         .catch(() => {
           toast.error("Something went wrong please try again");
@@ -62,7 +50,6 @@ export default function AddDesk() {
   return (
     <>
       <Header />
-      <ToastContainer theme="colored" />
       <Container className="my-10">
         <section className="bg-white dark:bg-gray-900">
           <div className="mx-auto">

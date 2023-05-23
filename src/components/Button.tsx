@@ -60,7 +60,12 @@ export function Button({
       </a>
     </Link>
   ) : (
-    <button className={className} {...props}>
+    <button
+      className={
+        className + " " + "disabled:!bg-gray-400 disabled:cursor-not-allowed"
+      }
+      {...props}
+    >
       {children}
     </button>
   );

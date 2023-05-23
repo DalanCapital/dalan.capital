@@ -4,6 +4,7 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { UserCircleIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 
 const more = [
   { label: "Accounts", href: "/my/desks/accounts" },
@@ -18,7 +19,10 @@ function UserMenu() {
   const pathname = usePathname();
   const signOutUser = () => {
     localStorage.removeItem("user");
-    router.replace("/");
+    toast.warn("You Successfully Signed out");
+    setTimeout(() => {
+      router.replace("/");
+    }, 2000);
   };
 
   return (
