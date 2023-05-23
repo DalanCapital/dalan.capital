@@ -192,7 +192,9 @@ export default function TeamsList() {
         <div className="flex justify-center">
           <Pagination
             currentPage={9}
-            onPageChange={() => {}}
+            onPageChange={(e) => {
+              console.log(e);
+            }}
             showIcons={true}
             totalPages={100}
           />
