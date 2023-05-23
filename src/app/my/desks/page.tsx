@@ -15,17 +15,13 @@ import { Dialog, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 
 const tableHeaders = [
-  "uuid",
   "title",
   "description",
   "content",
-  "logo",
-  "cover",
-  "aum_amount",
-  "aum_currency",
-  "is_public",
+  "aum amount",
+  "public",
   "status",
-  "synced_at",
+  "synced at",
 ];
 
 export default function DeskList() {
@@ -151,7 +147,7 @@ export default function DeskList() {
       <Container className="my-10">
         <div className="flex justify-end mb-5">
           <Link href="/my/desks/add">
-            <Button size="md">Add new item +</Button>
+            <Button size="md">+ Add</Button>
           </Link>
         </div>
         <div className="relative overflow-x-auto">
@@ -168,7 +164,7 @@ export default function DeskList() {
                   </th>
                 ))}
                 <th scope="col" className="px-6 py-3">
-                  actions
+                  Actions
                 </th>
               </tr>
             </thead>
