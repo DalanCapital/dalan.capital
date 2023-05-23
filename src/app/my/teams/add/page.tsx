@@ -6,15 +6,18 @@ import { Header } from "@/components/Header";
 import { useRouter } from "next/navigation";
 
 // * react toastify
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 // * formik
 import { useFormik } from "formik";
 import { apiService } from "@/composables/apiService";
 import { addDeskSchema } from "@/composables/form-validations";
+import { useState } from "react";
 
 export default function AddTeam() {
+  const [loading, setLoading] = useState(false);
+
   const router = useRouter();
   // * formik and form submition
   const { values, handleChange, handleSubmit, handleBlur, errors, touched } =
@@ -25,6 +28,7 @@ export default function AddTeam() {
       },
       validationSchema: addDeskSchema,
       onSubmit(formValues) {
+        setLoading(true);
         // @ts-ignore
         formValues.is_public = formValues.is_public === "1" ? true : false;
         apiService("/my/teams", {
@@ -32,10 +36,13 @@ export default function AddTeam() {
           body: JSON.stringify(formValues),
         })
           .then((res) => {
-            router.push("/my/teams");
-            // toast.success(res.message);
+            toast.success("Item added successfully");
+            setTimeout(() => {
+              router.push("/my/teams");
+            }, 1500);
           })
           .catch(() => {
+            setLoading(false);
             toast.error("Something went wrong please try again");
           });
       },
@@ -44,7 +51,6 @@ export default function AddTeam() {
   return (
     <>
       <Header />
-      <ToastContainer theme="colored" />
       <Container className="my-10">
         <section className="bg-white dark:bg-gray-900">
           <div className="mx-auto">
@@ -55,7 +61,7 @@ export default function AddTeam() {
               <div className="grid gap-4 sm:grid-cols-2 sm:gap-6">
                 <div className="w-full">
                   <label
-                    htmlFor="brand"
+                    htmlFor="title"
                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                   >
                     Title
@@ -76,13 +82,13 @@ export default function AddTeam() {
                 </div>
                 <div>
                   <label
-                    htmlFor="category"
+                    htmlFor="privacy"
                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                   >
                     Privacy
                   </label>
                   <select
-                    id="category"
+                    id="privacy"
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-none focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                     onChange={handleChange}
                     onBlur={handleBlur}
@@ -93,25 +99,13 @@ export default function AddTeam() {
                     <option value={1}>Public</option>
                   </select>
                 </div>
-
-                {/* <div className="sm:col-span-2">
-                  <label
-                    htmlFor="description"
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                  >
-                    Description
-                  </label>
-                  <textarea
-                    id="description"
-                    rows={8}
-                    className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-none border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                    placeholder="Your description here"
-                    value={values.description}
-                    onChange={handleChange}
-                  ></textarea>
-                </div> */}
               </div>
-              <Button size="md" type="submit" className="mt-5">
+              <Button
+                disabled={loading}
+                size="md"
+                type="submit"
+                className="mt-5"
+              >
                 Submit
               </Button>
             </form>
