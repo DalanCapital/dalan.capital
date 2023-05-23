@@ -1,105 +1,145 @@
-import Link from 'next/link'
-import { CheckCircleIcon } from '@heroicons/react/24/solid'
+import Link from "next/link";
+import { CheckCircleIcon } from "@heroicons/react/24/solid";
 
-import { Container } from '@/components/Container'
-import {Button} from "@/components/Button";
+import { Container } from "@/components/Container";
+import { Button } from "@/components/Button";
 
-const tiers = ['free', 'standard', 'pro', 'advance']
+const tiers = ["free", "standard", "pro", "advance"];
 
 const features = [
   {
-    name: 'Application Fee',
-    tiers: {free:'Free', standard:'$159', pro:'$699', advance:'$3599'}
+    name: "Application Fee",
+    tiers: { free: "Free", standard: "$159", pro: "$699", advance: "$3599" },
   },
   {
-    name: 'Start Balance',
-    tiers: {free:'$100', standard:'$1000', pro:'$10,000', advance:'$100,000'}
+    name: "Start Balance",
+    tiers: {
+      free: "$100",
+      standard: "$1000",
+      pro: "$10,000",
+      advance: "$100,000",
+    },
   },
   {
-    name: 'Max. Balance',
-    tiers: {free:'$1000', standard:'$10,000', pro:'$100,000', advance:'$1,000,000'}
+    name: "Max. Balance",
+    tiers: {
+      free: "$1000",
+      standard: "$10,000",
+      pro: "$100,000",
+      advance: "$1,000,000",
+    },
   },
   {
-    name: 'Scale Program',
-    tiers: {free:'4X', standard:'2X', pro:'2X', advance:'2X'}
+    name: "Scale Program",
+    tiers: { free: "4X", standard: "2X", pro: "2X", advance: "2X" },
   },
   {
-    name: 'Salary',
-    tiers: { free: 'Not Available', standard: 'Not Available', pro: '1% AUM', advance: '3% AUM' },
+    name: "Salary",
+    tiers: {
+      free: "Not Available",
+      standard: "Not Available",
+      pro: "1% AUM",
+      advance: "3% AUM",
+    },
   },
   {
-    name: 'Salary Max. Amount',
-    tiers: { free: 'Not Available', standard: 'Not Available', pro: 'Up to 850 USD', advance: 'Up to 25,000 USD' },
+    name: "Salary Max. Amount",
+    tiers: {
+      free: "Not Available",
+      standard: "Not Available",
+      pro: "Up to 850 USD",
+      advance: "Up to 25,000 USD",
+    },
   },
   {
-    name: 'Salary Min. Amount',
-    tiers: { free: 'Not Available', standard: 'Not Available', pro: '$300', advance: '$5000' },
+    name: "Salary Min. Amount",
+    tiers: {
+      free: "Not Available",
+      standard: "Not Available",
+      pro: "$300",
+      advance: "$5000",
+    },
   },
   {
-    name: 'Target',
-    tiers: { free: '10%', standard: '10%', pro: '10%', advance: '10%' },
+    name: "Target",
+    tiers: { free: "10%", standard: "10%", pro: "10%", advance: "10%" },
   },
   {
-    name: 'Profit Split',
-    tiers: { free: 'Not Available', standard: 'From 30%', pro: 'From 40%', advance: 'From 50%' },
+    name: "Profit Split",
+    tiers: {
+      free: "Not Available",
+      standard: "From 30%",
+      pro: "From 40%",
+      advance: "From 50%",
+    },
   },
   {
-    name: 'Max. Drawdown',
-    tiers: { free: '5%', standard: '5%', pro: '3%', advance: '2%' },
+    name: "Max. Drawdown",
+    tiers: { free: "5%", standard: "5%", pro: "3%", advance: "2%" },
   },
   {
-    name: 'Max. Daily Loss',
-    tiers: { free: '3%', standard: '3%', pro: '2%', advance: '1%' },
+    name: "Max. Daily Loss",
+    tiers: { free: "3%", standard: "3%", pro: "2%", advance: "1%" },
   },
   {
-    name: 'Drowdown Method',
-    tiers: { free: 'Start Balance', standard: 'Relative', pro: 'Relative', advance: 'Relative' },
+    name: "Drowdown Method",
+    tiers: {
+      free: "Start Balance",
+      standard: "Relative",
+      pro: "Relative",
+      advance: "Relative",
+    },
   },
   {
-    name: 'Leverage',
-    tiers: { free: '>1:100', standard: '1:10', pro: '1:10', advance: '1:10' },
+    name: "Leverage",
+    tiers: { free: ">1:100", standard: "1:10", pro: "1:10", advance: "1:10" },
   },
   {
-    name: 'Min. Monthly Gain',
-    tiers: { free: '2%', standard: '5%', pro: '8%', advance: '10%'},
+    name: "Min. Monthly Gain",
+    tiers: { free: "2%", standard: "5%", pro: "8%", advance: "10%" },
   },
   {
-    name: 'Max. Daily Volume',
-    tiers: { free: '500', standard: '2K', pro: '5K', advance: '20K'},
+    name: "Max. Daily Volume",
+    tiers: { free: "500", standard: "2K", pro: "5K", advance: "20K" },
   },
   {
-    name: 'Withdrawal Period',
-    tiers: { free: 'Monthly', standard: 'Monthly', pro: 'Bi-Weekly', advance: 'Weekly'},
+    name: "Withdrawal Period",
+    tiers: {
+      free: "Monthly",
+      standard: "Monthly",
+      pro: "Bi-Weekly",
+      advance: "Weekly",
+    },
   },
   {
-    name: 'Coaching',
-    tiers: { free: true, standard: true, pro: true, advance: true},
+    name: "Coaching",
+    tiers: { free: true, standard: true, pro: true, advance: true },
   },
   {
-    name: '24/7 Live Support',
-    tiers: { free: true, standard: true, pro: true, advance: true},
+    name: "24/7 Live Support",
+    tiers: { free: true, standard: true, pro: true, advance: true },
   },
   {
-    name: 'Verification',
-    tiers: { free: false, standard: true, pro: true, advance: true},
+    name: "Verification",
+    tiers: { free: false, standard: true, pro: true, advance: true },
   },
   {
-    name: 'Insurance',
-    tiers: { free: false, standard: false, pro: true, advance: true},
-  },
-  {
-    name: 'Pro Account',
+    name: "Insurance",
     tiers: { free: false, standard: false, pro: true, advance: true },
   },
   {
-    name: 'Tax Coverage',
-    tiers: { free: false, standard: false, pro: false, advance: true},
+    name: "Pro Account",
+    tiers: { free: false, standard: false, pro: true, advance: true },
   },
   {
-    name: 'FP&A',
-    tiers: { free: false, standard: false, pro: false, advance: true},
+    name: "Tax Coverage",
+    tiers: { free: false, standard: false, pro: false, advance: true },
   },
-]
+  {
+    name: "FP&A",
+    tiers: { free: false, standard: false, pro: false, advance: true },
+  },
+];
 
 export function PlansTable() {
   return (
@@ -114,7 +154,7 @@ export function PlansTable() {
           </h1>
           <div className="mx-auto mt-5 max-w-xl text-center text-lg leading-relaxed text-slate-700">
             Compare the features and benefits of each plan. If you’re still
-            unsure about anything feel free to{' '}
+            unsure about anything feel free to{" "}
             <Link legacyBehavior href="/contact">
               <a className="font-medium text-slate-900 underline">
                 reach out to us
@@ -124,9 +164,9 @@ export function PlansTable() {
           </div>
         </div>
 
-        <div className="mt-16 overflow-x-auto">
+        <div className="mt-16 overflow-x-auto max-h-[600px]">
           <table className="w-full table-auto">
-            <thead className="border-b border-gray-secondary-100">
+            <thead className="border-b border-gray-secondary-100 sticky top-0 bg-white">
               <tr>
                 <th
                   scope="col"
@@ -149,51 +189,55 @@ export function PlansTable() {
               {features.map((feature, index) => (
                 <tr
                   key={feature.name}
-                  className={index % 2 === 0 ? 'bg-amber-50' : undefined}
+                  className={index % 2 === 0 ? "bg-amber-50" : undefined}
                 >
                   <td className="whitespace-nowrap py-4 pl-4 pr-3 text-base font-medium text-slate-800 sm:pl-6">
                     {feature.name}
                   </td>
                   {tiers.map((tier) => (
                     <td key={tier} className="px-3 py-4">
-                      {typeof feature['tiers'][tier] == 'boolean' ? (
+                      {typeof feature["tiers"][tier] == "boolean" ? (
                         <div className="flex w-full justify-center">
-                          {feature['tiers'][tier] && (
+                          {feature["tiers"][tier] && (
                             <CheckCircleIcon className="h-5 w-5 shrink-0 text-slate-800" />
                           )}
                         </div>
                       ) : (
                         <p className="whitespace-nowrap text-center text-md text-slate-700">
-                          {feature['tiers'][tier]}
+                          {feature["tiers"][tier]}
                         </p>
                       )}
                     </td>
                   ))}
                 </tr>
               ))}
+              <tr className="ml-auto">
+                <td></td>
+                <td>
+                  <Button href="#" className="mt-8 w-full">
+                    Get Started
+                  </Button>
+                </td>
+                <td className="text-center">
+                  <Button href="#" className="mt-8 w-full">
+                    Get Started
+                  </Button>
+                </td>
+                <td className="text-center">
+                  <Button href="#" className="mt-8 w-full">
+                    Get Started
+                  </Button>
+                </td>
+                <td className="text-center">
+                  <Button href="#" className="mt-8 w-full">
+                    Get Started
+                  </Button>
+                </td>
+              </tr>
             </tbody>
-            <tfoot className="border-t border-gray-secondary-100">
-                <tr style={{ display: 'flex', justifyContent: 'center' }}>
-                  <td >
-                    <Button href="#" className="mt-8 w-full">
-                      Get Started
-                    </Button>
-                  </td>
-                  <td className="text-center">
-                    <Button href="#" className="mt-8 w-full">
-                      Get Started
-                    </Button>
-                  </td>
-                  <td className="text-center">
-                    <Button href="#" className="mt-8 w-full">
-                      Get Started
-                    </Button>
-                  </td>
-                </tr>
-            </tfoot>
           </table>
         </div>
       </Container>
     </section>
-  )
+  );
 }
