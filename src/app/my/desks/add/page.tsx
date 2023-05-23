@@ -17,30 +17,47 @@ import { addDeskSchema } from "@/composables/form-validations";
 export default function AddDesk() {
   const router = useRouter();
   // * formik and form submition
-  const { values, handleChange, handleSubmit, handleBlur, errors, touched } =
-    useFormik({
-      initialValues: {
-        title: "",
-        description: "",
-        is_public: 0,
-      },
-      validationSchema: addDeskSchema,
-      onSubmit(formValues) {
-        // @ts-ignore
-        formValues.is_public = formValues.is_public === "1" ? true : false;
-        apiService("/my/desks", {
-          method: "post",
-          body: JSON.stringify(formValues),
+  const {
+    values,
+    handleChange,
+    handleSubmit,
+    handleBlur,
+    errors,
+    touched,
+    setFieldValue,
+  } = useFormik({
+    initialValues: {
+      title: "",
+      description: "",
+      is_public: 0,
+      logo: "",
+    },
+    validationSchema: addDeskSchema,
+    onSubmit(formValues) {
+      console.log(formValues.logo);
+
+      const fd = new FormData();
+      fd.append("logo", formValues.logo);
+      fd.append("title", formValues.title);
+      fd.append("description", formValues.description);
+      // @ts-ignore
+      formValues.is_public = formValues.is_public === "1" ? true : false;
+      // @ts-ignore
+      fd.append("is_public", formValues.is_public);
+      // @ts-ignore
+      apiService("/my/desks", {
+        method: "post",
+        body: fd,
+      })
+        .then((res) => {
+          router.push("/my/desks");
+          // toast.success(res.message);
         })
-          .then((res) => {
-            router.push("/my/desks");
-            // toast.success(res.message);
-          })
-          .catch(() => {
-            toast.error("Something went wrong please try again");
-          });
-      },
-    });
+        .catch(() => {
+          toast.error("Something went wrong please try again");
+        });
+    },
+  });
 
   return (
     <>
@@ -73,6 +90,25 @@ export default function AddDesk() {
                   />
                   <span className="mt-2 text-sm text-red-600">
                     {errors.title && touched.title ? errors.title : ""}
+                  </span>
+                </div>
+                <div className="w-full">
+                  <label
+                    htmlFor="brand"
+                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >
+                    Logo
+                  </label>
+                  <input
+                    type="file"
+                    id="logo"
+                    name="logo"
+                    onChange={(e: any) =>
+                      setFieldValue("logo", e.target.files[0])
+                    }
+                  />
+                  <span className="mt-2 text-sm text-red-600">
+                    {errors.logo && touched.logo ? errors.logo : ""}
                   </span>
                 </div>
                 <div>

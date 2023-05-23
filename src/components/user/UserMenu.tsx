@@ -7,9 +7,10 @@ import { usePathname, useRouter } from "next/navigation";
 
 const more = [
   { label: "Accounts", href: "/my/desks/accounts" },
-  { label: "Desk", href: "/my/desks" },
-  { label: "Trader", href: "/my/teams/traders" },
-  { label: "Team", href: "/my/teams" },
+  { label: "Desks", href: "/my/desks" },
+  { label: "Traders", href: "/my/teams/traders" },
+  { label: "Teams", href: "/my/teams" },
+  { label: "Contracts", href: "/my/contracts" },
 ];
 
 function UserMenu() {
