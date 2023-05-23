@@ -59,19 +59,17 @@ export default function Signin() {
         <Container className="w-full">
           <div className="mx-auto flex max-w-lg flex-col items-center">
             <Link href="/" aria-label="Home" className="flex flex-shrink-0">
-              <Image alt="logo" src={logo} className="h-auto w-12" />
+              <Image alt="Dalan Capital" src={logo} className="h-auto w-12" />
             </Link>
             <h1 className="mt-10 text-center text-4xl font-semibold text-slate-900">
               Welcome back
             </h1>
             <p className="mt-4 text-center leading-relaxed text-slate-600">
               Don’t have an account yet?
-              <Link
-                href="/signup"
-                className="block text-center font-medium text-slate-800 underline duration-150 hover:text-slate-900 sm:ml-1.5 sm:inline-block sm:text-left"
-              >
-                Get started for free
-              </Link>
+              <span
+                className="block text-center font-medium text-slate-800 underline duration-150 hover:text-slate-900 sm:ml-1.5 sm:inline-block sm:text-left">
+                Enter your email address
+              </span>
               .
             </p>
 
@@ -147,7 +145,7 @@ export default function Signin() {
                       id="email"
                       type="email"
                       autoComplete="email"
-                      placeholder="foobar@email.com"
+                      placeholder="For example, mtrader@gmail.com"
                       className="block w-full appearance-none border border-gray-secondary-400/60 bg-gray-secondary-50 py-2.5 pl-12 pr-8 text-slate-800 placeholder-slate-500/75 outline-none duration-150 hover:bg-vanilla focus:border-gray-secondary-200 focus:bg-vanilla focus:outline-none focus:ring-gray-secondary-200"
                       value={values.email}
                       onChange={handleChange}
@@ -164,7 +162,7 @@ export default function Signin() {
                   type="submit"
                   disabled={loading}
                 >
-                  Sign in
+                  {loading ? "Loading..." : "Get Verify Code"}
                 </Button>
               </form>
             </div>

@@ -33,18 +33,27 @@ export default function Signup() {
     OTPPayload.otp = code;
 
     auth.verifyOTP(OTPPayload, "/account/verify-otp").then((res) => {
-      if (res.succeed) {
-        toast.success("Welcome to Dalan");
-        localStorage.removeItem("OTPPayload");
-        localStorage.setItem("user", JSON.stringify(res.results));
-        setTimeout(() => {
-          location.replace("/");
+      try{
+        if (res.succeed) {
+          toast.success("Welcome to Dalan");
+          localStorage.removeItem("OTPPayload");
+          localStorage.setItem("user", JSON.stringify(res.results));
+
+          setTimeout(() => {
+            location.replace("/");
+            setLoading(false);
+          }, 1000);
+        } else {
           setLoading(false);
-        }, 2000);
-      } else {
+          toast.error("Something went wrong please try again");
+        }
+      }catch (e){
         setLoading(false);
         toast.error("Something went wrong please try again");
       }
+    }).catch( e => {
+        setLoading(false);
+        toast.error("Something went wrong please try again");
     });
   };
   return (
@@ -100,7 +109,7 @@ export default function Signup() {
                 disabled={loading && code.length <= 6}
                 onClick={verifyOTP}
               >
-                Confirm Code
+                {loading ? "Verifying..." : "Verify Code"}
               </Button>
             </div>
           </div>

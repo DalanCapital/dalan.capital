@@ -19,10 +19,10 @@ function UserMenu() {
   const pathname = usePathname();
   const signOutUser = () => {
     localStorage.removeItem("user");
-    toast.warn("You Successfully Signed out");
+    toast.success("You Successfully Signed out", );
     setTimeout(() => {
       router.replace("/");
-    }, 2000);
+    }, 500);
   };
 
   return (
