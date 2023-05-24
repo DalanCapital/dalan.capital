@@ -9,20 +9,10 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 // * react toastify
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment } from "react";
-
-const tableHeaders = [
-  "title",
-  "description",
-  "content",
-  "aum amount",
-  "public",
-  "status",
-  "synced at",
-];
 
 export default function DeskList() {
   const [deskList, setDeskList] = useState([]);
@@ -34,16 +24,12 @@ export default function DeskList() {
 
   const deleteItem = (uuid: string) => {
     apiService(`/my/desks/${uuid}`, { method: "delete" })
-      .then((res) => {
-        console.log(res);
-
+      .then(() => {
         toast.success("Item Deleted Successfully");
         fetchDeskList();
       })
-      .catch((err) => {
-        console.log(err, "sss");
-
-        toast.error("Something went wrong");
+      .catch((res) => {
+        toast.error(res.toString());
       });
   };
 
@@ -52,8 +38,8 @@ export default function DeskList() {
       .then((res) => {
         setDeskList(res.results);
       })
-      .catch((err) => {
-        console.log(err);
+      .catch(() => {
+        toast.error("Something went wrong, please try again");
       });
   };
 
@@ -143,27 +129,30 @@ export default function DeskList() {
   return (
     <>
       <Header />
-      <ToastContainer theme="colored" />
       <Container className="my-10">
-        <h1 className="text-2xl font-semibold">Desks</h1>
-        <div className="flex justify-end">
+        <div className="flex justify-between items-center mb-3">
+          <h1 className="text-2xl font-semibold">Desks</h1>
           <Link href="/my/desks/add">
-            <Button size="md">+ Add</Button>
+            <Button size="md">Add +</Button>
           </Link>
         </div>
         <div className="relative overflow-x-auto">
           <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
             <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
               <tr>
-                {tableHeaders.map((singleHeader, headerIndex) => (
-                  <th
-                    key={`header-${headerIndex}`}
-                    scope="col"
-                    className="px-6 py-3"
-                  >
-                    {singleHeader}
-                  </th>
-                ))}
+                {deskList.length > 0
+                  ? Object.keys(deskList[0]).map(
+                      (singleHeader, headerIndex) => (
+                        <th
+                          key={`header-${headerIndex}`}
+                          scope="col"
+                          className="px-6 py-3"
+                        >
+                          {singleHeader}
+                        </th>
+                      )
+                    )
+                  : ""}
                 <th scope="col" className="px-6 py-3">
                   Actions
                 </th>
@@ -175,16 +164,14 @@ export default function DeskList() {
                   className="bg-white border-b hover:bg-gray-200 cursor-pointer dark:bg-gray-800 dark:border-gray-700"
                   key={singleIndex}
                 >
-                  {/* <th
-                    scope="row"
-                    className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                  >
-                    {singleItem.title}
-                  </th> */}
                   {Object.values(singleItem).map(
                     (singleTD: any, singleTDIdx) => (
                       <td key={`item-${singleTDIdx}`} className="px-6 py-4">
-                        {singleTD}
+                        {typeof singleTD === "boolean"
+                          ? singleTD
+                            ? "Yes"
+                            : "No"
+                          : singleTD}
                       </td>
                     )
                   )}
@@ -199,15 +186,6 @@ export default function DeskList() {
                       >
                         Edit
                       </Button>
-                      {/* <Button
-                        size="sm"
-                        className="px-2 py-1"
-                        onClick={() => {
-                          deleteItem(singleItem.uuid);
-                        }}
-                      >
-                        Delete
-                      </Button> */}
                       <DeleteModal uuid={singleItem.uuid} />
                       <Button
                         size="sm"
