@@ -20,39 +20,35 @@ export default function EditDesk() {
   const params = useParams();
 
   const [formKey, setFormKey] = useState(0);
+  const [loading, setLoading] = useState(false);
 
   // * formik and form submition
-  const {
-    values,
-    handleChange,
-    handleSubmit,
-    handleBlur,
-    errors,
-    touched,
-    setFieldValue,
-  } = useFormik({
-    initialValues: {
-      title: "",
-      description: "",
-      is_public: 0,
-    },
-    validationSchema: addDeskSchema,
-    onSubmit(formValues) {
-      // @ts-ignore
-      formValues.is_public = formValues.is_public === "1" ? true : false;
-      apiService(`/my/desks/${params.uuid}`, {
-        method: "put",
-        body: JSON.stringify(formValues),
-      })
-        .then(() => {
-          router.push("/my/desks");
-          // toast.success(res.message);
+  const { values, handleChange, handleSubmit, handleBlur, errors, touched } =
+    useFormik({
+      initialValues: {
+        title: "",
+        description: "",
+        is_public: 0,
+      },
+      validationSchema: addDeskSchema,
+      onSubmit(formValues) {
+        setLoading(true);
+        // @ts-ignore
+        formValues.is_public = formValues.is_public === "1" ? true : false;
+        apiService(`/my/desks/${params.uuid}`, {
+          method: "put",
+          body: JSON.stringify(formValues),
         })
-        .catch(() => {
-          toast.error("Something went wrong please try again");
-        });
-    },
-  });
+          .then(() => {
+            router.push("/my/desks");
+            // toast.success(res.message);
+          })
+          .catch(() => {
+            setLoading(true);
+            toast.error("Something went wrong please try again");
+          });
+      },
+    });
 
   // ! TEMP COMMENTED
   const fetchSingleItem = () => {
@@ -143,7 +139,12 @@ export default function EditDesk() {
                   ></textarea>
                 </div>
               </div>
-              <Button size="md" type="submit" className="mt-5">
+              <Button
+                size="md"
+                type="submit"
+                className="mt-5"
+                disabled={loading}
+              >
                 Submit
               </Button>
             </form>

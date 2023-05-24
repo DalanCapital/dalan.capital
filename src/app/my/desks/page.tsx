@@ -153,9 +153,13 @@ export default function DeskList() {
                       )
                     )
                   : ""}
-                <th scope="col" className="px-6 py-3">
-                  Actions
-                </th>
+                {deskList.length > 0 ? (
+                  <th scope="col" className="px-6 py-3">
+                    Actions
+                  </th>
+                ) : (
+                  ""
+                )}
               </tr>
             </thead>
             <tbody>
