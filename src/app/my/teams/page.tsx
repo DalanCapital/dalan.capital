@@ -4,6 +4,7 @@ import { Container } from "@/components/Container";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { apiService } from "@/composables/apiService";
+import { Pagination } from "flowbite-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -187,6 +188,16 @@ export default function TeamsList() {
               ))}
             </tbody>
           </table>
+        </div>
+        <div className="flex justify-center">
+          <Pagination
+            currentPage={9}
+            onPageChange={(e) => {
+              console.log(e);
+            }}
+            showIcons={true}
+            totalPages={100}
+          />
         </div>
       </Container>
 
