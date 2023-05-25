@@ -100,6 +100,7 @@ export default function ServiceTables(props: IServiceTableProps) {
                     <DeleteModal
                       endpoint={props.endpoint}
                       uuid={singleItem.uuid}
+                      onDelete={fetchList()}
                     />
                     <Button
                       size="sm"

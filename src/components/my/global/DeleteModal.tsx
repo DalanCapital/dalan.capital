@@ -8,6 +8,7 @@ import { toast } from "react-toastify";
 export interface IDeleteModal {
   endpoint: string;
   uuid: string;
+  onDelete?: void;
 }
 
 export default function DeleteModal(props: IDeleteModal) {
@@ -26,6 +27,7 @@ export default function DeleteModal(props: IDeleteModal) {
       .then(() => {
         toast.success("Item Deleted Successfully");
         closeModal();
+        props.onDelete;
       })
       .catch((err) => {
         toast.error(err.toString());
