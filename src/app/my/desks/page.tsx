@@ -145,7 +145,8 @@ export default function DeskList() {
       <Header />
       <ToastContainer theme="colored" />
       <Container className="my-10">
-        <div className="flex justify-end mb-5">
+        <h1 className="text-2xl font-semibold">Desks</h1>
+        <div className="flex justify-end">
           <Link href="/my/desks/add">
             <Button size="md">+ Add</Button>
           </Link>
