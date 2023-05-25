@@ -13,10 +13,14 @@ import "react-toastify/dist/ReactToastify.css";
 import { useFormik } from "formik";
 import { apiService } from "@/composables/apiService";
 import { addDeskSchema } from "@/composables/form-validations";
+import { useEffect, useState } from "react";
 
 export default function EditDesk() {
   const router = useRouter();
   const params = useParams();
+
+  const [formKey, setFormKey] = useState(0);
+  const [loading, setLoading] = useState(false);
 
   // * formik and form submition
   const { values, handleChange, handleSubmit, handleBlur, errors, touched } =
@@ -28,6 +32,7 @@ export default function EditDesk() {
       },
       validationSchema: addDeskSchema,
       onSubmit(formValues) {
+        setLoading(true);
         // @ts-ignore
         formValues.is_public = formValues.is_public === "1" ? true : false;
         apiService(`/my/desks/${params.uuid}`, {
@@ -39,21 +44,30 @@ export default function EditDesk() {
             // toast.success(res.message);
           })
           .catch(() => {
+            setLoading(true);
             toast.error("Something went wrong please try again");
           });
       },
     });
 
   // ! TEMP COMMENTED
-  // const fetchSingleItem = () => {
-  //   apiService(`/my/desks/${params.uuid}`).then((res) => {
-  //     console.log(res);
-  //   });
-  // };
+  const fetchSingleItem = () => {
+    apiService(`/my/desks/${params.uuid}`)
+      .then((res) => {
+        values.title = res.results.title;
+        values.description = res.results.description;
+        values.is_public = res.results.is_public;
+        setFormKey(1);
+      })
+      .catch((err) => {
+        setFormKey(2);
+        toast.error(err.toString());
+      });
+  };
 
-  // useEffect(() => {
-  //   fetchSingleItem();
-  // }, []);
+  useEffect(() => {
+    fetchSingleItem();
+  }, []);
 
   return (
     <>
@@ -65,7 +79,7 @@ export default function EditDesk() {
             <h2 className="mb-4 text-xl font-bold text-gray-900 dark:text-white">
               Add a new Item
             </h2>
-            <form onSubmit={handleSubmit}>
+            <form key={formKey} onSubmit={handleSubmit}>
               <div className="grid gap-4 sm:grid-cols-2 sm:gap-6">
                 <div className="w-full">
                   <label
@@ -125,7 +139,12 @@ export default function EditDesk() {
                   ></textarea>
                 </div>
               </div>
-              <Button size="md" type="submit" className="mt-5">
+              <Button
+                size="md"
+                type="submit"
+                className="mt-5"
+                disabled={loading}
+              >
                 Submit
               </Button>
             </form>

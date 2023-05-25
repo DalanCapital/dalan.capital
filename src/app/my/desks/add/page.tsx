@@ -13,8 +13,11 @@ import "react-toastify/dist/ReactToastify.css";
 import { useFormik } from "formik";
 import { apiService } from "@/composables/apiService";
 import { addDeskSchema } from "@/composables/form-validations";
+import { useState } from "react";
 
 export default function AddDesk() {
+  const [loading, setLoading] = useState(false);
+
   const router = useRouter();
   // * formik and form submition
   const {
@@ -34,15 +37,17 @@ export default function AddDesk() {
     },
     validationSchema: addDeskSchema,
     onSubmit(formValues) {
+      setLoading(true);
       apiService("/my/desks", {
         method: "post",
         body: JSON.stringify(formValues),
       })
-        .then((res) => {
+        .then(() => {
           router.push("/my/desks");
         })
-        .catch(() => {
-          toast.error("Something went wrong please try again");
+        .catch((err) => {
+          setLoading(false);
+          toast.error(err.toString());
         });
     },
   });
@@ -135,7 +140,12 @@ export default function AddDesk() {
                   ></textarea>
                 </div>
               </div>
-              <Button size="md" type="submit" className="mt-5">
+              <Button
+                size="md"
+                type="submit"
+                className="mt-5"
+                disabled={loading}
+              >
                 Submit
               </Button>
             </form>

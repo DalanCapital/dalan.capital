@@ -13,10 +13,14 @@ import "react-toastify/dist/ReactToastify.css";
 import { useFormik } from "formik";
 import { apiService } from "@/composables/apiService";
 import { addDeskSchema } from "@/composables/form-validations";
+import { useEffect, useState } from "react";
 
 export default function EditContract() {
   const router = useRouter();
   const params = useParams();
+
+  const [loading, setLoading] = useState(false);
+  const [formKey, setFormKey] = useState(0);
 
   // * formik and form submition
   const { values, handleChange, handleSubmit, handleBlur, errors, touched } =
@@ -27,6 +31,7 @@ export default function EditContract() {
       },
       validationSchema: addDeskSchema,
       onSubmit(formValues) {
+        setLoading(true);
         // @ts-ignore
         formValues.is_public = formValues.is_public === "1" ? true : false;
         apiService(`/my/contracts/${params.uuid}`, {
@@ -35,24 +40,30 @@ export default function EditContract() {
         })
           .then(() => {
             router.push("/my/contracts");
-            // toast.success(res.message);
           })
-          .catch(() => {
-            toast.error("Something went wrong please try again");
+          .catch((err) => {
+            setLoading(false);
+            toast.error(err.toString());
           });
       },
     });
 
   // ! TEMP COMMENTED
-  // const fetchSingleItem = () => {
-  //   apiService(`/my/desks/${params.uuid}`).then((res) => {
-  //     console.log(res);
-  //   });
-  // };
+  const fetchSingleItem = () => {
+    apiService(`/my/desks/${params.uuid}`)
+      .then((res) => {
+        console.log(res);
+        setFormKey(1);
+      })
+      .catch((err) => {
+        setFormKey(2);
+        toast.error(err.toString());
+      });
+  };
 
-  // useEffect(() => {
-  //   fetchSingleItem();
-  // }, []);
+  useEffect(() => {
+    fetchSingleItem();
+  }, []);
 
   return (
     <>
@@ -106,25 +117,13 @@ export default function EditContract() {
                     <option value={1}>Public</option>
                   </select>
                 </div>
-
-                {/* <div className="sm:col-span-2">
-                  <label
-                    htmlFor="description"
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                  >
-                    Description
-                  </label>
-                  <textarea
-                    id="description"
-                    rows={8}
-                    className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-none border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                    placeholder="Your description here"
-                    value={values.description}
-                    onChange={handleChange}
-                  ></textarea>
-                </div> */}
               </div>
-              <Button size="md" type="submit" className="mt-5">
+              <Button
+                size="md"
+                type="submit"
+                className="mt-5"
+                disabled={loading}
+              >
                 Submit
               </Button>
             </form>

@@ -48,7 +48,7 @@ const features = [
     description:
       "Passion is what fuels our team at Dalan. We're passionate about creating a trading platform that can make a real difference, empowering traders, and making it easy for investors to earn returns.",
     className:
-      "lg:after:content-[''] lg:after:right-0 lg:after:h-5/6 lg:after:w-px lg:after:absolute lg:after:bg-gray-secondary-400/80 before:top-0 before:w-full sm:before:w-5/6 before:h-px before:absolute before:bg-gray-secondary-400/80 before:content-[''] sm:before:h-0",
+      "lg:after:content-[''] lg:after:left-0 lg:after:h-5/6 lg:after:w-px lg:after:absolute lg:after:bg-gray-secondary-400/80 before:top-0 before:w-full sm:before:w-5/6 before:h-px before:absolute before:bg-gray-secondary-400/80 before:content-[''] sm:before:h-0",
     icon: function ResilienceIcon() {
       return (
         <svg
@@ -72,7 +72,7 @@ const features = [
     description:
       "Inclusivity is a vital part of our core values. Our platform is designed to give everyone the opportunity to invest and trade, regardless of their level of experience. We believe that by providing access to funding and the right tools, we can enable our users to reach their full potential.",
     className:
-      "sm:after:content-[''] sm:after:right-0 sm:after:h-5/6 sm:after:w-px sm:after:absolute sm:after:bg-gray-secondary-400/80 lg:after:w-0 before:top-0 before:w-full sm:before:w-5/6 before:h-px before:absolute before:bg-gray-secondary-400/80 before:content-[''] lg:before:h-0",
+      "lg:after:content-[''] lg:after:right-0 lg:after:h-5/6 lg:after:w-px lg:after:absolute lg:after:bg-gray-secondary-400/80 before:top-0 before:w-full sm:before:w-5/6 before:h-px before:absolute before:bg-gray-secondary-400/80 before:content-['']",
     icon: function TeamworkIcon() {
       return (
         <svg
@@ -116,7 +116,7 @@ const features = [
     description:
       "We believe that success should be shared. Our platform is built on the principle of collaboration between traders and investors, with both parties benefiting from mutual support.",
     className:
-      "lg:after:content-[''] lg:after:right-0 lg:after:h-5/6 lg:after:w-px lg:after:absolute lg:after:bg-gray-secondary-400/80 before:top-0 before:w-full sm:before:w-5/6 before:h-px before:absolute before:bg-gray-secondary-400/80 before:content-['']",
+      "lg:after:content-[''] lg:after:left-0 lg:after:h-5/6 lg:after:w-px lg:after:absolute lg:after:bg-gray-secondary-400/80 before:top-0 before:w-full sm:before:w-5/6 before:h-px before:absolute before:bg-gray-secondary-400/80 before:content-['']",
     icon: function IntegrityIcon() {
       return (
         <svg
