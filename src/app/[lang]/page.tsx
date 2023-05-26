@@ -10,8 +10,7 @@ import { Faqs } from "@/components/Faqs";
 import { CallToAction } from "@/components/CallToAction";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { getDictionary } from "./dictionaries";
-import Link from "next/link";
+import { getDictionary } from "@/app/[lang]/dictionaries";
 
 export default async function Home({ params: { lang } }: any) {
   const dict = await getDictionary(lang); // en
@@ -26,9 +25,7 @@ export default async function Home({ params: { lang } }: any) {
         />
       </Head>
       <Header />
-      <h1>{dict.products.cart}</h1>
-      <Link href={lang + "/features"}>MMD</Link>
-      <HomeHero />
+      <HomeHero dict={dict} />
       <LogosRow />
       <FeatureBlocks />
       <FeaturesGrid />
