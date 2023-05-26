@@ -10,8 +10,11 @@ import { Faqs } from "@/components/Faqs";
 import { CallToAction } from "@/components/CallToAction";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { getDictionary } from "@/app/[lang]/dictionaries";
 
-export default function Home() {
+export default async function Home({ params: { lang } }: any) {
+  const dict = await getDictionary(lang); // en
+
   return (
     <>
       <Head>
@@ -22,7 +25,7 @@ export default function Home() {
         />
       </Head>
       <Header />
-      <HomeHero />
+      <HomeHero dict={dict} />
       <LogosRow />
       <FeatureBlocks />
       <FeaturesGrid />
