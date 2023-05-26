@@ -16,34 +16,35 @@ export interface IServiceTableProps {
 }
 
 export interface IStatus {
-  loading?: boolean;
-  error?: boolean;
-  empty?: boolean;
+  loading: boolean;
+  error: boolean;
+  empty: boolean;
 }
 export default function ServiceTables(props: IServiceTableProps) {
   // * variables
   const [list, setList] = useState([]);
-  const [status, setStatus] = useState<IStatus>();
+  const [status, setStatus] = useState<IStatus>({} as IStatus);
 
   // * get list
   const fetchList = () => {
-    setStatus({ loading: true });
+    setStatus({ loading: true, error: false, empty: false });
     apiService(props.endpoint)
       .then((res) => {
-        setStatus({ loading: false });
+        setStatus({ loading: true, error: false, empty: false });
         if (res.succeed) {
           if (res.results.length === 0) {
-            setStatus({ empty: true });
+            setStatus({ loading: false, error: false, empty: true });
           } else {
             setList(res.results);
           }
         } else {
-          setStatus({ error: true });
+          setStatus({ loading: false, error: true, empty: false });
+
           toast.error("Something went wrong!");
         }
       })
       .catch((err) => {
-        setStatus({ error: true, loading: false });
+        setStatus({ loading: false, error: true, empty: false });
         toast.error(err.toString());
       });
   };
@@ -62,7 +63,7 @@ export default function ServiceTables(props: IServiceTableProps) {
     if (list.length >= 2) {
       setList((list) => list.filter((item, idx) => idx !== findedIndex));
     } else {
-      setStatus({ empty: true });
+      setStatus({ empty: true, loading: false, error: false });
     }
   };
 
@@ -84,7 +85,7 @@ export default function ServiceTables(props: IServiceTableProps) {
     );
   }
 
-  if (status?.loading) {
+  if (status.loading) {
     return (
       <>
         <TableTitle />
@@ -133,7 +134,8 @@ export default function ServiceTables(props: IServiceTableProps) {
       </>
     );
   }
-  if (status?.error) {
+
+  if (status.error) {
     return (
       <>
         <TableTitle />
@@ -142,7 +144,7 @@ export default function ServiceTables(props: IServiceTableProps) {
     );
   }
 
-  if (status?.empty) {
+  if (status.empty) {
     return (
       <>
         <TableTitle />
@@ -150,7 +152,8 @@ export default function ServiceTables(props: IServiceTableProps) {
       </>
     );
   }
-  if (status?.loading === false && list.length !== 0) {
+
+  if (status.loading === false && list.length !== 0) {
     return (
       <>
         <TableTitle />
@@ -217,4 +220,11 @@ export default function ServiceTables(props: IServiceTableProps) {
       </>
     );
   }
+
+  return (
+    <>
+      <TableTitle />
+      <div className="text-center text-xl">No Data Found!</div>
+    </>
+  );
 }
