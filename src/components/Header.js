@@ -5,7 +5,7 @@
 import { Fragment, useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useParams } from "next/navigation";
 import { Disclosure, Transition, Popover, Menu } from "@headlessui/react";
 import clsx from "clsx";
 import { ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
@@ -23,23 +23,24 @@ import UserMenu from "./user/UserMenu";
 // * mock data
 const links = [
   { label: "Home", href: "/" },
-  { label: "Features", href: "/features" },
-  { label: "Solutions", href: "/solutions" },
-  { label: "Pricing", href: "/pricing" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
+  { label: "Features", href: "features" },
+  { label: "Solutions", href: "solutions" },
+  { label: "Pricing", href: "pricing" },
+  { label: "About", href: "about" },
+  { label: "Contact", href: "contact" },
 ];
 
 const more = [
-  { label: "Newsroom", href: "/blog/newsroom" },
-  { label: "Blog", href: "/blog" },
-  { label: "Documentation", href: "/docs" },
-  { label: "Open APIs", href: "/docs/apis" },
+  { label: "Newsroom", href: "blog/newsroom" },
+  { label: "Blog", href: "blog" },
+  { label: "Documentation", href: "docs" },
+  { label: "Open APIs", href: "docs/apis" },
 ];
 // * mock data
 
 // * header component
 export function Header() {
+  const lang = useParams().lang;
   const pathname = usePathname();
   const [hydrated, setHydrated] = useState(false);
   useEffect(() => {
@@ -120,7 +121,7 @@ export function Header() {
                     <Link
                       legacyBehavior
                       key={`${index}-mobile`}
-                      href={link.href}
+                      href={`${lang}/${link.href}`}
                     >
                       <a
                         className={
@@ -159,7 +160,10 @@ export function Header() {
                               className="mt-2"
                               key={`${subLink.label}-dropdown-desktop`}
                             >
-                              <Link legacyBehavior href={subLink.href}>
+                              <Link
+                                legacyBehavior
+                                href={`${lang}/${subLink.href}`}
+                              >
                                 <a className="block px-3 py-3 font-medium text-slate-700 transition duration-300 ease-in-out hover:bg-amber-50 hover:text-slate-900">
                                   {subLink.label}
                                 </a>
@@ -174,7 +178,7 @@ export function Header() {
                 <div className="mt-6">
                   <Button
                     size="md"
-                    href="/contact"
+                    href={`${lang}/contact`}
                     variant="ghost"
                     className="w-full"
                   >
@@ -204,7 +208,7 @@ export function Header() {
     }
     return (
       <>
-        <Button size="md" href="/start">
+        <Button size="md" href={`${lang}/start`}>
           Start Here
         </Button>
       </>
@@ -218,7 +222,7 @@ export function Header() {
       <Container className="flex h-full w-full items-center border-b border-gray-secondary-300/60">
         <nav className="relative z-50 flex w-full items-center justify-between ">
           <div className="flex items-center space-x-8 lg:space-x-12">
-            <Link legacyBehavior href="/" aria-label="Home">
+            <Link legacyBehavior href={`${lang}/`} aria-label="Home">
               <a className="flex flex-shrink-0 items-center">
                 <Image
                   src={logo}
@@ -237,7 +241,7 @@ export function Header() {
                 <Link
                   legacyBehavior
                   key={`${link.label}-desktop`}
-                  href={link.href}
+                  href={`${lang}/${link.href}`}
                 >
                   <a
                     className={clsx(
@@ -276,7 +280,7 @@ export function Header() {
                     <Menu.Items className="absolute right-0 z-20 mt-3 w-52 space-y-1 bg-gray-secondary-50 p-2.5 drop-shadow filter">
                       {more.map((subLink, i) => (
                         <Menu.Item key={`${subLink.label}-dropdown-desktop`}>
-                          <Link legacyBehavior href={subLink.href}>
+                          <Link legacyBehavior href={`${lang}/${subLink.href}`}>
                             <a
                               className={`block py-3.5 px-5 font-medium ${
                                 pathname == subLink.href
@@ -299,7 +303,7 @@ export function Header() {
           <div>
             <div className="flex items-center space-x-4">
               <div className="hidden lg:block">
-                <Link legacyBehavior href="/contact">
+                <Link legacyBehavior href={`${lang}/contact`}>
                   <a className="inline-block px-4 py-2 font-medium text-slate-700 hover:bg-amber-50 hover:text-slate-900">
                     +44 7888 872710
                   </a>
