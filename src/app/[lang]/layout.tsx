@@ -12,10 +12,11 @@ export const metadata = {
 export async function generateStaticParams() {
   return [
     { lang: "en" },
-    { lang: "fr" },
+    { lang: "ar" },
     { lang: "tr" },
     { lang: "de" },
     { lang: "fa" },
+    { lang: "es" },
   ];
 }
 
@@ -27,7 +28,10 @@ export default function RootLayout({
   params: any;
 }) {
   return (
-    <html lang={params.lang}>
+    <html
+      lang={params.lang}
+      dir={params.lang === "fa" || params.lang === "ar" ? "rtl" : "ltr"}
+    >
       <body className={inter.className}>
         <Providers>{children}</Providers>
       </body>
