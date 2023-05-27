@@ -1,5 +1,24 @@
 {
   "hero": {
-    "title": "Hero in french"
+    "title": "Connect Market, Dalan is Here",
+    "heroFeatures": {
+      "featureOne": {
+        "light": "One click integrations, that",
+        "bold": "work for you."
+      },
+      "featureTwo": {
+        "light": "Just record and hit publish, it’s that",
+        "bold": "simple."
+      },
+      "featureThree": {
+        "light": "Get weekly reports straight to your inbox with",
+        "bold": "key metrics"
+      }
+    },
+    "cta": {
+      "ctaOne": "Get your free account",
+      "ctaTwo": "Get your free account",
+      "trialOffer": "30-day free trial. No card required."
+    }
   }
 }

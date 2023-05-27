@@ -1,3 +1,4 @@
+"use client";
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 
@@ -5,8 +6,11 @@ import Avatar from "public/images/avatars/avatar-01.jpg";
 import homeHeroImg from "public/images/stock/home-hero.jpg";
 import { Container } from "@/components/Container";
 import { Button } from "@/components/Button";
+import { useParams } from "next/navigation";
 
 export function HomeHero({ dict }) {
+  const lang = useParams().lang;
+
   return (
     <section className="relative overflow-hidden bg-amber-100 pt-16 md:pt-20 xl:pt-32">
       <Container>
@@ -18,41 +22,45 @@ export function HomeHero({ dict }) {
             <li className="flex items-center md:items-start xl:items-center">
               <CheckCircleIcon className="h-5 w-5 shrink-0 text-slate-800 md:h-6 md:w-6 xl:h-5 xl:w-5" />
               <p className="ml-3 text-slate-700 lg:ml-4 xl:ml-5 xl:text-lg">
-                One click integrations, that{" "}
+                {dict.hero.heroFeatures.featureOne.light}{" "}
                 <span className="font-medium text-slate-900">
-                  work for you.
+                  {dict.hero.heroFeatures.featureOne.bold}
                 </span>
               </p>
             </li>
             <li className="flex items-center md:items-start xl:items-center">
               <CheckCircleIcon className="h-5 w-5 shrink-0 text-slate-800 md:h-6 md:w-6 xl:h-5 xl:w-5" />
               <p className="ml-3 text-slate-700 lg:ml-4 xl:ml-5 xl:text-lg">
-                Just record and hit publish, it’s that{" "}
-                <span className="font-medium text-slate-900">simple.</span>
+                {dict.hero.heroFeatures.featureTwo.light}{" "}
+                <span className="font-medium text-slate-900">
+                  {dict.hero.heroFeatures.featureTwo.bold}
+                </span>
               </p>
             </li>
             <li className="flex items-center md:items-start xl:items-center">
               <CheckCircleIcon className="h-5 w-5 shrink-0 text-slate-800 md:h-6 md:w-6 xl:h-5 xl:w-5" />
               <p className="ml-3 text-slate-700 lg:ml-4 xl:ml-5 xl:text-lg">
-                Get weekly reports straight to your inbox with{" "}
-                <span className="font-medium text-slate-900">key metrics.</span>
+                {dict.hero.heroFeatures.featureThree.light}{" "}
+                <span className="font-medium text-slate-900">
+                  {dict.hero.heroFeatures.featureThree.bold}
+                </span>
               </p>
             </li>
           </ul>
           <div className="mt-10 flex flex-col sm:flex-row sm:space-x-5 md:mt-12 md:justify-center xl:justify-start">
-            <Button href="/start" className="w-full sm:w-auto">
-              Get your free account
+            <Button href={`${lang}/start`} className="w-full sm:w-auto">
+              {dict.hero.cta.ctaOne}
             </Button>
             <Button
-              href="/signin"
+              href={`${lang}/start`}
               variant="ghost"
               className="mt-3.5 w-full sm:mt-0 sm:w-auto"
             >
-              See our solutions
+              {dict.hero.cta.ctaTwo}
             </Button>
           </div>
           <p className="mt-4 flex text-md text-slate-600/90 md:justify-center xl:justify-start xl:text-base">
-            30-day free trial. No card required.
+            {dict.hero.cta.trialOffer}
           </p>
         </div>
       </Container>
