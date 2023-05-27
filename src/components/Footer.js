@@ -5,8 +5,7 @@ import Image from "next/image";
 import logo from "public/images/logo-light.png";
 import githubLogo from "public/images/logos/github-mark-white.svg";
 import { Container } from "@/components/Container";
-import { useParams, useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useRouter, usePathname, useSearchParams } from "next/navigation";
 
 const navigation = {
   company: [
@@ -48,13 +47,15 @@ const navigation = {
 };
 
 export function Footer() {
-  const params = useParams();
-  const router = useRouter();
+  const pathname = usePathname();
+  console.log(pathname);
 
-  useEffect(() => {
-    console.log(router);
-    console.log(params);
-  }, []);
+  const handleChangeLocale = (locale) => {
+    return pathname.replace(pathname.split("/")[1], locale);
+  };
+
+  handleChangeLocale();
+
   return (
     <section className="overflow-hidden bg-slate-700 pt-20 pb-12">
       <Container>
@@ -235,6 +236,7 @@ export function Footer() {
                   Cookies
                 </a>
               </Link>
+              {/* <Link href={handleChangeLocale("fa")}>Farsi</Link> */}
             </div>
           </div>
         </div>
