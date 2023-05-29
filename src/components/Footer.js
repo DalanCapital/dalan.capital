@@ -1,9 +1,11 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 
 import logo from "public/images/logo-light.png";
 import githubLogo from "public/images/logos/github-mark-white.svg";
 import { Container } from "@/components/Container";
+import { useRouter, usePathname, useSearchParams } from "next/navigation";
 
 const navigation = {
   company: [
@@ -45,6 +47,15 @@ const navigation = {
 };
 
 export function Footer() {
+  const pathname = usePathname();
+  console.log(pathname);
+
+  const handleChangeLocale = (locale) => {
+    return pathname.replace(pathname.split("/")[1], locale);
+  };
+
+  handleChangeLocale();
+
   return (
     <section className="overflow-hidden bg-slate-700 pt-20 pb-12">
       <Container>
@@ -58,7 +69,11 @@ export function Footer() {
               />
             </Link>
             <p className="mt-10 text-md leading-relaxed text-slate-50">
-              Welcome to Dalan - a platform that aims to revolutionize the world of trading and investments! Our objective is to provide a product that creates an opportunity for traders to trade using funded accounts, while also giving investors an avenue for earning returns on their investments.
+              Welcome to Dalan - a platform that aims to revolutionize the world
+              of trading and investments! Our objective is to provide a product
+              that creates an opportunity for traders to trade using funded
+              accounts, while also giving investors an avenue for earning
+              returns on their investments.
             </p>
             <div className="mt-8 flex items-center gap-4">
               <a href="#" className="group ">
@@ -125,13 +140,17 @@ export function Footer() {
                   <path d="M8.49125 7.4475V10.8825C8.05863 10.7684 7.60593 10.7529 7.16651 10.837C6.72709 10.9211 6.31215 11.1028 5.95228 11.3686C5.59241 11.6345 5.29678 11.9777 5.08719 12.3729C4.87759 12.7682 4.75937 13.2055 4.74125 13.6525C4.7158 14.0379 4.77324 14.4243 4.90969 14.7857C5.04614 15.147 5.25843 15.475 5.53227 15.7474C5.8061 16.0198 6.13513 16.2304 6.4972 16.365C6.85926 16.4995 7.24596 16.5549 7.63125 16.5275C8.01976 16.557 8.41005 16.5019 8.7752 16.366C9.14035 16.23 9.47167 16.0165 9.74629 15.7401C10.0209 15.4637 10.2323 15.131 10.3659 14.765C10.4995 14.399 10.552 14.0083 10.52 13.62V0H13.9187C14.4975 3.595 16.2937 4.43 18.7025 4.815V8.26C17.0341 8.12366 15.4246 7.5803 14.015 6.6775V13.4837C14.0125 16.5625 12.1875 20 7.65625 20C6.80632 19.9961 5.96571 19.8226 5.18368 19.4897C4.40165 19.1569 3.69392 18.6712 3.10195 18.0613C2.50998 17.4515 2.04569 16.7295 1.73627 15.9379C1.42685 15.1463 1.27853 14.3009 1.3 13.4513C1.32672 12.5664 1.54073 11.6973 1.9279 10.9013C2.31506 10.1052 2.8666 9.40028 3.54613 8.83297C4.22566 8.26565 5.01774 7.84884 5.87014 7.61002C6.72254 7.37121 7.61588 7.31582 8.49125 7.4475Z" />
                 </svg>
               </a>
-              <Link href="https://github.com/dalancapital" target="_blank" className="group">
+              <Link
+                href="https://github.com/dalancapital"
+                target="_blank"
+                className="group"
+              >
                 <Image
-                    src={githubLogo}
-                    alt="Dalan Github Profile"
-                    width="20"
-                    height="20"
-                    className="fill-slate-100/90 duration-150 group-hover:fill-slate-50"
+                  src={githubLogo}
+                  alt="Dalan Github Profile"
+                  width="20"
+                  height="20"
+                  className="fill-slate-100/90 duration-150 group-hover:fill-slate-50"
                 />
               </Link>
             </div>
@@ -217,6 +236,7 @@ export function Footer() {
                   Cookies
                 </a>
               </Link>
+              {/* <Link href={handleChangeLocale("fa")}>Farsi</Link> */}
             </div>
           </div>
         </div>
