@@ -202,7 +202,7 @@ export function Header() {
     ) {
       return (
         <>
-          <UserMenu />
+          <UserMenu lang={lang}/>
         </>
       );
     }

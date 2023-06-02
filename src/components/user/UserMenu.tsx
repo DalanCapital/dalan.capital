@@ -3,8 +3,9 @@ import { Menu } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { UserCircleIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { useParams, usePathname, useRouter } from "next/navigation";
 import { toast } from "react-toastify";
+import { getDictionary } from "@/app/[lang]/dictionaries";
 
 const more = [
   { label: "Accounts", href: "/my/desks/accounts" },
@@ -15,13 +16,15 @@ const more = [
 ];
 
 function UserMenu() {
+  const lang = useParams().lang;
+  const dict = getDictionary(lang);
   const router = useRouter();
   const pathname = usePathname();
   const signOutUser = () => {
     localStorage.removeItem("user");
     toast.success("You Successfully Signed out", );
     setTimeout(() => {
-      router.replace("/");
+      router.replace("/"+lang);
     }, 500);
   };
 
@@ -51,7 +54,7 @@ function UserMenu() {
             <Menu.Items className="absolute right-0 z-20 mt-3 w-52 space-y-1 bg-gray-secondary-50 p-2.5 drop-shadow filter">
               {more.map((subLink, i) => (
                 <Menu.Item key={`${subLink.label}-dropdown-desktop`}>
-                  <Link legacyBehavior href={subLink.href}>
+                  <Link legacyBehavior href={"/"+lang+subLink.href}>
                     <a
                       className={`block py-3.5 px-5 font-medium ${
                         pathname == subLink.href

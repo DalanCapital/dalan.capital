@@ -17,8 +17,10 @@ import { IVerifyOTPPayload } from "@werify/id-ts/dist/modules/public/verifyOTP/i
 // * react toastify
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { getDictionary } from "@/app/[lang]/dictionaries";
 
-export default function Signup() {
+export default function Signup({ params: { lang } }: any) {
+  const dict = getDictionary(lang);
   let [code, setCode] = useState("");
   let [loading, setLoading] = useState(false);
 
@@ -40,7 +42,7 @@ export default function Signup() {
           localStorage.setItem("user", JSON.stringify(res.results));
 
           setTimeout(() => {
-            location.replace("/");
+            location.replace("/"+lang);
             setLoading(false);
           }, 1000);
         } else {
