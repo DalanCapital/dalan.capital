@@ -1,6 +1,9 @@
+'use client'
 import "@/styles/tailwind.css";
 import { Inter } from "next/font/google";
 import { Providers } from "@/store/Provider";
+import { CookiesProvider } from 'react-cookie';
+import { Router } from "next/router";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +23,7 @@ export async function generateStaticParams() {
   ];
 }
 
+
 export default function RootLayout({
   children,
   params,
@@ -27,14 +31,19 @@ export default function RootLayout({
   children: React.ReactNode;
   params: any;
 }) {
+  let locale = params.lang;
+  console.log(window.location.pathname);
   return (
-    <html
-      lang={params.lang}
-      dir={params.lang === "fa" || params.lang === "ar" ? "rtl" : "ltr"}
-    >
-      <body className={inter.className}>
-        <Providers>{children}</Providers>
-      </body>
-    </html>
+    <CookiesProvider>
+      <html
+        lang={params.lang}
+        dir={params.lang === "fa" || params.lang === "ar" ? "rtl" : "ltr"}
+      >
+        <body className={inter.className}>
+          <Providers>{children}</Providers>
+        </body>
+      </html>
+    </CookiesProvider>
+    
   );
 }
