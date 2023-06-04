@@ -14,7 +14,6 @@ import { getDictionary } from "@/app/[lang]/dictionaries";
 
 export default async function Home({ params: { lang } }: any) {
   const dict = await getDictionary(lang); // en
-
   return (
     <>
       <Head>

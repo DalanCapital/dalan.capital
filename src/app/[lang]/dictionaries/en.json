@@ -3,22 +3,22 @@
     "title": "Connect Market, Dalan is Here",
     "heroFeatures": {
       "featureOne": {
-        "light": "One click integrations, that",
-        "bold": "work for you."
+        "light": "Sign up and get your",
+        "bold": "Trading Account."
       },
       "featureTwo": {
-        "light": "Just record and hit publish, it’s that",
-        "bold": "simple."
+        "light": "Start trading and track in",
+        "bold": "Trader4."
       },
       "featureThree": {
-        "light": "Get weekly reports straight to your inbox with",
-        "bold": "key metrics"
+        "light": "Get weekly reports with",
+        "bold": "Withdrawals and Receipts."
       }
     },
     "cta": {
-      "ctaOne": "Get your free account",
-      "ctaTwo": "Get your free account",
-      "trialOffer": "30-day free trial. No card required."
+      "ctaOne": "Get your REAL account",
+      "ctaTwo": "Start with a demo account",
+      "trialOffer": "Start Free, No Credit Card Required"
     }
   }
 }

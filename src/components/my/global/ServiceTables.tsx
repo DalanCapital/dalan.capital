@@ -3,7 +3,7 @@
 import { Button } from "@/components/Button";
 import { apiService } from "@/composables/apiService";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import DeleteModal from "./DeleteModal";
@@ -21,6 +21,7 @@ export interface IStatus {
   empty: boolean;
 }
 export default function ServiceTables(props: IServiceTableProps) {
+  const lang = useParams().lang;
   // * variables
   const [list, setList] = useState([]);
   const [status, setStatus] = useState<IStatus>({} as IStatus);
@@ -31,15 +32,15 @@ export default function ServiceTables(props: IServiceTableProps) {
     apiService(props.endpoint)
       .then((res) => {
         setStatus({ loading: true, error: false, empty: false });
-        if (res.succeed) {
-          if (res.results.length === 0) {
-            setStatus({ loading: false, error: false, empty: true });
-          } else {
+        if (res.succeed){
+          if(res.results.length > 0){
             setList(res.results);
+            setStatus({ loading: false, error: false, empty: false });
+          }else{
+            setStatus({ loading: false, error: false, empty: true });
           }
         } else {
           setStatus({ loading: false, error: true, empty: false });
-
           toast.error("Something went wrong!");
         }
       })
@@ -52,7 +53,7 @@ export default function ServiceTables(props: IServiceTableProps) {
   // * change route and go to single
   const router = useRouter();
   const changeRoute = (uuid: string) => {
-    router.push(`${props.endpoint}/${uuid}`);
+    router.push(lang+`${props.endpoint}/${uuid}`);
   };
 
   const deleteItem = (uuid: string) => {
