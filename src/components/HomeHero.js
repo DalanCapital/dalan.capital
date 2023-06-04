@@ -48,11 +48,11 @@ export function HomeHero({ dict }) {
             </li>
           </ul>
           <div className="mt-10 flex flex-col sm:flex-row sm:space-x-5 md:mt-12 md:justify-center xl:justify-start">
-            <Button href={`${lang}/start`} className="w-full sm:w-auto">
+            <Button href={`${lang}/pricing`} className="w-full sm:w-auto">
               {dict.hero.cta.ctaOne}
             </Button>
             <Button
-              href={`${lang}/start`}
+              href={`${lang}/pricing`}
               variant="ghost"
               className="mt-3.5 w-full sm:mt-0 sm:w-auto"
             >
@@ -86,9 +86,7 @@ export function HomeHero({ dict }) {
                 </svg>
 
                 <p className="relative">
-                  Wavvy has taken the headache out of our podcast hosting, and
-                  allowed us to focus on what we love to do – record great
-                  content, and grow a loyal audience.
+                  Dalan Capital help traders as well as investors to make the most of their capital by trading in the financial markets. We are a team of experienced traders and analysts who are passionate about trading and have a strong desire to help others achieve their financial goals.
                 </p>
               </div>
               <div className="mt-7 flex items-center">
@@ -104,7 +102,7 @@ export function HomeHero({ dict }) {
                   <p className="font-medium text-slate-900">Courtland Allen</p>
 
                   <p className="font-medium text-slate-500">
-                    Indie Hackers Podcast
+                    Trader at Dalan Capital
                   </p>
                 </div>
               </div>
@@ -115,7 +113,7 @@ export function HomeHero({ dict }) {
               src={homeHeroImg}
               className="h-auto w-full object-cover"
               priority
-              alt="hero image"
+              alt="Dalan Capital"
             />
           </div>
         </Container>

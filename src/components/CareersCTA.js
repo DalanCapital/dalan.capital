@@ -13,7 +13,7 @@ export function CareersCTA() {
             We`re always on the lookout for talented and passionate individuals to join our team at Dalan.
           </p>
           <div className="mt-10 flex w-full justify-center sm:mt-12">
-            <Button href="/careers">See open positions</Button>
+            <Button href="${}/careers">See open positions</Button>
           </div>
         </div>
       </Container>

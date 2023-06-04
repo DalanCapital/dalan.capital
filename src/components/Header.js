@@ -21,14 +21,7 @@ import logoIcon from "public/images/logo-icon.png";
 import UserMenu from "./user/UserMenu";
 
 // * mock data
-const links = [
-  { label: "Home", href: "/" },
-  { label: "Features", href: "features" },
-  { label: "Solutions", href: "solutions" },
-  { label: "Pricing", href: "pricing" },
-  { label: "About", href: "about" },
-  { label: "Contact", href: "contact" },
-];
+
 
 const more = [
   { label: "Newsroom", href: "blog/newsroom" },
@@ -46,6 +39,14 @@ export function Header() {
   useEffect(() => {
     setHydrated(true);
   }, []);
+  const links = [
+    { label: "Home", href: "/"},
+    { label: "Features", href: "features" },
+    { label: "Solutions", href: "solutions" },
+    { label: "Pricing", href: "pricing" },
+    { label: "About", href: "about" },
+    { label: "Contact", href: "contact" },
+  ];
 
   function MenuIcon({ open }) {
     return (
@@ -256,7 +257,7 @@ export function Header() {
                 </Link>
               ))}
 
-              <Menu as="div" className="relative">
+              {/* <Menu as="div" className="relative">
                 {({ open }) => (
                   <>
                     <Menu.Button
@@ -296,7 +297,7 @@ export function Header() {
                     </Menu.Items>
                   </>
                 )}
-              </Menu>
+              </Menu> */}
             </div>
           </div>
 
